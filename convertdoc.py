@@ -35,10 +35,12 @@ args = parser.parse_args()
 TYPE_MAP = {
     'int': 'integer',
     'float': 'number',
+    'char': 'string',
     'EntityDesc': 'userdata @EntityDesc',
     'HomingLaser::SampleList': 'userdata @HomingLaser::SampleList',
     'LaserHomingType': 'integer @LaserHomingType',
     'HomingLaser': 'userdata @LaserHomingType',
+    'RoomDescriptor List': 'CppList_RoomDescriptor',
 }
 
 NAME_BLACKLIST = [
@@ -51,35 +53,50 @@ if len(infiles) > 1:
     if not os.path.exists("out"):
         os.mkdir("out")
 
+def convert_type(typ: str):
+    typ = TYPE_MAP[typ] if typ in TYPE_MAP else typ
+    typ = typ.replace(" ", "_")
+    return typ
+
 def convert_field(static: str, const: str, ftype: str, fname: str) -> str:
     if static:
-        return f"---@type {TYPE_MAP[ftype] if ftype in TYPE_MAP else ftype}"\
-               f"{classname}.{fname}{' --const' if const else ''}"
+        return f"---@type {convert_type(ftype)}\n"\
+               f"{classname}.{fname} = nil{' --const' if const else ''}"
     else:
-        return f"---@field {fname} {TYPE_MAP[ftype] if ftype in TYPE_MAP else ftype}{' @const' if const else ''}"
+        return f"---@field {fname} {convert_type(ftype)}{' @const' if const else ''}"
 
-def convert_method(static: str, ret_type: str, func_name: str, fargs: str) -> str:
+def convert_method(static: str, ret_type: str, func_name: str, fargs: str, overloaded: bool) -> str:
     fargsl = []
     out = ""
     if fargs is not None and fargs.strip() != '':
+        lastType = None
         for arg in fargs.split(","):
             arg = arg.strip()
-            argmatch = re.match(r'(?P<type>[\w:]+) (?P<argName>\w+)(?: = (?P<default>.*))?', arg)
+
+            if (arg == "..."):
+                fargsl.append(arg)
+                out = out + f"---@vararg {lastType}\n"
+                continue
+
+            argmatch = re.match(r'(?P<type>[\w :]+?) (?P<argName>\w+)(?: = (?P<default>.*))?', arg)
             (argtype, argname, default) = argmatch.group('type', 'argName', 'default')
+            lastType = argtype
             fargsl.append(argname)
 
-            out = (out + f"---@param {argname}{'?' if default else ''} {TYPE_MAP[argtype] if argtype in TYPE_MAP else argtype}" 
+            out = (out + f"---@param {argname}{'?' if default else ''} {convert_type(argtype)}" 
                 + (f" @default: {default}" if default else "")
                 + "\n"
             )
 
     if ret_type != 'void':
-        out = out + f"---@return {TYPE_MAP[ret_type] if ret_type in TYPE_MAP else ret_type}\n"
-    
+        out = out + f"---@return {convert_type(ret_type)}\n"
+
     is_constructor = ret_type == func_name
     if is_constructor:
-        out = out + f"function {func_name}(" + ", ".join(fargsl) + ")\n"
+        out = out + f"function _G.{func_name}(" + ", ".join(fargsl) + ")\n"
     else:
+        if overloaded:
+            out = out + "---@diagnostic disable-next-line: duplicate-set-field\n"
         out = out + f"function {classname}{'.' if static else ':'}{func_name}(" + ", ".join(fargsl) + ")\n"
     out = out + "end\n"
     return out
@@ -99,6 +116,7 @@ for file in infiles:
     lines = file.readlines()
     field_groups = []
     method_groups = []
+    has_static = False
     for line in lines:
         line = ( line.strip()
             .replace('⚓︎', '') # button the end of the text copypasted frm the rendered html
@@ -107,7 +125,7 @@ for file in infiles:
         if line == '':
             continue
         # check field
-        match = re.match(r'^(?P<static>static\s+)?(?P<const>const\s+)?(?P<type>[\w:]+)\s+(?P<fieldName>\w+)$', line)
+        match = re.match(r'^(?P<static>static\s+)?(?P<const>const\s+)?(?P<type>[\w :]+?)\s+(?P<fieldName>\w+)$', line)
         if (match):
             (static, const, ftype, fname) = match.group('static', 'const', 'type', 'fieldName')
             if fname not in NAME_BLACKLIST:
@@ -115,11 +133,13 @@ for file in infiles:
             continue
 
         # check function
-        match = re.match(r'(?P<static>static\s+)?(?:const\s+)?(?P<retType>[\w:]+)\s*(?P<funcName>\w+) \((?P<args>.*)?\)', line)
+        match = re.match(r'(?P<static>static\s+)?(?:const\s+)?(?P<retType>[\w :]+?)\s*(?P<funcName>\w+) \((?P<args>.*)?\)', line)
         if match:
             (static, ret_type, func_name, fargs) = match.group('static', 'retType', 'funcName', 'args')
             if func_name not in NAME_BLACKLIST:
                 method_groups.append((static, ret_type, func_name, fargs))
+                if static:
+                    has_static = True
             continue
             
         print(f"Warning: no match found for line \"{line}\"", file=sys.stderr)
@@ -130,10 +150,12 @@ for file in infiles:
     for data in field_groups:
         print(convert_field(*data), file=out)
 
-    print(f"local {classname} = " + "{}\n", file=out)
+    print(f"{'_G.' if has_static else 'local '}{classname} = " + "{}\n", file=out)
 
     for data in method_groups:
-        print(convert_method(*data), file=out)
+        func_name = data[2]
+        overloaded = any(filter(lambda x: x[2] == func_name and x != data, method_groups))
+        print(convert_method(*data, overloaded), file=out)
 
     if close_out:
         out.close()
