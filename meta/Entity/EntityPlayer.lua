@@ -8,7 +8,7 @@
 ---@field ControlsEnabled boolean
 ---@field Damage number
 ---@field FireDelay number
----@field FriendBallEnemy EntityDesc @const
+---@field FriendBallEnemy userdata @EntityDesc @const
 ---@field HeadFrameDelay integer
 ---@field IBSCharge number
 ---@field ItemHoldCooldown integer
