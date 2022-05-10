@@ -41,6 +41,11 @@ TYPE_MAP = {
     'LaserHomingType': 'integer @LaserHomingType',
     'HomingLaser': 'userdata @LaserHomingType',
     'RoomDescriptor List': 'CppList_RoomDescriptor',
+    'Item': 'ItemConfig_Item',
+    'Costume': 'ItemConfig_Costume',
+    'CardList': 'CardConfigList',
+    'ItemList': 'ItemConfigList',
+    'PillList': 'PillConfigList',
 }
 
 NAME_BLACKLIST = [
