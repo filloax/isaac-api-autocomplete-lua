@@ -27,7 +27,7 @@ end
 local CppList_RoomConfigSpawn = {}
 
 ---@param idx integer
----@return RoomConfigSpawn
+---@return RoomConfig_Spawn
 function CppList_RoomConfigSpawn:Get(idx)
 end
 
@@ -54,7 +54,7 @@ end
 local CardConfigList = {}
 
 ---@param idx integer
----@return userdata
+---@return ItemConfig_Card
 function CardConfigList:Get(idx)
 end
 
@@ -63,7 +63,7 @@ end
 local CostumeConfigList = {}
 
 ---@param idx integer
----@return userdata
+---@return ItemConfig_Costume
 function CostumeConfigList:Get(idx)
 end
 
@@ -81,7 +81,7 @@ end
 local ItemConfigList = {}
 
 ---@param idx integer
----@return userdata
+---@return ItemConfig_Item
 function ItemConfigList:Get(idx)
 end
 
@@ -90,7 +90,7 @@ end
 local PillConfigList = {}
 
 ---@param idx integer
----@return userdata
+---@return ItemConfig_PillEffect
 function PillConfigList:Get(idx)
 end
 
