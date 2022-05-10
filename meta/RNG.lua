@@ -1,11 +1,11 @@
 ---@meta
 
+---@class RNG
+local RNG = {}
+
 ---@return RNG
 function _G.RNG()
 end
-
----@class RNG
-local RNG = {}
 
 ---@return integer
 function RNG:GetSeed()
