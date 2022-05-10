@@ -35,16 +35,55 @@ args = parser.parse_args()
 TYPE_MAP = {
     'int': 'integer',
     'float': 'number',
+    'EntityDesc': 'userdata @EntityDesc',
     'HomingLaser::SampleList': 'userdata @HomingLaser::SampleList',
     'LaserHomingType': 'integer @LaserHomingType',
     'HomingLaser': 'userdata @LaserHomingType',
 }
+
+NAME_BLACKLIST = [
+    'ActiveItemDesc'
+]
 
 infiles: "list[TextIO]" = args.input
 
 if len(infiles) > 1:
     if not os.path.exists("out"):
         os.mkdir("out")
+
+def convert_field(static: str, const: str, ftype: str, fname: str) -> str:
+    if static:
+        return f"---@type {TYPE_MAP[ftype] if ftype in TYPE_MAP else ftype}"\
+               f"{classname}.{fname}{' --const' if const else ''}"
+    else:
+        return f"---@field {fname} {TYPE_MAP[ftype] if ftype in TYPE_MAP else ftype}{' @const' if const else ''}"
+
+def convert_method(static: str, ret_type: str, func_name: str, fargs: str) -> str:
+    fargsl = []
+    out = ""
+    if fargs is not None and fargs.strip() != '':
+        for arg in fargs.split(","):
+            arg = arg.strip()
+            argmatch = re.match(r'(?P<type>[\w:]+) (?P<argName>\w+)(?: = (?P<default>.*))?', arg)
+            (argtype, argname, default) = argmatch.group('type', 'argName', 'default')
+            fargsl.append(argname)
+
+            out = (out + f"---@param {argname}{'?' if default else ''} {TYPE_MAP[argtype] if argtype in TYPE_MAP else argtype}" 
+                + (f" @default: {default}" if default else "")
+                + "\n"
+            )
+
+    if ret_type != 'void':
+        out = out + f"---@return {TYPE_MAP[ret_type] if ret_type in TYPE_MAP else ret_type}\n"
+    
+    is_constructor = ret_type == func_name
+    if is_constructor:
+        out = out + f"function {func_name}(" + ", ".join(fargsl) + ")\n"
+    else:
+        out = out + f"function {classname}{'.' if static else ':'}{func_name}(" + ", ".join(fargsl) + ")\n"
+    out = out + "end\n"
+    return out
+
 
 for file in infiles:
     basename = os.path.splitext(os.path.basename(file.name))[0]
@@ -71,14 +110,16 @@ for file in infiles:
         match = re.match(r'^(?P<static>static\s+)?(?P<const>const\s+)?(?P<type>[\w:]+)\s+(?P<fieldName>\w+)$', line)
         if (match):
             (static, const, ftype, fname) = match.group('static', 'const', 'type', 'fieldName')
-            field_groups.append((static, const, ftype, fname))
+            if fname not in NAME_BLACKLIST:
+                field_groups.append((static, const, ftype, fname))
             continue
 
         # check function
         match = re.match(r'(?P<static>static\s+)?(?:const\s+)?(?P<retType>[\w:]+)\s*(?P<funcName>\w+) \((?P<args>.*)?\)', line)
         if match:
             (static, ret_type, func_name, fargs) = match.group('static', 'retType', 'funcName', 'args')
-            method_groups.append((static, ret_type, func_name, fargs))
+            if func_name not in NAME_BLACKLIST:
+                method_groups.append((static, ret_type, func_name, fargs))
             continue
             
         print(f"Warning: no match found for line \"{line}\"", file=sys.stderr)
@@ -86,35 +127,13 @@ for file in infiles:
     print("---@meta\n", file=out)
     print(f"---@class {classname}", file=out)
 
-    for (static, const, ftype, fname) in field_groups:
-        if static:
-            print(f"---@type {TYPE_MAP[ftype] if ftype in TYPE_MAP else ftype}", file=out)
-            print(f"{classname}.{fname}{' --const' if const else ''}", file=out)
-        else:
-            print(f"---@field {fname} {TYPE_MAP[ftype] if ftype in TYPE_MAP else ftype}{' @const' if const else ''}", file=out)
+    for data in field_groups:
+        print(convert_field(*data), file=out)
 
     print(f"local {classname} = " + "{}\n", file=out)
 
-    for (static, ret_type, func_name, fargs) in method_groups:
-        fargsl = []
-        if fargs is not None and fargs.strip() != '':
-            for arg in fargs.split(","):
-                arg = arg.strip()
-                argmatch = re.match(r'(?P<type>[\w:]+) (?P<argName>\w+)(?: = (?P<default>.*))?', arg)
-                (argtype, argname, default) = argmatch.group('type', 'argName', 'default')
-                fargsl.append(argname)
-
-                print(f"---@param {argname}{'?' if default else ''} {TYPE_MAP[argtype] if argtype in TYPE_MAP else argtype}" + (f" @default: {default}" if default else ""), file=out)
-
-        if ret_type != 'void':
-            print(f"---@return {TYPE_MAP[ret_type] if ret_type in TYPE_MAP else ret_type}", file=out)
-        
-        is_constructor = ret_type == func_name
-        if is_constructor:
-            print(f"function {func_name}(" + ", ".join(fargsl) + ")", file=out)
-        else:
-            print(f"function {classname}{'.' if static else ':'}{func_name}(" + ", ".join(fargsl) + ")", file=out)
-        print("end\n", file=out)
+    for data in method_groups:
+        print(convert_method(*data), file=out)
 
     if close_out:
         out.close()
