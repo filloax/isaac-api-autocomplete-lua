@@ -40,6 +40,8 @@ TYPE_MAP = {
     'HomingLaser::SampleList': 'userdata @HomingLaser::SampleList',
     'LaserHomingType': 'integer @LaserHomingType',
     'HomingLaser': 'userdata @LaserHomingType',
+    'LRoomAreaDesc': 'userdata @LRoomAreaDesc',
+    'GetLRoomTileDesc': 'userdata @GetLRoomTileDesc',
     'RoomDescriptor List': 'CppList_RoomDescriptor',
     'Item': 'ItemConfig_Item',
     'Costume': 'ItemConfig_Costume',
@@ -48,6 +50,18 @@ TYPE_MAP = {
     'PillList': 'PillConfigList',
     'SpawnList': 'CppList_RoomConfigSpawn',
     'EntryList': 'CppList_RoomConfigEntries',
+    'RoomConfigRoom': 'RoomConfig_Room',
+    'DoorSet': 'userdata @DoorSet',
+    'ItemConfigNullItemID': 'integer @ItemConfigNullItemID',
+    'Config': 'ItemConfig',
+    'Ending': 'integer @Ending',
+    'FadeoutTarget': 'integer @FadeoutTarget',
+    'Ambush': 'userdata @Ambush',
+    'ItemOverlay': 'userdata @ItemOverlay',
+    'StageTransition::Animation': 'integer @StageTransition::Animation',
+    'QueueItemData': 'QueuedItemData',
+    'ProjectilesMode': 'integer @ProjectilesMode',
+    'MultiShotParams': 'userdata @MultiShotParams',
 }
 
 NAME_BLACKLIST = [
@@ -61,9 +75,7 @@ if len(infiles) > 1:
         os.mkdir("out")
 
 def convert_type(typ: str):
-    typ = TYPE_MAP[typ] if typ in TYPE_MAP else typ
-    typ = typ.replace(" ", "_")
-    return typ
+    return TYPE_MAP[typ] if typ in TYPE_MAP else typ.replace(" ", "_")
 
 def convert_field(static: str, const: str, ftype: str, fname: str) -> str:
     if static:
