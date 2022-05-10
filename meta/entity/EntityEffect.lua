@@ -14,7 +14,7 @@
 ---@field Scale number
 ---@field State integer
 ---@field Timeout integer
-local EntityEffect = {}
+_G.EntityEffect = {}
 
 ---@param Parent Entity
 function EntityEffect:FollowParent(Parent)

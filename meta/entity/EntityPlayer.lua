@@ -16,7 +16,7 @@
 ---@field Luck number
 ---@field MaxFireDelay number
 ---@field MoveSpeed number
----@field QueuedItem QueueItemData
+---@field QueuedItem QueuedItemData
 ---@field SamsonBerserkCharge integer
 ---@field SecondaryActiveItem ActiveItemDesc
 ---@field ShotSpeed number
@@ -85,7 +85,7 @@ end
 function EntityPlayer:AddControlsCooldown(Cooldown)
 end
 
----@param Item ItemConfigItem
+---@param Item ItemConfig_Item
 ---@param ItemStateOnly boolean
 function EntityPlayer:AddCostume(Item, ItemStateOnly)
 end
@@ -314,7 +314,7 @@ end
 ---@param FamiliarVariant integer
 ---@param TargetCount integer
 ---@param rng RNG
----@param SourceItemConfigItem? ItemConfigItem @default: nil
+---@param SourceItemConfigItem? ItemConfig_Item @default: nil
 ---@param FamiliarSubType? integer @default: -1
 function EntityPlayer:CheckFamiliar(FamiliarVariant, TargetCount, rng, SourceItemConfigItem, FamiliarSubType)
 end
@@ -652,7 +652,7 @@ function EntityPlayer:GetMovementVector()
 end
 
 ---@param WeaponType? WeaponType @default: WeaponType.WEAPON_TEARS
----@return MultiShotParams
+---@return userdata @MultiShotParams
 function EntityPlayer:GetMultiShotParams(WeaponType)
 end
 
@@ -660,7 +660,7 @@ end
 ---@param Weapon WeaponType
 ---@param ShotDirection Vector
 ---@param ShotSpeed number
----@param params MultiShotParams
+---@param params userdata @MultiShotParams
 ---@return PosVel
 function EntityPlayer:GetMultiShotPositionVelocity(LoopIndex, Weapon, ShotDirection, ShotSpeed, params)
 end
@@ -1122,6 +1122,7 @@ end
 ---@param Item CollectibleType
 ---@param UseFlags? UseFlags @default: 0
 ---@param Slot? ActiveSlot @default: -1
+---@diagnostic disable-next-line: duplicate-set-field
 function EntityPlayer:UseActiveItem(Item, UseFlags, Slot)
 end
 
@@ -1131,6 +1132,7 @@ end
 ---@param AllowNonMainPlayer? boolean @default: true
 ---@param ToAddCostume? boolean @default: false
 ---@param Slot? ActiveSlot @default: -1
+---@diagnostic disable-next-line: duplicate-set-field
 function EntityPlayer:UseActiveItem(Item, ShowAnim, KeepActiveItem, AllowNonMainPlayer, ToAddCostume, Slot)
 end
 

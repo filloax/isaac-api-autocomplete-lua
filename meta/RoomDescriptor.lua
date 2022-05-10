@@ -1,12 +1,12 @@
 ---@meta
 
 ---@class RoomDescriptor
----@field AllowedDoors DoorSet
+---@field AllowedDoors userdata @DoorSet
 ---@field AwardSeed integer
 ---@field ChallengeDone boolean
 ---@field Clear boolean
 ---@field ClearCount integer
----@field Data RoomConfigRoom
+---@field Data RoomConfig_Room
 ---@field DecorationSeed integer
 ---@field DeliriumDistance integer
 ---@field DisplayFlags integer
@@ -15,7 +15,7 @@
 ---@field HasWater boolean
 ---@field ListIndex integer
 ---@field NoReward boolean
----@field OverrideData RoomConfigRoom
+---@field OverrideData RoomConfig_Room
 ---@field PitsCount integer
 ---@field PoopCount integer
 ---@field PressurePlatesTriggered boolean

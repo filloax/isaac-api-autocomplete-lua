@@ -109,7 +109,7 @@ end
 function Game:DonateGreed(Donate)
 end
 
----@param Ending Ending
+---@param Ending integer @Ending
 function Game:End(Ending)
 end
 
@@ -118,7 +118,7 @@ function Game:Fadein(Speed)
 end
 
 ---@param Speed number
----@param Target FadeoutTarget
+---@param Target integer @FadeoutTarget
 function Game:Fadeout(Speed, Target)
 end
 
@@ -134,7 +134,7 @@ end
 function Game:FinishChallenge()
 end
 
----@return Ambush
+---@return userdata @Ambush
 function Game:GetAmbush()
 end
 
@@ -174,7 +174,7 @@ end
 function Game:GetHUD()
 end
 
----@return ItemOverlay
+---@return userdata @ItemOverlay
 function Game:GetItemOverlay()
 end
 
@@ -343,7 +343,7 @@ end
 function Game:Spawn(Type, Variant, Position, Velocity, Spawner, SubType, Seed)
 end
 
----@param desc userdata_@EntityDesc
+---@param desc userdata @EntityDesc
 ---@param Position Vector
 ---@param Spawner Entity
 ---@return EntityNPC
@@ -369,7 +369,7 @@ function Game:StartRoomTransition(RoomIndex, Direction, Animation, Player, Dimen
 end
 
 ---@param SameStage boolean
----@param Animation StageTransition::Animation
+---@param Animation integer @StageTransition::Animation
 function Game:StartStageTransition(SameStage, Animation)
 end
 

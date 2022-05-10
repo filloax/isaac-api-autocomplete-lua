@@ -38,7 +38,7 @@ function HUD:ShowItemText(MainString, SecondaryString, IsCurseDisplay)
 end
 
 ---@param Player EntityPlayer
----@param Item Item
+---@param Item ItemConfig_Item
 ---@diagnostic disable-next-line: duplicate-set-field
 function HUD:ShowItemText(Player, Item)
 end

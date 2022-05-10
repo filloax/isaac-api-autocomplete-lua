@@ -2,13 +2,13 @@
 
 ---@class EntityNPC : Entity
 ---@field CanShutDoors boolean
----@field ChildNPC EntityNPC
+---@field ChildNPC EntityNPC @const
 ---@field EntityRef Entity
 ---@field GroupIdx integer
 ---@field I1 integer
 ---@field I2 integer
----@field ParentNPC EntityNPC
----@field Pathfinder any @PathFinder
+---@field ParentNPC EntityNPC @const
+---@field Pathfinder PathFinder
 ---@field ProjectileCooldown integer
 ---@field ProjectileDelay integer
 ---@field Scale number
@@ -16,8 +16,7 @@
 ---@field StateFrame integer
 ---@field V1 Vector
 ---@field V2 Vector
----@field SpriteScale Vector @WARNING: will be reset at the end of every update for NPCs
-local EntityNPC = {}
+_G.EntityNPC = {}
 
 ---@param HorizontalAnim string
 ---@param VerticalAnim string
@@ -42,15 +41,15 @@ end
 ---@param NumProjectiles integer
 ---@param TargetPos Vector
 ---@param TrajectoryModifier number
----@param Params any @ProjectileParams
----@return Entity @EntityProjectile
+---@param Params ProjectileParams
+---@return EntityProjectile
 function EntityNPC:FireBossProjectiles(NumProjectiles, TargetPos, TrajectoryModifier, Params)
 end
 
 ---@param Pos Vector
 ---@param Velocity Vector
 ---@param Mode integer @ProjectilesMode
----@param Params any @ProjectileParams
+---@param Params ProjectileParams
 function EntityNPC:FireProjectiles(Pos, Velocity, Mode, Params)
 end
 
@@ -82,17 +81,17 @@ function EntityNPC:KillUnique()
 end
 
 ---@param Seed integer
----@param ChampionColorIdx? integer @ChampionColor @default: -1
+---@param ChampionColorIdx? ChampionColor @default: -1
 ---@param Init? boolean @default: false
 function EntityNPC:MakeChampion(Seed, ChampionColorIdx, Init)
 end
 
 ---@param Size number
----@return Entity @EntityEffect
+---@return EntityEffect
 function EntityNPC:MakeSplat(Size)
 end
 
----@param type integer @EntityType
+---@param type EntityType
 ---@param Variant integer
 ---@param SubType integer
 ---@param ChampionColorIdx integer
@@ -100,7 +99,7 @@ end
 function EntityNPC:Morph(type, Variant, SubType, ChampionColorIdx)
 end
 
----@param ID integer @SoundEffect
+---@param ID SoundEffect
 ---@param Volume number
 ---@param FrameDelay integer
 ---@param Loop boolean
@@ -109,20 +108,20 @@ function EntityNPC:PlaySound(ID, Volume, FrameDelay, Loop, Pitch)
 end
 
 ---@param GroupIdx integer
----@return any @EntityList
+---@return EntityList
 function EntityNPC:QueryNPCsGroup(GroupIdx)
 end
 
----@param SpawnerType integer @EntityType
----@param Type integer @EntityType
+---@param SpawnerType EntityType
+---@param Type EntityType
 ---@param OnlyEnemies boolean
----@return any @EntityList
+---@return EntityList
 function EntityNPC:QueryNPCsSpawnerType(SpawnerType, Type, OnlyEnemies)
 end
 
----@param Type integer @EntityType
+---@param Type EntityType
 ---@param Variant integer
----@return any @EntityList
+---@return EntityList
 function EntityNPC:QueryNPCsType(Type, Variant)
 end
 

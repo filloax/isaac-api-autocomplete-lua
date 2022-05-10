@@ -14,7 +14,7 @@
 ---@field RoomClearCount integer
 ---@field ShootDirection Direction
 ---@field State integer
-local EntityFamiliar = {}
+_G.EntityFamiliar = {}
 
 ---@param Value integer
 function EntityFamiliar:AddCoins(Value)

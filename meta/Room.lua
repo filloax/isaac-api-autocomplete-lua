@@ -193,11 +193,11 @@ end
 function Room:GetLightingAlpha()
 end
 
----@return LRoomAreaDesc
+---@return userdata @LRoomAreaDesc
 function Room:GetLRoomAreaDesc()
 end
 
----@return LRoomTileDesc
+---@return userdata @LRoomTileDesc
 function Room:GetLRoomTileDesc()
 end
 

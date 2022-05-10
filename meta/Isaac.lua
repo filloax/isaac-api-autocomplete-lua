@@ -110,7 +110,7 @@ end
 function Isaac.GetFreeNearPosition(pos, step)
 end
 
----@return Config
+---@return ItemConfig
 function Isaac.GetItemConfig()
 end
 

@@ -27,7 +27,7 @@
 ---@field StartAngleDegrees number
 ---@field TearFlags TearFlags
 ---@field Timeout integer
-local EntityLaser = {}
+_G.EntityLaser = {}
 
 ---@param Flags TearFlags
 function EntityLaser:AddTearFlags(Flags)
@@ -50,7 +50,7 @@ end
 function EntityLaser:GetEndPoint()
 end
 
----@return userdata @HomingLaser::SampleList
+---@return userdata_@HomingLaser::SampleList
 function EntityLaser:GetNonOptimizedSamples()
 end
 
@@ -58,7 +58,7 @@ end
 function EntityLaser:GetRenderZ()
 end
 
----@return userdata @HomingLaser::SampleList
+---@return userdata_@HomingLaser::SampleList
 function EntityLaser:GetSamples()
 end
 
@@ -86,7 +86,7 @@ end
 function EntityLaser:SetBlackHpDropChance(Chance)
 end
 
----@param Type integer @LaserHomingType
+---@param Type integer_@LaserHomingType
 function EntityLaser:SetHomingType(Type)
 end
 

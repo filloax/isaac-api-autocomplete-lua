@@ -9,7 +9,7 @@ local TemporaryEffects = {}
 function TemporaryEffects:AddCollectibleEffect(CollectibleType, AddCostume, Count)
 end
 
----@param NullId ItemConfigNullItemID
+---@param NullId integer @ItemConfigNullItemID
 ---@param AddCostume? boolean @default: true
 ---@param Count? integer @default: 1
 function TemporaryEffects:AddNullEffect(NullId, AddCostume, Count)
@@ -38,12 +38,12 @@ end
 function TemporaryEffects:GetEffectsList()
 end
 
----@param NullId ItemConfigNullItemID
+---@param NullId integer @ItemConfigNullItemID
 ---@return TemporaryEffect
 function TemporaryEffects:GetNullEffect(NullId)
 end
 
----@param NullId ItemConfigNullItemID
+---@param NullId integer @ItemConfigNullItemID
 ---@return integer
 function TemporaryEffects:GetNullEffectNum(NullId)
 end
@@ -63,7 +63,7 @@ end
 function TemporaryEffects:HasCollectibleEffect(CollectibleType)
 end
 
----@param NullId ItemConfigNullItemID
+---@param NullId integer @ItemConfigNullItemID
 ---@return boolean
 function TemporaryEffects:HasNullEffect(NullId)
 end
@@ -78,7 +78,7 @@ end
 function TemporaryEffects:RemoveCollectibleEffect(CollectibleType, Count)
 end
 
----@param NullId ItemConfigNullItemID
+---@param NullId integer @ItemConfigNullItemID
 ---@param Count? integer @default: 1
 function TemporaryEffects:RemoveNullEffect(NullId, Count)
 end
