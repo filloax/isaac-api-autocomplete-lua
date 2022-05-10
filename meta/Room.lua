@@ -3,6 +3,8 @@
 ---@class Room
 local Room = {}
 
+---@class LinecheckMode : integer
+
 ---@param Pos1 Vector
 ---@param Pos2 Vector
 ---@param Mode LinecheckMode
