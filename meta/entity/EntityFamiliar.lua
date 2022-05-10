@@ -1,6 +1,6 @@
 ---@meta
 
----@class EntityFamiliar
+---@class EntityFamiliar : Entity
 ---@field Coins integer
 ---@field FireCooldown integer
 ---@field HeadFrameDelay integer

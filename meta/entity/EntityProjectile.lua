@@ -1,6 +1,6 @@
 ---@meta
 
----@class EntityProjectile
+---@class EntityProjectile : Entity
 ---@field Acceleration number
 ---@field ChangeFlags integer
 ---@field ChangeTimeout integer

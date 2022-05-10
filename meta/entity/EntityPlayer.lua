@@ -1,6 +1,6 @@
 ---@meta
 
----@class EntityPlayer
+---@class EntityPlayer : Entity
 ---@field BabySkin BabySubType
 ---@field CanFly boolean
 ---@field ControllerIndex integer @const

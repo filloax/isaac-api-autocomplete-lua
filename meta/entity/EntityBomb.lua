@@ -1,6 +1,6 @@
 ---@meta
 
----@class EntityBomb
+---@class EntityBomb : Entity
 ---@field ExplosionDamage number
 ---@field Flags TearFlags
 ---@field IsFetus boolean

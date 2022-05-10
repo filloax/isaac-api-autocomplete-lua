@@ -1,6 +1,6 @@
 ---@meta
 
----@class EntityPickup
+---@class EntityPickup : Entity
 ---@field AutoUpdatePrice boolean
 ---@field Charge integer
 ---@field OptionsPickupIndex integer

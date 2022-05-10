@@ -1,6 +1,6 @@
 ---@meta
 
----@class EntityEffect
+---@class EntityEffect : Entity
 ---@field DamageSource integer
 ---@field FallingAcceleration number
 ---@field FallingSpeed number

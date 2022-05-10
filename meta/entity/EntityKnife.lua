@@ -1,6 +1,6 @@
 ---@meta
 
----@class EntityKnife
+---@class EntityKnife : Entity
 ---@field Charge number
 ---@field MaxDistance number
 ---@field PathFollowSpeed number
