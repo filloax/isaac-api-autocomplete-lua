@@ -46,10 +46,12 @@ TYPE_MAP = {
     'CardList': 'CardConfigList',
     'ItemList': 'ItemConfigList',
     'PillList': 'PillConfigList',
+    'SpawnList': 'CppList_RoomConfigSpawn',
+    'EntryList': 'CppList_RoomConfigEntries',
 }
 
 NAME_BLACKLIST = [
-    'ActiveItemDesc'
+    'SecondaryActiveItem'
 ]
 
 infiles: "list[TextIO]" = args.input
