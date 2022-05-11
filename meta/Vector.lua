@@ -1,7 +1,6 @@
 ---@meta
 
 ---@type fun(x: number, y: number): Vector
----@type table
 _G.Vector = {}
 _G.Vector.One = Vector(1, 1)
 _G.Vector.Zero = Vector(0, 0)
