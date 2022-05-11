@@ -9,6 +9,10 @@
 ---@field Scale Vector
 local Sprite = {}
 
+---@return Sprite
+function _G.Sprite()
+end
+
 ---@return string
 function Sprite:GetAnimation()
 end
