@@ -50,7 +50,7 @@ end
 function EntityLaser:GetEndPoint()
 end
 
----@return userdata_@HomingLaser::SampleList
+---@return userdata @HomingLaser::SampleList
 function EntityLaser:GetNonOptimizedSamples()
 end
 
@@ -58,7 +58,7 @@ end
 function EntityLaser:GetRenderZ()
 end
 
----@return userdata_@HomingLaser::SampleList
+---@return userdata @HomingLaser::SampleList
 function EntityLaser:GetSamples()
 end
 
@@ -86,7 +86,7 @@ end
 function EntityLaser:SetBlackHpDropChance(Chance)
 end
 
----@param Type integer_@LaserHomingType
+---@param Type integer @LaserHomingType
 function EntityLaser:SetHomingType(Type)
 end
 

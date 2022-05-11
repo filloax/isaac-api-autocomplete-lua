@@ -36,6 +36,7 @@ TYPE_MAP = {
     'int': 'integer',
     'float': 'number',
     'char': 'string',
+    'bool': 'boolean',
     'EntityDesc': 'userdata @EntityDesc',
     'HomingLaser::SampleList': 'userdata @HomingLaser::SampleList',
     'LaserHomingType': 'integer @LaserHomingType',
@@ -44,6 +45,7 @@ TYPE_MAP = {
     'GetLRoomTileDesc': 'userdata @GetLRoomTileDesc',
     'RoomDescriptor List': 'CppList_RoomDescriptor',
     'Item': 'ItemConfig_Item',
+    'ItemConfigItem': 'ItemConfig_Item',
     'Costume': 'ItemConfig_Costume',
     'CardList': 'CardConfigList',
     'ItemList': 'ItemConfigList',
@@ -62,6 +64,8 @@ TYPE_MAP = {
     'QueueItemData': 'QueuedItemData',
     'ProjectilesMode': 'integer @ProjectilesMode',
     'MultiShotParams': 'userdata @MultiShotParams',
+    'PlayerPocketItem': 'userdata @PlayerPocketItem',
+    'UseFlags': 'UseFlag',
 }
 
 NAME_BLACKLIST = [

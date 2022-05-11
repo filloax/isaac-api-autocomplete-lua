@@ -716,7 +716,7 @@ function EntityPlayer:GetPlayerType()
 end
 
 ---@param SlotId integer
----@return PlayerPocketItem
+---@return userdata @PlayerPocketItem
 function EntityPlayer:GetPocketItem(SlotId)
 end
 
@@ -927,10 +927,10 @@ end
 function EntityPlayer:QueueExtraAnimation(Animation)
 end
 
----@param Item ItemConfigItem
+---@param Item ItemConfig_Item
 ---@param Charge? integer @default: 0
 ---@param Touched? boolean @default: false
----@param Golden? bool @default: false
+---@param Golden? boolean @default: false
 ---@param VarData? integer @default: 0
 function EntityPlayer:QueueItem(Item, Charge, Touched, Golden, VarData)
 end
@@ -952,7 +952,7 @@ end
 function EntityPlayer:RemoveCollectible(Type, IgnoreModifiers, ActiveSlot, RemoveFromPlayerForm)
 end
 
----@param Item ItemConfigItem
+---@param Item ItemConfig_Item
 function EntityPlayer:RemoveCostume(Item)
 end
 
@@ -984,7 +984,7 @@ end
 function EntityPlayer:RenderTop(position)
 end
 
----@param Item ItemConfigItem
+---@param Item ItemConfig_Item
 ---@param SpritePath string
 ---@param SpriteId integer
 function EntityPlayer:ReplaceCostumeSprite(Item, SpritePath, SpriteId)
@@ -1120,7 +1120,7 @@ function EntityPlayer:UpdateCanShoot()
 end
 
 ---@param Item CollectibleType
----@param UseFlags? UseFlags @default: 0
+---@param UseFlags? UseFlag @default: 0
 ---@param Slot? ActiveSlot @default: -1
 ---@diagnostic disable-next-line: duplicate-set-field
 function EntityPlayer:UseActiveItem(Item, UseFlags, Slot)
@@ -1137,13 +1137,13 @@ function EntityPlayer:UseActiveItem(Item, ShowAnim, KeepActiveItem, AllowNonMain
 end
 
 ---@param ID Card
----@param UseFlags? UseFlags @default: 0
+---@param UseFlags? UseFlag @default: 0
 function EntityPlayer:UseCard(ID, UseFlags)
 end
 
 ---@param ID PillEffect
 ---@param PillColor PillColor
----@param UseFlags? UseFlags @default: 0
+---@param UseFlags? UseFlag @default: 0
 function EntityPlayer:UsePill(ID, PillColor, UseFlags)
 end
 
