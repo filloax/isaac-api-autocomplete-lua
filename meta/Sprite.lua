@@ -7,6 +7,7 @@
 ---@field Offset Vector
 ---@field PlaybackSpeed number
 ---@field Scale Vector
+---@field Rotation number
 local Sprite = {}
 
 ---@return Sprite
