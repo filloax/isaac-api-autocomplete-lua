@@ -17,7 +17,6 @@ end
 (search-and-replace {classname} after)
 """
 
-from email.mime import base
 import re
 import os, sys
 import argparse
