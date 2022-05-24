@@ -1,5 +1,7 @@
 # Isaac Modding API Autocomplete
 
+Now published as a [VSCode extension](https://github.com/filloax/isaac-lua-api-vscode) for easier installation!
+
 *Tired of having to go to the [docs](https://wofsauge.github.io/IsaacDocs/rep/) every time you want to mod any small thing? Of having to run the whole game to find out if you made an error that would have been immediately visible in the editor in any other language? Or just want an autocomplete that isn't "here's every single function name I found in the mod folder"? Then this might help you.*
 
 ![autocomplete example 1](./readme/screen1.png)
@@ -8,6 +10,14 @@ This repo includes [EmmyLUA annotations](https://emmylua.github.io/annotation.ht
 
 
 ## How to use
+
+Install the [VSCode extension](https://github.com/filloax/isaac-lua-api-vscode) from VSCode or the marketplace:
+
+[![Marketplace Version](https://img.shields.io/visual-studio-marketplace/v/Filloax.isaac-lua-api-vscode?label=Visual%20Studio%20Marketplace&logo=visual-studio-code "Current Version")](https://marketplace.visualstudio.com/items?itemName=Filloax.isaac-lua-api-vscode)
+
+### Manual install
+
+Before the VSCode extension was made. Can potentially be used with other editors.
 
 This was tested with VSCode using the [vscode-lua](https://github.com/sumneko/vscode-lua) ([annotation documentation here](https://github.com/sumneko/lua-language-server/wiki/EmmyLua-Annotations)) extension by sumneko, which includes support for EmmyLUA annotations. Other editors that support them may work.
 
@@ -50,4 +60,4 @@ This was tested with VSCode using the [vscode-lua](https://github.com/sumneko/vs
 
 * Ought to find a way to automate it, as right now the convertdoc.py script takes text manually copypasted from the rendered wofsauge's docs. Ideally, it should read their source, so that it can be automated to update when the docs are updated.
 
-* If anyone knows how to make a vscode extension for this, please do.
+~~* If anyone knows how to make a vscode extension for this, please do.~~ Done!
