@@ -1,5 +1,3 @@
----@meta
-
 ---@class EntityFamiliar : Entity
 ---@field Coins integer
 ---@field FireCooldown integer

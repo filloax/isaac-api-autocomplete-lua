@@ -1,5 +1,3 @@
----@meta
-
 ---@class RoomConfig_Spawn
 ---@field EntryCount integer
 ---@field SumWeights number

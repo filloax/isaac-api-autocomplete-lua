@@ -1,5 +1,3 @@
----@meta
-
 ---@class TemporaryEffects
 local TemporaryEffects = {}
 

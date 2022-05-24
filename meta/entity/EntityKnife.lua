@@ -1,5 +1,3 @@
----@meta
-
 ---@class EntityKnife : Entity
 ---@field Charge number
 ---@field MaxDistance number

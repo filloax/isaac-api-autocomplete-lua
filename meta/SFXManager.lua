@@ -1,5 +1,3 @@
----@meta
-
 ---@class SFXManager
 local SFXManager = {}
 

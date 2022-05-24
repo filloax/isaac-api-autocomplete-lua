@@ -1,5 +1,3 @@
----@meta
-
 ---@class EntityPlayer : Entity
 ---@field BabySkin BabySubType
 ---@field CanFly boolean

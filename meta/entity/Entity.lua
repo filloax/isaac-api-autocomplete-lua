@@ -1,5 +1,3 @@
----@meta
-
 ---@class Entity
 ---@field Child Entity
 ---@field CollisionDamage number

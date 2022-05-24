@@ -1,5 +1,3 @@
----@meta
-
 ---@class Level
 ---@field DungeonReturnPosition Vector
 ---@field DungeonReturnRoomIndex integer

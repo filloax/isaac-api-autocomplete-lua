@@ -1,5 +1,3 @@
----@meta
-
 ---@class ItemPool
 local ItemPool = {}
 

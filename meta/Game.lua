@@ -1,5 +1,3 @@
----@meta
-
 ---@class Game
 ---@field BlueWombParTime integer
 ---@field BossRushParTime integer

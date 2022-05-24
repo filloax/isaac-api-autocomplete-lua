@@ -1,5 +1,3 @@
----@meta
-
 ---@class CppList
 local CppList = {}
 

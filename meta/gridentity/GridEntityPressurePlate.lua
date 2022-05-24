@@ -1,5 +1,3 @@
----@meta
-
 ---@class GridEntityPressurePlate : GridEntity
 ---@field GreedModeRNG RNG
 ---@field NextGreedAnimation string

@@ -1,5 +1,3 @@
----@meta
-
 ---@type fun(x: number, y: number): Vector
 _G.Vector = {}
 _G.Vector.One = Vector(1, 1)

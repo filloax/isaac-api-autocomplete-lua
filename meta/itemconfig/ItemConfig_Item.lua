@@ -1,5 +1,3 @@
----@meta
-
 ---@class ItemConfig_Item
 ---@field AchievementID integer
 ---@field AddBlackHearts integer

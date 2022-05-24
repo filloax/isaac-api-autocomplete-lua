@@ -1,5 +1,3 @@
----@meta
-
 ---@class ItemConfig_Card
 ---@field AchievementID integer
 ---@field Description string

@@ -1,5 +1,3 @@
----@meta
-
 ---@class ItemConfig_Costume
 ---@field Anm2Path string
 ---@field HasOverlay boolean

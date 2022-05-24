@@ -1,5 +1,3 @@
----@meta
-
 ---@class GridEntityPoop : GridEntity
 ---@field ReducedSpawnRate boolean
 ---@field ReviveTimer integer

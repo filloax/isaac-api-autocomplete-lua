@@ -1,5 +1,3 @@
----@meta
-
 ---@class RoomConfig_Entry
 ---@field Subtype integer
 ---@field Type EntityType

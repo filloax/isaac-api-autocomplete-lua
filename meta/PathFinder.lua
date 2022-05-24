@@ -1,5 +1,3 @@
----@meta
-
 ---@class PathFinder
 local PathFinder = {}
 

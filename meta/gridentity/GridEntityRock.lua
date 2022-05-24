@@ -1,5 +1,3 @@
----@meta
-
 ---@class GridEntityRock : GridEntity
 ---@field Anim string
 ---@field FrameCnt integer

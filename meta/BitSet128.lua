@@ -1,5 +1,3 @@
----@meta
-
 ---@class BitSet128
 ---@field l integer
 ---@field h integer

@@ -1,5 +1,3 @@
----@meta
-
 ---@class RoomConfig_Room
 ---@field Difficulty Difficulty @const
 ---@field Doors integer @const

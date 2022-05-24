@@ -1,5 +1,3 @@
----@meta
-
 ---@class EntityRef
 ---@field Entity Entity
 ---@field IsCharmed boolean

@@ -1,5 +1,3 @@
----@meta
-
 ---@class GridEntity
 ---@field CollisionClass GridCollisionClass
 ---@field Desc GridEntityDesc

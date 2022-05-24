@@ -1,5 +1,3 @@
----@meta
-
 ---@class EntityPtr
 ---@field Ref Entity
 local EntityPtr = {}

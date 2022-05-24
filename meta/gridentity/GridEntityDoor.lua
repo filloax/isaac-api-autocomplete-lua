@@ -1,5 +1,3 @@
----@meta
-
 ---@class GridEntityDoor : GridEntity
 ---@field Busted boolean
 ---@field CloseAnimation string

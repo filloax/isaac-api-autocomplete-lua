@@ -1,5 +1,3 @@
----@meta
-
 ---@class RoomDescriptor
 ---@field AllowedDoors userdata @DoorSet
 ---@field AwardSeed integer

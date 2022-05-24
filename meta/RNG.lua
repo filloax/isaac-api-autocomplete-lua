@@ -1,5 +1,3 @@
----@meta
-
 ---@class RNG
 local RNG = {}
 

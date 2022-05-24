@@ -1,5 +1,3 @@
----@meta
-
 ---@class Input
 _G.Input = {}
 

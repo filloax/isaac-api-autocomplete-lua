@@ -1,5 +1,3 @@
----@meta
-
 ---@class GridEntityDesc : GridEntity
 ---@field Initialized boolean
 ---@field SpawnCount integer

@@ -1,5 +1,3 @@
----@meta
-
 ---@class TearParams
 ---@field BombVariant integer
 ---@field TearColor Color

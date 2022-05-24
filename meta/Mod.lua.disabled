@@ -1,5 +1,3 @@
----@meta
-
 -- Disabled as it will complain about mod tables with added functions
 -- in mods with more files, depending on how they are handled; you can
 -- re-enable it and keep it if you don't have that problem

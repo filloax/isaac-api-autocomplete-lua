@@ -1,5 +1,3 @@
----@meta
-
 ---@class EntityBomb : Entity
 ---@field ExplosionDamage number
 ---@field Flags TearFlags

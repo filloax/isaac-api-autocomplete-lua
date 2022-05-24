@@ -1,5 +1,3 @@
----@meta
-
 ---@class GridEntityPit : GridEntity
 ---@field HasLadder boolean
 local GridEntityPit = {}

@@ -1,5 +1,3 @@
----@meta
-
 ---@class TemporaryEffect
 ---@field Cooldown integer
 ---@field Count integer

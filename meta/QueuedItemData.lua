@@ -1,5 +1,3 @@
----@meta
-
 ---@class QueuedItemData
 ---@field Charge integer
 ---@field Item ItemConfig_Item

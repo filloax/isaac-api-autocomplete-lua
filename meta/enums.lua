@@ -1,5 +1,3 @@
----@meta
-
 ---@class ActionTriggers : integer
 ---@class ActiveSlot : integer
 ---@class BabySubType : integer

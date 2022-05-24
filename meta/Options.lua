@@ -1,5 +1,3 @@
----@meta
-
 ---@class Options
 ---@type integer
 Options.AnnouncerVoiceMode = nil

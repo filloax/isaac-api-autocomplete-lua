@@ -1,5 +1,3 @@
----@meta
-
 ---@class EntityLaser : Entity
 ---@field Angle number
 ---@field AngleDegrees number

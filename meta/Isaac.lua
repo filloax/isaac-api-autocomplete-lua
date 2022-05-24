@@ -1,5 +1,3 @@
----@meta
-
 ---@class Isaac
 _G.Isaac = {}
 

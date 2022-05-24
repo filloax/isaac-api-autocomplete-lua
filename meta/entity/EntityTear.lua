@@ -1,5 +1,3 @@
----@meta
-
 ---@class EntityTear : Entity
 ---@field BaseDamage number @const
 ---@field BaseScale number @const

@@ -1,5 +1,3 @@
----@meta
-
 ---@class KColor
 ---@field Alpha number
 ---@field Blue number

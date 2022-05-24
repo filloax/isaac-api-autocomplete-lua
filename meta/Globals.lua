@@ -1,5 +1,3 @@
----@meta
-
 -- Others (mostly constructors) are defined in their own files
 
 ---@param object userdata

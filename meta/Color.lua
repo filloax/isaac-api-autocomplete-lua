@@ -1,5 +1,3 @@
----@meta
-
 ---@class Color
 ---@field A number
 ---@field B number

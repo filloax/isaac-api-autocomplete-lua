@@ -1,5 +1,3 @@
----@meta
-
 ---@class ItemConfig
 _G.ItemConfig = {}
 

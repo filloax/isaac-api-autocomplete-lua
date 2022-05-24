@@ -1,5 +1,3 @@
----@meta
-
 ---@class ShockwaveParams
 ---@field Age integer
 ---@field LifeSpan integer

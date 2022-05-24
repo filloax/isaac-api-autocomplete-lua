@@ -1,5 +1,3 @@
----@meta
-
 ---@class ActiveItemDesc
 ---@field BatteryCharge integer
 ---@field Charge integer

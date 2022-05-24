@@ -1,5 +1,3 @@
----@meta
-
 ---@class Sprite
 ---@field Color Color
 ---@field FlipX boolean

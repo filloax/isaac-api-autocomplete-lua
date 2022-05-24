@@ -1,5 +1,3 @@
----@meta
-
 ---@class PosVel
 ---@field Position Vector
 ---@field Velocity Vector

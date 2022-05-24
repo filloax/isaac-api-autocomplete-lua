@@ -1,5 +1,3 @@
----@meta
-
 ---@class EntityNPC : Entity
 ---@field CanShutDoors boolean
 ---@field ChildNPC EntityNPC @const

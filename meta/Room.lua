@@ -1,5 +1,3 @@
----@meta
-
 ---@class Room
 local Room = {}
 

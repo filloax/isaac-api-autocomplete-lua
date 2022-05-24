@@ -1,5 +1,3 @@
----@meta
-
 ---@class MusicManager
 local MusicManager = {}
 

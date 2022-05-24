@@ -1,5 +1,3 @@
----@meta
-
 ---@return ProjectileParams
 function ProjectileParams()
 end

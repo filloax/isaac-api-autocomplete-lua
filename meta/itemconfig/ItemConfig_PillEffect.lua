@@ -1,5 +1,3 @@
----@meta
-
 ---@class ItemConfig_PillEffect
 ---@field AchievementID integer
 ---@field GreedModeAllowed boolean
