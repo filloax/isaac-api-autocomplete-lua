@@ -77,7 +77,7 @@ function GridEntityDoor:TryBlowOpen(FromExplosion, source)
 end
 
 ---@param player EntityPlayer
----@param Force boolean
+---@param Force? boolean
 ---@return boolean
 function GridEntityDoor:TryUnlock(player, Force)
 end

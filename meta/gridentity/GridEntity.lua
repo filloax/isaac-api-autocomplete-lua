@@ -6,7 +6,7 @@
 ---@field VarData integer
 local GridEntity = {}
 
----@param Immediate boolean
+---@param Immediate? boolean
 ---@return boolean
 function GridEntity:Destroy(Immediate)
 end

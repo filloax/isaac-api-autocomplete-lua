@@ -53,14 +53,14 @@ end
 ---@param SubType? integer @default: -1
 ---@param Cache? boolean @default: false
 ---@param IgnoreFriendly? boolean @default: false
----@return table
+---@return Entity[]
 function Isaac.FindByType(Type, Variant, SubType, Cache, IgnoreFriendly)
 end
 
 ---@param Position Vector
 ---@param Radius number
 ---@param Partitions? integer @default: 0xFFFFFFFF
----@return table
+---@return Entity[]
 function Isaac.FindInRadius(Position, Radius, Partitions)
 end
 

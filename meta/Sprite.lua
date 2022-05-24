@@ -110,8 +110,8 @@ function Sprite:RemoveOverlay()
 end
 
 ---@param Position Vector
----@param TopLeftClamp Vector
----@param BottomRightClamp Vector
+---@param TopLeftClamp? Vector @default: Vector.Zero
+---@param BottomRightClamp? Vector @default: Vector.Zero
 function Sprite:Render(Position, TopLeftClamp, BottomRightClamp)
 end
 
@@ -130,16 +130,16 @@ end
 function Sprite:Reset()
 end
 
+--- Passing Reset as false will continue the animation from the current frame.
+--- This is a really good tool for familiars that alternate between different
+--- FloatDirection animations dynamically and other entities that follow
+--- similar behaviors.
 ---@param AnimationName string
 ---@param Reset? boolean @default: true
 ---@return boolean
 function Sprite:SetAnimation(AnimationName, Reset)
 end
 
---- Passing Reset as false will continue the animation from the current frame.
---- This is a really good tool for familiars that alternate between different
---- FloatDirection animations dynamically and other entities that follow
---- similar behaviors.
 ---@param AnimationName string
 ---@param FrameNum integer
 ---@overload fun(self: Sprite, FrameNum: integer)

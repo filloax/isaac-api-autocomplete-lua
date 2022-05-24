@@ -7,7 +7,7 @@
 ---@field FlipX boolean
 ---@field FrameCount integer
 ---@field Friction number
----@field EntityGridCollisionClass EntityGridCollisionClass
+---@field GridCollisionClass EntityGridCollisionClass
 ---@field HitPoints number
 ---@field Index integer
 ---@field InitSeed integer
@@ -23,6 +23,7 @@
 ---@field SpawnerType integer @EntityType
 ---@field SpawnerVariant integer
 ---@field SpawnGridIndex integer
+---@field Color Color
 ---@field SplatColor Color
 ---@field SpriteOffset Vector
 ---@field SpriteRotation number
@@ -180,7 +181,7 @@ end
 function Entity:HasMortalDamage()
 end
 
----@param includeDead boolean
+---@param includeDead? boolean
 ---@return boolean
 function Entity:IsActiveEnemy(includeDead)
 end
