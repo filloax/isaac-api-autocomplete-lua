@@ -11,3 +11,4 @@
 ---@field SkinColor SkinColor
 local ItemConfig_Costume = {}
 
+---@class SkinColor : integer
