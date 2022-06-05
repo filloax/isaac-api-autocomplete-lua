@@ -277,23 +277,23 @@ end
 function Entity:TakeDamage(Damage, Flags, Source, DamageCountdown)
 end
 
----@return any @EntityBomb
+---@return EntityBomb
 function Entity:ToBomb()
 end
 
----@return any @EntityEffect
+---@return EntityEffect
 function Entity:ToEffect()
 end
 
----@return any @EntityFamiliar
+---@return EntityFamiliar
 function Entity:ToFamiliar()
 end
 
----@return any @EntityKnife
+---@return EntityKnife
 function Entity:ToKnife()
 end
 
----@return any @EntityLaser
+---@return EntityLaser
 function Entity:ToLaser()
 end
 
@@ -301,19 +301,19 @@ end
 function Entity:ToNPC()
 end
 
----@return any @EntityPickup
+---@return EntityPickup
 function Entity:ToPickup()
 end
 
----@return any @EntityPlayer
+---@return EntityPlayer
 function Entity:ToPlayer()
 end
 
----@return any @EntityProjectile
+---@return EntityProjectile
 function Entity:ToProjectile()
 end
 
----@return any @EntityTear
+---@return EntityTear
 function Entity:ToTear()
 end
 
