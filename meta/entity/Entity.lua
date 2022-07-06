@@ -19,8 +19,8 @@
 ---@field RenderZOffset integer
 ---@field Size number
 ---@field SizeMulti Vector
----@field SpawnerEntity Entity
----@field SpawnerType integer @EntityType
+---@field SpawnerEntity Entity?
+---@field SpawnerType EntityType
 ---@field SpawnerVariant integer
 ---@field SpawnGridIndex integer
 ---@field Color Color
@@ -31,7 +31,7 @@
 ---@field SubType integer
 ---@field Target Entity
 ---@field TargetPosition Vector
----@field Type integer @EntityType
+---@field Type EntityType
 ---@field Variant integer
 ---@field Velocity Vector
 ---@field Visible boolean
