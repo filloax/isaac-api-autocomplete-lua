@@ -6,6 +6,7 @@
 ---@field GO number
 ---@field R number
 ---@field RO number
+---@operator mul(Color): Color
 local Color = {}
 
 ---@param R number
@@ -18,12 +19,6 @@ local Color = {}
 ---@return Color
 function _G.Color(R, G, B, A, RO, GO, BO)
 end
-
---not actual method, metamethods not supported for now
----@param right Color
----@return Color
---function Color:__mul(right)
---end
 
 ---@param m1 Color
 ---@param m2 Color

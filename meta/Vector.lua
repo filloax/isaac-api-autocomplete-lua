@@ -22,6 +22,11 @@ end
 ---@class Vector
 ---@field X number
 ---@field Y number
+---@operator add(Vector): Vector
+---@operator sub(Vector): Vector
+---@operator unm: Vector
+---@operator mul(number|Vector): Vector
+---@operator div(number|Vector): Vector
 local Vector = {}
 
 ---@param Right Vector
