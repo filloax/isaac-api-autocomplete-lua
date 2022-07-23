@@ -1,3 +1,4 @@
+---@enum ModCallbacks
 ModCallbacks = {
 	MC_NPC_UPDATE = 0,			-- Callback is a method that takes (EntityNPC). Called after an NPC is updated. When adding callback, specify an EntityType so it is only called for entities of that type.
 	MC_POST_UPDATE = 1,			-- Callback is a method with no arguments. Called after game update.
@@ -91,6 +92,7 @@ ModCallbacks = {
 	MC_PRE_ROOM_ENTITY_SPAWN = 71 -- (EntityType Type, integer Variant, integer SubType, integer GridIndex, integer Seed) - This is called when entering a new room, before spawning entities which are part its layout. Grid entities will also trigger this callback and their type will the same as the type used by the gridspawn command. Because of this, effects are assigned the type 999 instead of 1000 in this callback. Optional return: an array table with new values { Type, Variant, Subtype }. Returning a table will override any replacements that might naturally occur i.e. enemy variants.
 }
 
+---@enum EntityType
 EntityType = {
 	ENTITY_NULL = 0,
 	ENTITY_PLAYER = 1,     --  1 player
@@ -456,6 +458,7 @@ EntityType = {
 	ENTITY_TEXT = 9001
 }
 
+---@enum GridEntityType
 GridEntityType = {
 	GRID_NULL = 0,
 	GRID_DECORATION = 1,
@@ -489,6 +492,7 @@ GridEntityType = {
 	GRID_ROCK_GOLD = 27,
 }
 
+---@enum EffectVariant
 EffectVariant = {
 	EFFECT_NULL = 0,
 	BOMB_EXPLOSION = 1,
@@ -695,6 +699,7 @@ EffectVariant = {
 	ULTRA_DEATH_SCYTHE = 199,
 }
 
+---@enum PickupVariant
 PickupVariant = {
 	PICKUP_NULL = 0,
 	PICKUP_HEART = 10,
@@ -727,6 +732,7 @@ PickupVariant = {
 	PICKUP_MOMSCHEST = 390,
 }
 
+---@enum HeartSubType
 HeartSubType = {
 	HEART_FULL = 1,
 	HEART_HALF = 2,
@@ -742,6 +748,7 @@ HeartSubType = {
 	HEART_ROTTEN = 12,
 }
 
+---@enum CoinSubType
 CoinSubType = {
 	COIN_PENNY = 1,
 	COIN_NICKEL = 2,
@@ -752,6 +759,7 @@ CoinSubType = {
 	COIN_GOLDEN = 7,
 }
 
+---@enum KeySubType
 KeySubType = {
 	KEY_NORMAL = 1,
 	KEY_GOLDEN = 2,
@@ -759,6 +767,7 @@ KeySubType = {
 	KEY_CHARGED = 4,
 }
 
+---@enum BatterySubType
 BatterySubType = {
 	BATTERY_NORMAL = 1,
 	BATTERY_MICRO = 2,
@@ -766,16 +775,19 @@ BatterySubType = {
 	BATTERY_GOLDEN = 4,
 }
 
+---@enum SackSubType
 SackSubType = {
 	SACK_NORMAL = 1,
 	SACK_BLACK = 2,
 }
 
+---@enum ChestSubType
 ChestSubType = {
 	CHEST_OPENED = 0,
 	CHEST_CLOSED = 1
 }
 
+---@enum BombSubType
 BombSubType = {
 	BOMB_NORMAL = 1,
 	BOMB_DOUBLEPACK = 2,
@@ -786,11 +798,13 @@ BombSubType = {
 	BOMB_GIGA = 7,
 }
 
+---@enum BedSubType
 BedSubType = {
 	BED_ISAAC = 0,
 	BED_MOM = 1,
 }
 
+---@enum PickupPrice
 PickupPrice = {
 	PRICE_ONE_HEART = -1,
 	PRICE_TWO_HEARTS = -2,
@@ -801,11 +815,13 @@ PickupPrice = {
 	PRICE_FREE = -1000,
 }
 
+---@enum PoopPickupSubType
 PoopPickupSubType = {
 	POOP_SMALL = 0,
 	POOP_BIG = 1,
 }
 
+---@enum Challenge
 Challenge = {
 	CHALLENGE_NULL = 0,
 	CHALLENGE_PITCH_BLACK = 1,
@@ -859,6 +875,7 @@ Challenge = {
 	NUM_CHALLENGES = 46
 }
 
+---@enum BombVariant
 BombVariant = {
     BOMB_NORMAL = 0,
     BOMB_BIG = 1,
@@ -883,6 +900,7 @@ BombVariant = {
 	BOMB_ROCKET_GIGA = 20,
 }
 
+---@enum CacheFlag
 CacheFlag = {
 	CACHE_DAMAGE = 0x1,
 	CACHE_FIREDELAY = 0x2,
@@ -904,6 +922,7 @@ CacheFlag = {
 	CACHE_TWIN_SYNC = 0x80000000, -- special cache flag used when syncing Jacob and Esau's speed
 }
 
+---@enum NpcState
 NpcState = {
 	STATE_INIT = 0,
 	STATE_APPEAR = 1,
@@ -926,6 +945,7 @@ NpcState = {
 	STATE_DEATH = 18
 }
 
+---@enum EntityGridCollisionClass
 EntityGridCollisionClass = {
 	GRIDCOLL_NONE = 0,
 	GRIDCOLL_WALLS_X = 1,	-- only collide with vertical walls
@@ -937,6 +957,7 @@ EntityGridCollisionClass = {
 	GRIDCOLL_PITSONLY = 7,	-- moving inside a pit, collide with everything else, correct position
 }
 	
+---@enum EntityCollisionClass
 EntityCollisionClass = {
 	ENTCOLL_NONE = 0,			-- no collision with other entities
 	ENTCOLL_PLAYERONLY = 1,		-- collide with player only
@@ -945,6 +966,7 @@ EntityCollisionClass = {
 	ENTCOLL_ALL = 4				-- collide with everything
 }
 
+---@enum EntityFlag
 EntityFlag = {
 	FLAG_NO_STATUS_EFFECTS = 1,			-- prevent freeze/poison/slow/charm/confusion/fear/burn
 	FLAG_NO_INTERPOLATE = 1<<1,			-- do not interpolate position
@@ -1014,6 +1036,7 @@ EntityFlag = {
 	FLAG_FRIENDLY_BALL = 1<<59,				-- Used to detect enemies spawned by Friendly Ball
 }
 
+---@enum DamageFlag
 DamageFlag = {
 	DAMAGE_NOKILL = 1,			-- damage can not kill the receiver
 	DAMAGE_FIRE = 1<<1,			-- source is some sort of fire (ie. fireplace)
@@ -1050,12 +1073,14 @@ DamageFlag = {
 	DAMAGE_SPAWN_RUNE = 1<<32,			-- should drop a rune if damage is lethal
 }
 
+---@enum SortingLayer
 SortingLayer = {
 	SORTING_BACKGROUND = 0,			-- Background level, behind grid entities (creep, pitfalls)
 	SORTING_DOOR = 1,				-- Used by door Xray animation
 	SORTING_NORMAL = 2				-- Uses Y position to determine Z sorting
 }
 
+---@enum FamiliarVariant
 FamiliarVariant = {
 	FAMILIAR_NULL = 0,
 	BROTHER_BOBBY = 1,
@@ -1237,6 +1262,7 @@ FamiliarVariant = {
 	FORGOTTEN_BODY = 900,
 }
 
+---@enum LocustSubtypes
 LocustSubtypes = {
 	LOCUST_OF_WRATH = 1,
 	LOCUST_OF_PESTILENCE = 2,
@@ -1245,6 +1271,7 @@ LocustSubtypes = {
 	LOCUST_OF_CONQUEST = 5
 }
 
+---@enum ItemType
 ItemType = {
 	ITEM_NULL = 0,
 	ITEM_PASSIVE = 1,
@@ -1253,6 +1280,7 @@ ItemType = {
 	ITEM_FAMILIAR = 4
 }
 
+---@enum NullItemID
 NullItemID = {
 	ID_NULL = - 1,
 	ID_EXPLOSIVE_DIARRHEA = 0,
@@ -1393,6 +1421,7 @@ NullItemID = {
 	NUM_NULLITEMS = 132
 }
 
+---@enum WeaponType
 WeaponType = {
 	WEAPON_TEARS = 1,
 	WEAPON_BRIMSTONE = 2,
@@ -1412,6 +1441,7 @@ WeaponType = {
 	NUM_WEAPON_TYPES = 16
 }
 
+---@enum PlayerSpriteLayer
 PlayerSpriteLayer = {
 	SPRITE_GLOW = 0,
 	SPRITE_BODY = 1,
@@ -1431,6 +1461,7 @@ PlayerSpriteLayer = {
 	NUM_SPRITE_LAYERS = 15
 }
 
+---@enum BabySubType
 BabySubType = {
 	BABY_UNASSIGNED = - 1,
 	BABY_SPIDER = 0,
@@ -1510,6 +1541,7 @@ BabySubType = {
 	BABY_BASIC = 71
 }
 
+---@enum LaserOffset
 LaserOffset = {
 	LASER_TECH1_OFFSET = 0,
 	LASER_TECH2_OFFSET = 1,
@@ -1520,6 +1552,7 @@ LaserOffset = {
 	LASER_TRACTOR_BEAM_OFFSET = 6
 }
 
+---@enum ActionTriggers
 ActionTriggers = {
 	ACTIONTRIGGER_NONE = 0,
 	ACTIONTRIGGER_BOMBPLACED = 1,
@@ -1530,6 +1563,7 @@ ActionTriggers = {
 	ACTIONTRIGGER_ITEMSDROPPED = 1 << 5
 }
 
+---@enum GridCollisionClass
 GridCollisionClass = {
 	COLLISION_NONE = 0,
 	COLLISION_PIT = 1,
@@ -1539,6 +1573,7 @@ GridCollisionClass = {
 	COLLISION_WALL_EXCEPT_PLAYER = 5
 }
 
+---@enum Direction
 Direction = {
 	NO_DIRECTION = -1,
 	LEFT = 0,
@@ -1547,6 +1582,7 @@ Direction = {
 	DOWN = 3
 }
 
+---@enum LevelStage
 LevelStage = {
 	STAGE_NULL = 0,
 	STAGE1_1 = 1,
@@ -1575,6 +1611,7 @@ LevelStage = {
 	NUM_BACKWARDS_STAGES = 7, -- Save stages up to Mausoleum II for the Ascent (7 stages)
 }
 
+---@enum StageType
 StageType = {
 	STAGETYPE_ORIGINAL = 0,
 	STAGETYPE_WOTL = 1,
@@ -1584,6 +1621,7 @@ StageType = {
 	STAGETYPE_REPENTANCE_B = 5,
 }
 
+---@enum RoomType
 RoomType = {
 	ROOM_NULL = 0,
 	ROOM_DEFAULT = 1,
@@ -1621,6 +1659,7 @@ RoomType = {
 	NUM_ROOMTYPES = 30
 }
 
+---@enum RoomShape
 RoomShape = {
 	ROOMSHAPE_1x1 = 1,
 	ROOMSHAPE_IH = 2,
@@ -1637,6 +1676,7 @@ RoomShape = {
 	NUM_ROOMSHAPES = 13
 }
 
+---@enum DoorSlot
 DoorSlot = {
 	NO_DOOR_SLOT = - 1,
 	LEFT0 = 0,
@@ -1650,6 +1690,7 @@ DoorSlot = {
 	NUM_DOOR_SLOTS = 8
 }
 
+---@enum LevelCurse
 LevelCurse = {
 	CURSE_NONE = 0,
 	CURSE_OF_DARKNESS = 1,
@@ -1663,6 +1704,7 @@ LevelCurse = {
 	NUM_CURSES = 9
 }
 
+---@enum PlayerType
 PlayerType = {
 	PLAYER_POSSESSOR = -1,
 	
@@ -1713,6 +1755,7 @@ PlayerType = {
 	NUM_PLAYER_TYPES = 41
 }
 
+---@enum PlayerForm
 PlayerForm = {
 	PLAYERFORM_GUPPY = 0,
 	PLAYERFORM_LORD_OF_THE_FLIES = 1,
@@ -1732,6 +1775,7 @@ PlayerForm = {
 	NUM_PLAYER_FORMS = 15
 }
 
+---@enum PillColor
 PillColor = {
 	PILL_NULL = 0,
 	PILL_BLUE_BLUE = 1,
@@ -1756,6 +1800,7 @@ PillColor = {
 	PILL_COLOR_MASK = 0x7ff,
 }
 
+---@enum Music
 Music = {
 	MUSIC_NULL = 0,
 	MUSIC_BASEMENT = 1,
@@ -1858,6 +1903,7 @@ Music = {
 	NUM_MUSIC = 119
 }
 
+---@enum SoundEffect
 SoundEffect = {
 	SOUND_NULL = 0,
 	SOUND_1UP = 1,
@@ -2613,6 +2659,7 @@ SoundEffect = {
 	NUM_SOUND_EFFECTS = 817
 }
 
+---@enum DoorState
 DoorState = {
 	STATE_INIT = 0,
 	STATE_CLOSED = 1,
@@ -2621,6 +2668,7 @@ DoorState = {
 	STATE_HALF_CRACKED = 4
 }
 
+---@enum DoorVariant
 DoorVariant = {
 	DOOR_UNSPECIFIED = 0,
 	DOOR_LOCKED = 1,
@@ -2633,6 +2681,7 @@ DoorVariant = {
 	DOOR_UNLOCKED = 8
 }
 
+---@enum Difficulty
 Difficulty = {
 	DIFFICULTY_NORMAL = 0,
 	DIFFICULTY_HARD = 1,
@@ -2640,6 +2689,7 @@ Difficulty = {
 	DIFFICULTY_GREEDIER = 3
 }
 
+---@enum LevelStateFlag
 LevelStateFlag = {
 	STATE_BUM_KILLED = 0,
 	STATE_EVIL_BUM_KILLED = 1,
@@ -2670,6 +2720,7 @@ LevelStateFlag = {
 	NUM_STATE_FLAGS = 24
 }
 
+---@enum GameStateFlag
 GameStateFlag = {
 	STATE_FAMINE_SPAWNED = 0,
 		STATE_PESTILENCE_SPAWNED = 1, -- obsolete
@@ -2726,6 +2777,7 @@ GameStateFlag = {
 	NUM_STATE_FLAGS = 49
 }
 
+---@enum CollectibleType
 CollectibleType = {
 	COLLECTIBLE_NULL = 0,
 	COLLECTIBLE_SAD_ONION = 1,
@@ -3480,6 +3532,7 @@ CollectibleType = {
 	NUM_COLLECTIBLES = 733
 }
 
+---@enum TrinketType
 TrinketType = {
 	TRINKET_NULL = 0,
 	TRINKET_SWALLOWED_PENNY = 1,
@@ -3692,6 +3745,7 @@ TrinketType = {
 	TRINKET_ID_MASK = 0x7fff,
 }
 
+---@enum PillEffect
 PillEffect = {
 	PILLEFFECT_NULL = - 1,
 	PILLEFFECT_BAD_GAS = 0,
@@ -3749,6 +3803,7 @@ PillEffect = {
 	NUM_PILL_EFFECTS = 50
 }
 
+---@enum Card
 Card = {
 	CARD_RANDOM = - 1,
 	CARD_NULL = 0,
@@ -3858,6 +3913,7 @@ Card = {
 	NUM_CARDS = 98
 }
 
+---@enum TearVariant
 TearVariant = {
 	BLUE = 0,
 	BLOOD = 1,
@@ -3917,6 +3973,7 @@ local function TEARFLAG(x)
 	return x >= 64 and BitSet128(0,1<<(x-64)) or BitSet128(1<<x,0)
 end
 
+---@enum TearFlags
 TearFlags = {
 	TEAR_NORMAL = BitSet128(0,0),
 	TEAR_SPECTRAL = TEARFLAG(0),					-- Ouija board type tear (goes thru obstacles)
@@ -4020,6 +4077,7 @@ TearFlags = {
 	TEAR_LUDOVICO = TEARFLAG(127),					-- Used as a weapon for Ludovico Technique
 }
 
+---@enum ButtonAction
 ButtonAction = {
 	ACTION_LEFT = 0,
 	ACTION_RIGHT = 1,
@@ -4052,6 +4110,7 @@ ButtonAction = {
 	ACTION_CONSOLE = 28 -- USE ONLY FOR HOOKING! To check the input use IsButtonTriggered with desired key
 }
 
+---@enum Keyboard
 Keyboard = {
 	KEY_SPACE = 32,
 	KEY_APOSTROPHE = 39,
@@ -4175,6 +4234,7 @@ Keyboard = {
 	KEY_MENU = 348
 }
 
+---@enum Mouse
 Mouse = {
 	MOUSE_BUTTON_1 = 0,
 	MOUSE_BUTTON_2 = 1,
@@ -4190,12 +4250,14 @@ Mouse = {
 	MOUSE_BUTTON_MIDDLE = 2
 }
 
+---@enum InputHook
 InputHook = {
 	IS_ACTION_PRESSED = 0,
 	IS_ACTION_TRIGGERED = 1,
 	GET_ACTION_VALUE = 2
 }
 
+---@enum SeedEffect
 SeedEffect = {
 	SEED_NORMAL = 0,
 	SEED_MOVEMENT_PITCH = 1,
@@ -4269,6 +4331,7 @@ SeedEffect = {
 	NUM_SEEDS = 79
 }
 
+---@enum GridRooms
 GridRooms = {
 	NO_ROOM_IDX = -99999,
 	
@@ -4301,6 +4364,7 @@ GridRooms = {
 	ROOM_MINESHAFT_IDX = -101,
 }
 
+---@enum ItemPoolType
 ItemPoolType = {
 	POOL_NULL = - 1,
 	POOL_TREASURE = 0,
@@ -4337,6 +4401,7 @@ ItemPoolType = {
 	NUM_ITEMPOOLS = 31
 }
 
+---@enum ProjectileVariant
 ProjectileVariant = {
 	PROJECTILE_NORMAL = 0,
 	PROJECTILE_BONE = 1,
@@ -4357,6 +4422,7 @@ ProjectileVariant = {
 	PROJECTILE_PEEP = 16,	-- eye shot
 }
 
+---@enum ProjectileFlags
 ProjectileFlags = {
 	SMART = 1,			-- follow player
 	EXPLODE = 1 << 1,		-- explode on impact
@@ -4419,6 +4485,7 @@ ProjectileFlags = {
 	FADEOUT = 1 << 57,
 }
 
+---@enum EntityPartition
 EntityPartition = {
 	FAMILIAR = 1,
 	BULLET = 1<<1,
@@ -4429,6 +4496,7 @@ EntityPartition = {
 	EFFECT = 1<<6
 }
 
+---@enum ChampionColor
 ChampionColor = {
 	RED = 0, -- 33% more life, full heart
 	YELLOW = 1, -- 33% faster, lil battery
@@ -4461,6 +4529,7 @@ ChampionColor = {
 	RAINBOW = 25, -- many champion effects combined, drops one of everything
 }
 
+---@enum ActiveSlot
 ActiveSlot = {
 	SLOT_PRIMARY = 0, -- main slot
 	SLOT_SECONDARY = 1, -- schoolbag slot
@@ -4468,6 +4537,7 @@ ActiveSlot = {
 	SLOT_POCKET2 = 3, -- single use card/pill slot (Dice Bag)
 }
 
+---@enum UseFlag
 UseFlag = {
 	USE_NOANIM = 1,				-- Don't play use animations
 	USE_NOCOSTUME = 1 << 1,		-- Don't add costume
@@ -4487,6 +4557,7 @@ UseFlag = {
 	USE_NOHUD = 1 << 11,		 -- Don't display text in the HUD (this is currently only used by Echo Chamber)  
 }
 
+---@enum RoomTransitionAnim
 RoomTransitionAnim = {
 	WALK = 0, -- mostly when using doors
 	FADE = 1, -- fadein/fadout used for Mom's Hand
@@ -4511,6 +4582,7 @@ RoomTransitionAnim = {
 	DEATH_CERTIFICATE = 20,
 }
 
+---@enum BackdropType
 BackdropType = {
 	BACKDROP_NULL = 0,
 	BASEMENT = 1,
@@ -4576,6 +4648,7 @@ BackdropType = {
 	NUM_BACKDROPS = 61
 }
 
+---@enum PoopSpellType
 PoopSpellType = {
 	SPELL_NONE = 0,
 
@@ -4597,6 +4670,7 @@ PoopSpellType = {
 	SPELL_QUEUE_SIZE = 6
 }
 
+---@enum LaserSubType
 LaserSubType = {
 	LASER_SUBTYPE_LINEAR = 0,				-- Typical laser that has a start and end point.
 	LASER_SUBTYPE_RING_LUDOVICO = 1,		-- Controlled ring laser a la Tech+Ludovico, Brim+Ludovico
@@ -4654,6 +4728,7 @@ ItemConfig.CARDTYPE_SPECIAL	= 3		-- Special cards (anything that doesn't fall in
 ItemConfig.CARDTYPE_SPECIAL_OBJECT = 4	-- Special pocket items that do not qualify as "cards"
 ItemConfig.CARDTYPE_TAROT_REVERSE = 5 	-- Reversed tarot cards
 
+---@enum RenderMode
 RenderMode = {
 	RENDER_NULL = 0,				-- Currently not rendering room entities
 	RENDER_NORMAL = 1,				-- Rendering room entities normally (in a dry room)
@@ -4691,6 +4766,7 @@ RoomDescriptor.FLAG_ROTGUT_CLEARED = 1<<16			-- Rotgut's heart was killed, immed
 RoomDescriptor.FLAG_PORTAL_LINKED = 1<<17				-- A portal spawned by Lil Portal now links to this room, don't create more portals that link to it
 RoomDescriptor.FLAG_BLUE_REDIRECT = 1<<18				-- If walking into this room through a door, redirect to a Blue Womb room instead (this is used by Blue Key)
 
+---@enum SkinColor
 SkinColor = {
 	SKIN_PINK = -1,
 	SKIN_WHITE = 0,
