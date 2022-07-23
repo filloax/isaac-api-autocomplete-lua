@@ -1120,18 +1120,8 @@ end
 ---@param Item CollectibleType
 ---@param UseFlags? UseFlag @default: 0
 ---@param Slot? ActiveSlot @default: -1
----@diagnostic disable-next-line: duplicate-set-field
+---@overload fun(Item: CollectibleType, ShowAnim?: boolean, KeepActiveItem?: boolean, AllowNonMainPlayer?: boolean, ToAddCostume?: boolean, Slot?: ActiveSlot)
 function EntityPlayer:UseActiveItem(Item, UseFlags, Slot)
-end
-
----@param Item CollectibleType
----@param ShowAnim? boolean @default: false
----@param KeepActiveItem? boolean @default: false
----@param AllowNonMainPlayer? boolean @default: true
----@param ToAddCostume? boolean @default: false
----@param Slot? ActiveSlot @default: -1
----@diagnostic disable-next-line: duplicate-set-field
-function EntityPlayer:UseActiveItem(Item, ShowAnim, KeepActiveItem, AllowNonMainPlayer, ToAddCostume, Slot)
 end
 
 ---@param ID Card
