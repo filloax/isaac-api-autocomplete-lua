@@ -263,7 +263,7 @@ end
 function Game:HasEncounteredBoss(Boss, Variant)
 end
 
----@return integer
+---@return boolean
 function Game:HasHallucination()
 end
 
@@ -334,7 +334,7 @@ end
 ---@param Variant integer
 ---@param Position Vector
 ---@param Velocity Vector
----@param Spawner Entity
+---@param Spawner Entity?
 ---@param SubType integer
 ---@param Seed integer
 ---@return Entity
