@@ -127,7 +127,7 @@ function EntityNPC:ResetPathFinderTarget()
 end
 
 ---@param Position Vector
----@param Spawner Entity
+---@param Spawner? Entity
 ---@param TargetPos Vector
 ---@param Big boolean
 ---@param YOffset number

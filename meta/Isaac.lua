@@ -25,7 +25,7 @@ end
 function Isaac.CountEnemies()
 end
 
----@param Spawner Entity
+---@param Spawner? Entity  Optionally specify only entities spawned by this entity
 ---@param Type? EntityType @default: EntityType.ENTITY_NULL
 ---@param Variant? integer @default: -1
 ---@param SubType? integer @default: -1
@@ -180,7 +180,7 @@ end
 ---@param gridEntityType GridEntityType
 ---@param variant integer
 ---@param position Vector
----@param forced boolean
+---@param forced? boolean [bug] currently doesn't have any effect
 ---@return GridEntity
 function Isaac.GridSpawn(gridEntityType, variant, position, forced)
 end

@@ -1027,8 +1027,8 @@ function EntityPlayer:SetPill(SlotId, Pill)
 end
 
 ---@param Type CollectibleType
----@param Slot ActiveSlot
----@param KeepInPools boolean
+---@param Slot? ActiveSlot
+---@param KeepInPools? boolean
 function EntityPlayer:SetPocketActiveItem(Type, Slot, KeepInPools)
 end
 
