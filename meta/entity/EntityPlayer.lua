@@ -84,7 +84,7 @@ function EntityPlayer:AddControlsCooldown(Cooldown)
 end
 
 ---@param Item ItemConfig_Item
----@param ItemStateOnly boolean
+---@param ItemStateOnly? boolean
 function EntityPlayer:AddCostume(Item, ItemStateOnly)
 end
 
@@ -144,7 +144,7 @@ function EntityPlayer:AddKeys(Amount)
 end
 
 ---@param MaxHearts integer
----@param IgnoreKeeper boolean
+---@param IgnoreKeeper? boolean
 function EntityPlayer:AddMaxHearts(MaxHearts, IgnoreKeeper)
 end
 
@@ -243,7 +243,7 @@ end
 function EntityPlayer:AnimateSad()
 end
 
----@param Up boolean
+---@param Up? boolean
 function EntityPlayer:AnimateTeleport(Up)
 end
 
@@ -344,7 +344,7 @@ function EntityPlayer:DropPocketItem(PocketNum, Pos)
 end
 
 ---@param DropPos Vector
----@param ReplaceTick boolean
+---@param ReplaceTick? boolean
 function EntityPlayer:DropTrinket(DropPos, ReplaceTick)
 end
 
@@ -394,7 +394,7 @@ end
 ---@param Position Vector
 ---@param OffsetID LaserOffset
 ---@param Direction Vector
----@param LeftEye boolean
+---@param LeftEye? boolean
 ---@param OneHit? boolean @default: false
 ---@param Source? Entity @default: nil
 ---@param DamageMultiplier? number @default: 1
@@ -470,7 +470,7 @@ function EntityPlayer:GetBombFlags()
 end
 
 ---@param TearFlags TearFlags
----@param ForceSmallBomb boolean
+---@param ForceSmallBomb? boolean
 ---@return BombVariant
 function EntityPlayer:GetBombVariant(TearFlags, ForceSmallBomb)
 end
@@ -1093,7 +1093,7 @@ function EntityPlayer:TryHoldTrinket(Type)
 end
 
 ---@param Collectible CollectibleType
----@param KeepPersistent boolean
+---@param KeepPersistent? boolean
 function EntityPlayer:TryRemoveCollectibleCostume(Collectible, KeepPersistent)
 end
 
