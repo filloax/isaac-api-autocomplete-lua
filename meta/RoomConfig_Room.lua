@@ -5,7 +5,7 @@
 ---@field InitialWeight number @const
 ---@field Name string @const
 ---@field Shape RoomShape @const
----@field OriginalVariant integer @const
+---@field OriginalVariant integer @const | Not officially documented but functional
 ---@field SpawnCount integer @const
 ---@field Spawns CppList_RoomConfigSpawn @const
 ---@field StageID integer @const

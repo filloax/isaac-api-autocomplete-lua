@@ -3,14 +3,14 @@
 ---@field FireCooldown integer
 ---@field HeadFrameDelay integer
 ---@field Hearts integer
----@field IsDelayed boolean
----@field IsFollower boolean
+---@field IsDelayed boolean # Not officially documented but functional
+---@field IsFollower boolean # Not officially documented but functional
 ---@field Keys integer
 ---@field LastDirection Direction
 ---@field MoveDirection Direction
 ---@field OrbitAngleOffset number
----@field OrbitLayer Vector
----@field OrbitSpeed number
+---@field OrbitLayer Vector # Not officially documented but functional
+---@field OrbitSpeed number # Not officially documented but functional
 ---@field OrbitDistance Vector
 ---@field Player EntityPlayer
 ---@field RoomClearCount integer
