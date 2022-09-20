@@ -3,6 +3,7 @@
 ---@field AddBlackHearts integer
 ---@field AddBombs integer
 ---@field AddCoins integer
+---@field AddCostumeOnPickup boolean
 ---@field AddHearts integer
 ---@field AddKeys integer
 ---@field AddMaxHearts integer

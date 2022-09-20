@@ -1,4 +1,5 @@
 ---@class RoomConfig_Spawn
+---@field Entries CppList_RoomConfigEntries
 ---@field EntryCount integer
 ---@field SumWeights number
 ---@field X integer
