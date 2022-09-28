@@ -48,7 +48,7 @@ end
 function Isaac.Explode(pos, source, damage)
 end
 
----@param Type EntityType
+---@param Type integer
 ---@param Variant? integer @default: -1
 ---@param SubType? integer @default: -1
 ---@param Cache? boolean @default: false
