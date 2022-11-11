@@ -45,3 +45,11 @@ end
 function HUD:SetVisible(Visible)
 end
 
+function HUD:Update()
+end
+
+function HUD:PostUpdate()
+end
+
+function HUD:Render()
+end
