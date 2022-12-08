@@ -12,7 +12,7 @@ end
 
 ---@param modRef table
 ---@param callbackId CallbackID # Vanilla IDs are integers, custom IDs can be any type including strings
----@param priority integer # Default priority is 0, higher goes later, using the CallbackPriority table is recommended
+---@param priority CallbackPriority # Default priority is 0, higher goes later, using the CallbackPriority table is recommended
 ---@param callbackFn table
 ---@param entityId? integer
 function Isaac.AddPriorityCallback(modRef, callbackId, priority, callbackFn, entityId)

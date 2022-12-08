@@ -90,7 +90,16 @@ ModCallbacks = {
 	MC_PRE_NPC_UPDATE = 69, -- (EntityNPC NPC), returns true if the internal ai should be ignored, false or nil/nothing otherwise
 	MC_PRE_SPAWN_CLEAN_AWARD = 70, -- (RNG& Rng, Vector SpawnPos), returns true if the spawn routine should be ignored, false or nil/nothing otherwise
 	MC_PRE_ROOM_ENTITY_SPAWN = 71, -- (EntityType Type, integer Variant, integer SubType, integer GridIndex, integer Seed) - This is called when entering a new room, before spawning entities which are part its layout. Grid entities will also trigger this callback and their type will the same as the type used by the gridspawn command. Because of this, effects are assigned the type 999 instead of 1000 in this callback. Optional return: an array table with new values { Type, Variant, Subtype }. Returning a table will override any replacements that might naturally occur i.e. enemy variants.
-	MC_PRE_ENTITY_DEVOLVE = 72, -- (Entity Ent), returns true if the internal devolving behavior should be ignored - When returning true, this callback is responsible for spawning the devolved entity and removing the original one.
+	MC_PRE_ENTITY_DEVOLVE = 72, -- (Entity Ent) - returns true if the internal devolving behavior should be ignored - When returning true, this callback is responsible for spawning the devolved entity and removing the original one.
+	MC_PRE_MOD_UNLOAD = 73, -- (table Mod) - This is called right before any mod is unloaded (when disabling a mod or reloading it using luamod), the mod's table is passed as an argu
+}
+
+---@enum CallbackPriority
+CallbackPriority = {
+	IMPORTANT = -200,
+	EARLY = -100,
+	DEFAULT = 0,
+	LATE = 100,
 }
 
 ---@enum EntityType
@@ -903,6 +912,26 @@ BombVariant = {
 	BOMB_GOLDENTROLL = 18,
 	BOMB_ROCKET = 19,
 	BOMB_ROCKET_GIGA = 20,
+}
+
+---@enum LaserVariant
+LaserVariant = {
+	LASER_NULL = 0,
+	THICK_RED = 1,
+	THIN_RED = 2,
+	SHOOP = 3,
+	PRIDE = 4,
+	LIGHT_BEAM = 5,
+	GIANT_RED = 6,
+	TRACTOR_BEAM = 7,
+	LIGHT_RING = 8,
+	BRIM_TECH = 9,
+	ELECTRIC = 10,
+	THICKER_RED = 11,
+	THICK_BROWN = 12,
+	BEAST = 13,
+	THICKER_BRIM_TECH = 14,
+	GIANT_BRIM_TECH = 15
 }
 
 ---@enum CacheFlag
@@ -3990,6 +4019,7 @@ TearVariant = {
 	SWORD_BEAM = 47,
 	SPORE = 48,
 	TECH_SWORD_BEAM = 49,
+	FETUS = 50,
 }
 
 local function TEARFLAG(x)
