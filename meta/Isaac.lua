@@ -1,11 +1,52 @@
 ---@class Isaac
 _G.Isaac = {}
 
+---@alias CallbackID any
+
 ---@param modRef table
----@param callbackId function
----@param callbackFn table
----@param entityId integer
+---@param callbackId CallbackID # Vanilla IDs are integers, custom IDs can be any type including strings
+---@param callbackFn function
+---@param entityId? integer
 function Isaac.AddCallback(modRef, callbackId, callbackFn, entityId)
+end
+
+---@param modRef table
+---@param callbackId CallbackID # Vanilla IDs are integers, custom IDs can be any type including strings
+---@param priority integer # Default priority is 0, higher goes later, using the CallbackPriority table is recommended
+---@param callbackFn table
+---@param entityId? integer
+function Isaac.AddPriorityCallback(modRef, callbackId, priority, callbackFn, entityId)
+end
+
+---@param modRef table
+---@param callbackId CallbackID # Vanilla IDs are integers, custom IDs can be any type including strings
+---@param callbackFn table
+function Isaac.RemoveCallback(modRef, callbackId, callbackFn)
+end
+
+---@vararg any # Callback args
+---@param callbackId CallbackID # Vanilla IDs are integers, custom IDs can be any type including strings
+---@return any # Type of callback return
+function Isaac.RunCallback(callbackId, ...)
+end
+
+---@vararg any # Callback args
+---@param param any # Param to check against
+---@param callbackId CallbackID # Vanilla IDs are integers, custom IDs can be any type including strings
+---@return any # Type of callback return
+function Isaac.RunCallbackWithParam(callbackId, param, ...)
+end
+
+---@class CallbackEntry
+---@field Mod table
+---@field Function function
+---@field Priority integer #default=0
+---@field Param integer #default=-1; entity ID or anything else
+
+---@param callbackId CallbackID
+---@param createIfMissing? boolean
+---@return CallbackEntry[] callbackList #sorted by priority and addition order, can set __matchParams metamethod (see https://wofsauge.github.io/IsaacDocs/rep/tutorials/CustomCallbacks.html)
+function Isaac.GetCallbacks(callbackId, createIfMissing)
 end
 
 ---@param pillEffect integer
@@ -199,12 +240,6 @@ end
 ---@param modName string
 ---@param apiVersion integer
 function Isaac.RegisterMod(modRef, modName, apiVersion)
-end
-
----@param modRef table
----@param callbackId function
----@param callbackFn table
-function Isaac.RemoveCallback(modRef, callbackId, callbackFn)
 end
 
 ---@param modRef table
