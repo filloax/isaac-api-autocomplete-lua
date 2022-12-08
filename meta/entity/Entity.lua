@@ -24,6 +24,7 @@
 ---@field SpawnerVariant integer
 ---@field SpawnGridIndex integer
 ---@field Color Color
+---@field SortingLayer SortingLayer # Affects render priority, see enum
 ---@field SplatColor Color
 ---@field SpriteOffset Vector
 ---@field SpriteRotation number

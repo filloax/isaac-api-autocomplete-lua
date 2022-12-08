@@ -199,6 +199,7 @@ end
 function Room:GetLRoomTileDesc()
 end
 
+---@deprecated # Removed from the game! Keeping for old information
 ---@return integer
 function Room:GetNextShockwaveId()
 end
@@ -242,8 +243,9 @@ function Room:GetSecondBossID()
 end
 
 ---@param Seed integer
+---@param noDecrease? boolean # default = false
 ---@return CollectibleType
-function Room:GetSeededCollectible(Seed)
+function Room:GetSeededCollectible(Seed, noDecrease)
 end
 
 ---@return integer
@@ -416,8 +418,9 @@ end
 function Room:SetSacrificeDone(Done)
 end
 
+---@deprecated # Removed from the game! Keeping for old information
 ---@param ShockwaveId integer
----@param Params ShockwaveParams
+---@param Params unknown
 function Room:SetShockwaveParam(ShockwaveId, Params)
 end
 

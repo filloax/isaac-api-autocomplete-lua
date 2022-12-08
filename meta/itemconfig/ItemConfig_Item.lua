@@ -48,3 +48,6 @@ end
 function ItemConfig_Item:IsTrinket()
 end
 
+---@return boolean
+function ItemConfig_Item:IsAvailable()
+end

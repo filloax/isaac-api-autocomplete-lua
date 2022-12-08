@@ -380,3 +380,10 @@ end
 function Game:UpdateStrangeAttractor(Position, Force, Radius)
 end
 
+---For reference, Monstro's stomp has Amplitude=0.035, Speed=0.025, Duration=10
+---@param Position Vector
+---@param Amplitude number
+---@param Speed number
+---@param Duration integer
+function Game:MakeShockwave(Position, Amplitude, Speed, Duration)
+end
