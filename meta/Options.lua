@@ -1,4 +1,6 @@
 ---@class Options
+_G.Options = {}
+
 ---@type integer
 Options.AnnouncerVoiceMode = nil
 ---@type boolean
@@ -51,5 +53,3 @@ Options.SFXVolume = nil
 Options.UseBorderlessFullscreen = nil
 ---@type boolean
 Options.VSync = nil
-local Options = {}
-

@@ -24,5 +24,8 @@
 ---@field SpawnSeed integer
 ---@field SurpriseMiniboss boolean
 ---@field VisitedCount integer
-local RoomDescriptor = {}
+local _RoomDescriptor = {}
+
+-- to make the enum not error
+_G.RoomDescriptor = {}
 

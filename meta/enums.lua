@@ -4806,7 +4806,7 @@ RenderMode = {
 	RENDER_WATER_REFLECT = 5		-- Rendering the reflection of room entities in a flooded room
 }
 
-	-- RoomDescriptor.DISPLAY_*
+-- RoomDescriptor.DISPLAY_*
 RoomDescriptor.DISPLAY_NONE = 0
 RoomDescriptor.DISPLAY_BOX = 1
 RoomDescriptor.DISPLAY_LOCK = 2

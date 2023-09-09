@@ -1,22 +1,23 @@
----@type fun(x: number, y: number): Vector
-_G.Vector = {}
-_G.Vector.One = Vector(1, 1)
-_G.Vector.Zero = Vector(0, 0)
+---@overload fun(x: number, y: number): Vector
+local _VectorGlobal = {}
+_G.Vector = _VectorGlobal
+_VectorGlobal.One = Vector(1, 1)
+_VectorGlobal.Zero = Vector(0, 0)
 
 ---@return Vector
-function RandomVector()
+function _G.RandomVector()
 end
 
 ---@param AngleDegrees number
 ---@return Vector
-function _G.Vector.FromAngle(AngleDegrees)
+function _VectorGlobal.FromAngle(AngleDegrees)
 end
 
 ---@param first Vector
 ---@param second Vector
 ---@param t number
 ---@return Vector
-function _G.Vector.Lerp(first, second, t)
+function _VectorGlobal.Lerp(first, second, t)
 end
 
 ---@class Vector
@@ -120,5 +121,3 @@ end
 ---@return Vector
 function Vector:Rotated(AngleDegrees)
 end
-
--- Add, sub etc not detectable for now
