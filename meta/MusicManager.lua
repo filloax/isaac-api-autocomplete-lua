@@ -59,9 +59,14 @@ end
 function MusicManager:PitchSlide(TargetPitch)
 end
 
----@param ID MusicManager
+---@param ID Music
 ---@param Volume number
 function MusicManager:Play(ID, Volume)
+end
+
+---Plays a jingle.
+---@param musicId Music 
+function MusicManager:PlayJingle(musicId)
 end
 
 ---@param ID MusicManager
@@ -74,6 +79,10 @@ end
 function MusicManager:Resume()
 end
 
+---Stops the currently playing jingle.
+function MusicManager:StopJingle()
+end
+
 function MusicManager:UpdateVolume()
 end
 
@@ -81,4 +90,3 @@ end
 ---@param FadeRate? number @default: 0.08
 function MusicManager:VolumeSlide(TargetVolume, FadeRate)
 end
-

@@ -26,6 +26,11 @@ end
 function GridEntityDoor:Close(Force)
 end
 
+---Returns the door's ExtraSprite.
+---@return Sprite
+function GridEntityDoor:GetExtraSprite()
+end
+
 ---@return Vector
 function GridEntityDoor:GetSpriteOffset()
 end

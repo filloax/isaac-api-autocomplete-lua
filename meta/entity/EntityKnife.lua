@@ -17,6 +17,10 @@ end
 function EntityKnife:ClearTearFlags(Flags)
 end
 
+---@return Vector[]
+function EntityKnife:GetHitList()
+end
+
 ---@return number
 function EntityKnife:GetKnifeDistance()
 end

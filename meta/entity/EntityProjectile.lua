@@ -43,6 +43,11 @@ end
 function EntityProjectile:ClearProjectileFlags(Flags)
 end
 
+---Deflects the projectile.
+---@param velocity Vector
+function EntityProjectile:Deflect(velocity)
+end
+
 ---@param Flags integer
 ---@return boolean
 function EntityProjectile:HasProjectileFlags(Flags)

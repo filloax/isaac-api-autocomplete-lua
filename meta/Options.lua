@@ -4,6 +4,8 @@ _G.Options = {}
 ---@type integer
 Options.AnnouncerVoiceMode = nil
 ---@type boolean
+Options.BetterVoidGeneration = nil
+---@type boolean
 Options.BulletVisibility = nil
 ---@type integer
 Options.CameraStyle = nil
@@ -29,6 +31,10 @@ Options.Fullscreen = nil
 Options.Gamma = nil
 ---@type number
 Options.HUDOffset = nil
+---@type boolean 
+Options.HushPanicStateFix =nil
+---@type boolean 
+Options.KeyMasterDealChance = nil
 ---@type string
 Options.Language = nil
 ---@type number
@@ -43,6 +49,10 @@ Options.MouseControl = nil
 Options.MusicVolume = nil
 ---@type boolean
 Options.PauseOnFocusLost = nil
+---@type boolean 
+Options.PreventModUpdates = nil
+---@type boolean 
+Options.QuickRoomClear = nil
 ---@type boolean
 Options.RumbleEnabled = nil
 ---@type boolean

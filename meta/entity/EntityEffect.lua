@@ -14,6 +14,11 @@
 ---@field Timeout integer
 _G.EntityEffect = {}
 
+---@param position Vector 
+---@param color Color Optional. Default is `Color.Default`.
+function EntityEffect:CreateLight(position, color)
+end
+
 ---@param Parent Entity
 function EntityEffect:FollowParent(Parent)
 end

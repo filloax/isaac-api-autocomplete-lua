@@ -3,6 +3,7 @@
 ---@field Doors integer @const
 ---@field Height integer @const
 ---@field InitialWeight number @const
+---@field Mode integer @const
 ---@field Name string @const
 ---@field Shape RoomShape @const
 ---@field OriginalVariant integer @const | Not officially documented but functional

@@ -6,6 +6,12 @@ _G.ItemConfig = {
     Config = {},
 }
 
+---Returns true if the collectible can be rerolled.
+---@param collectible CollectibleType | integer
+---@return boolean
+function __ItemConfig_Class:CanRerollCollectible(collectible)
+end
+
 ---@param ID Card
 ---@return ItemConfig_Card
 function __ItemConfig_Class:GetCard(ID)
@@ -42,6 +48,12 @@ end
 function __ItemConfig_Class:GetPillEffects()
 end
 
+---Returns a table of ItemConfigItem objects with the provided tag.
+---@param tag string 
+---@return ItemConfig_Item[]
+function __ItemConfig_Class:GetTaggedItems(tag)
+end
+
 ---@param ID integer
 ---@return ItemConfig_Item
 function __ItemConfig_Class:GetTrinket(ID)
@@ -49,6 +61,12 @@ end
 
 ---@return ItemConfigList
 function __ItemConfig_Class:GetTrinkets()
+end
+
+---Returns true if the trinket is valid.
+---@param trinketType TrinketType
+---@return boolean
+function __ItemConfig_Class:IsValidTrinket(trinketType)
 end
 
 ---@param ID CollectibleType

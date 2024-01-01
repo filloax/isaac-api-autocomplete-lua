@@ -1,3 +1,4 @@
+---@diagnostic disable: duplicate-set-field
 ---@class Game
 ---@field BlueWombParTime integer
 ---@field BossRushParTime integer
@@ -9,6 +10,16 @@ local Game = {}
 
 ---@return Game
 function _G.Game()
+end
+
+---Returns true if achievements can't be unlocked this run.
+---@return boolean 
+function Game:AchievementUnlocksDisallowed()
+end
+
+---Adds a debug flag to the game. Multiple can be added simultaneously with bitwise concatenation.
+---@param flags integer
+function Game:AddDebugFlags(flags)
 end
 
 function Game:AddDevilRoomDeal()
@@ -99,6 +110,11 @@ end
 function Game:Darken(Darkness, Timeout)
 end
 
+---Devolves the provided entity.
+---@param entity Entity
+function Game:DevolveEntity(entity)
+end
+
 ---@param Donate integer
 function Game:DonateAngel(Donate)
 end
@@ -130,19 +146,35 @@ function Game:Fart(Position, Radius, Source, FartScale, FartSubType, FartColor)
 end
 
 function Game:FinishChallenge()
+end 
+
+---Returns the current ChallengeParams.
+---@return ChallengeParams
+function Game:GetChallengeParams()
 end
 
----@return userdata @Ambush
-function Game:GetAmbush()
+---Returns the current color modifier for the screen.
+---@return ColorModifier
+function Game:GetCurrentColorModifier()
 end
 
 ---@return number
 function Game:GetDarknessModifier()
 end
 
+---Returns a bitmask of the debugflags.
+---@return integer
+function Game:GetDebugFlags()
+end
+
 ---@return integer
 function Game:GetDevilRoomDeals()
 end
+
+---Returns the current dimension.
+---@return Dimension
+function Game:GetDimension()
+end 
 
 ---@return integer
 function Game:GetDonationModAngel()
@@ -172,10 +204,6 @@ end
 function Game:GetHUD()
 end
 
----@return userdata @ItemOverlay
-function Game:GetItemOverlay()
-end
-
 ---@return ItemPool
 function Game:GetItemPool()
 end
@@ -190,6 +218,11 @@ end
 
 ---@return LevelStage
 function Game:GetLastLevelWithoutHalfHp()
+end
+
+---Returns the lerped color modifier. This is formatted as the absolute rate of change.
+---@return ColorModifier
+function Game:GetLerpColorModifier()
 end
 
 ---@return Level
@@ -209,6 +242,16 @@ end
 function Game:GetNumPlayers()
 end
 
+---Returns the current pause menu state.
+---@return PauseMenuStates
+function Game:GetPauseMenuState()
+end
+
+---Returns the amount of planetariums that has been entered in the current run.
+---@return integer 
+function Game:GetPlanetariumsVisited()
+end
+
 ---@param Index integer
 ---@return EntityPlayer
 function Game:GetPlayer(Index)
@@ -223,6 +266,11 @@ end
 ---@return Room
 function Game:GetRoom()
 end
+
+---Returns the RoomTransition class.
+---@return RoomTransition
+function Game:GetRoomTransition()
+end 
 
 ---@return integer
 function Game:GetScreenShakeCountdown()
@@ -243,6 +291,11 @@ end
 ---@param GameStateFlag GameStateFlag
 ---@return boolean
 function Game:GetStateFlag(GameStateFlag)
+end
+
+---Returns the target ColorModifier.
+---@return ColorModifier
+function Game:GetTargetColorModifier()
 end
 
 ---@return number
@@ -267,12 +320,46 @@ end
 function Game:HasHallucination()
 end
 
+---Returns true if the entity was erased for the run.
+---@param entity Entity 
+---@return boolean
+function Game:IsErased(entity)
+end
+
+---Returns true if the entity was erased for the run.
+---@param type EntityType
+---@param variant integer? Optional. Default is -1.
+---@param subType integer? Optional. Default is -1.
+---@return boolean
+function Game:IsErased(type, variant, subType)
+end
+
+---TODO: Document me!
+---@return boolean
+function Game:IsGreedBoss()
+end
+
+---TODO: Document me!
+---@return boolean
+function Game:IsGreedFinalBoss()
+end
+
 ---@return boolean
 function Game:IsGreedMode()
 end
 
 ---@return boolean
 function Game:IsPaused()
+end
+
+---Returns true if the pause menu is open.
+---@return boolean
+function Game:IsPauseMenuOpen()
+end 
+
+---Returns true if the game run is a rerun.
+---@return boolean 
+function Game:IsRerun()
 end
 
 ---@param IAmErrorRoom boolean
@@ -297,6 +384,13 @@ end
 ---@param Seed integer
 function Game:RerollLevelPickups(Seed)
 end
+
+---Sets the color modifier.
+---@param colorModifier ColorModifier
+---@param lerp boolean? Optional. Default is true. 
+---@param rate number? Optional. Default is 0.015.
+function Game:SetColorModifier(colorModifier, lerp, rate)
+end 
 
 ---@param Stage LevelStage
 function Game:SetLastDevilRoomStage(Stage)
@@ -341,6 +435,12 @@ end
 function Game:Spawn(Type, Variant, Position, Velocity, Spawner, SubType, Seed)
 end
 
+---Spawns a bomb crater.
+---@param position Vector 
+---@return Entity 
+function Game:SpawnBombCrater(position)
+end
+
 ---@param desc userdata @EntityDesc
 ---@param Position Vector
 ---@param Spawner Entity
@@ -368,7 +468,8 @@ end
 
 ---@param SameStage boolean
 ---@param Animation integer @StageTransition::Animation
-function Game:StartStageTransition(SameStage, Animation)
+---@param Player EntityPlayer
+function Game:StartStageTransition(SameStage, Animation, Player)
 end
 
 function Game:Update()
