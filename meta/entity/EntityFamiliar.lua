@@ -129,3 +129,7 @@ end
 ---@return boolean `true` if it was able to aim.
 function EntityFamiliar:TryAimAtMarkedTarget(aimDirection, direction, unknownVector)
 end
+
+---@return PathFinder
+function EntityFamiliar:GetPathFinder()
+end
