@@ -1,25 +1,3 @@
----@overload fun(x: number, y: number): Vector
-local _VectorGlobal = {}
-_G.Vector = _VectorGlobal
-_VectorGlobal.One = Vector(1, 1)
-_VectorGlobal.Zero = Vector(0, 0)
-
----@return Vector
-function _G.RandomVector()
-end
-
----@param AngleDegrees number
----@return Vector
-function _VectorGlobal.FromAngle(AngleDegrees)
-end
-
----@param first Vector
----@param second Vector
----@param t number
----@return Vector
-function _VectorGlobal.Lerp(first, second, t)
-end
-
 ---@class Vector
 ---@field X number
 ---@field Y number
@@ -29,6 +7,22 @@ end
 ---@operator mul(number|Vector): Vector
 ---@operator div(number|Vector): Vector
 local Vector = {}
+
+---@param x number
+---@param y number
+function _G.Vector(x, y) end
+
+---@param AngleDegrees number
+---@return Vector
+function Vector.FromAngle(AngleDegrees)
+end
+
+---@param first Vector
+---@param second Vector
+---@param t number
+---@return Vector
+function Vector.Lerp(first, second, t)
+end
 
 ---@param Right Vector
 ---@return Vector
@@ -121,3 +115,10 @@ end
 ---@return Vector
 function Vector:Rotated(AngleDegrees)
 end
+
+_G.Vector = {
+	---@type Vector
+	One = Vector(1,1),
+	---@type Vector
+	Zero = Vector(0,0)
+}

@@ -69,7 +69,6 @@ end
 function Color:SetTint(RedTint, GreenTint, BlueTint, AlphaTint)
 end
 
-
 _G.Color = {
     ---@type Color
     TearIpecac = Color(0, 0, 0),

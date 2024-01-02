@@ -16,9 +16,9 @@ _G.WeightedOutcomePicker = function() end
 ---```
 ---@param value integer 
 ---@param weight integer 
-function WeightedOutcomePicker.AddOutcomeWeight(value, weight) end
+function WeightedOutcomePicker:AddOutcomeWeight(value, weight) end
 
 ---Returns a random outcome from the list in WeightedOutcomePicker. 
 ---@param rng RNG 
 ---@return integer 
-function WeightedOutcomePicker.PickOutcome(rng) end
+function WeightedOutcomePicker:PickOutcome(rng) end

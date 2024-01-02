@@ -155,7 +155,7 @@ end
 ---@param initial integer
 ---@param ref EntityRef
 ---@return integer
-function Entity:ComputeStatusEffectDuration()
+function Entity:ComputeStatusEffectDuration(initial, ref)
 end
 
 ---Copies the entity's status effects onto another entity
@@ -203,7 +203,7 @@ end
 
 ---@param unknown boolean TODO: Figure out what this does
 ---@return Shape
-function Entity:GetDebugShape()
+function Entity:GetDebugShape(unknown)
 end
 
 ---@return RNG
@@ -211,7 +211,7 @@ function Entity:GetDropRNG()
 end
 
 --- Returns the corresponding EntityConfig entry for this entity.
----@return EntityConfigEntity
+---@return EntityConfig_Entity
 function Entity:GetEntityConfigEntity()
 end
 
@@ -265,7 +265,7 @@ end
 ---@param target Entity
 ---@param strength integer
 ---@return Vector
-function Entity:GetPredictedTargetPosition()
+function Entity:GetPredictedTargetPosition(target, strength)
 end
 
 ---@return number 

@@ -50,7 +50,7 @@ function RNG:RandomVector()
 end 
 
 ---@param Seed integer
----@param ShiftIdx integer
+---@param ShiftIdx? integer
 function RNG:SetSeed(Seed, ShiftIdx)
 end
 

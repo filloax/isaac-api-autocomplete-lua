@@ -22,9 +22,9 @@ end
 ---@param parentId string The id of the parent element.
 ---@param elementId string The id of the element.
 ---@param label string? Optional. The button's label. Default is an empty string.
----@param change nil | fun(): nil Optional. If defined, the function is called when the checkbox is ticked or unticked. Default is nil.
+---@param changeCallback nil | fun(newValue: boolean) Optional. If defined, the function is called when the checkbox is ticked or unticked. Default is nil.
 ---@param isActive boolean? Optional. If true, the checkbox will be checked on creation. If false, the checkbox won't be checked upon creation.
-function ImGui.AddCheckbox(parentId, elementId, label, change, isActive)
+function ImGui.AddCheckbox(parentId, elementId, label, changeCallback, isActive)
 end
 
 ---Adds a combobox element which represents a single line element that allows you to select a value from a dropdown menu.
@@ -232,7 +232,7 @@ end
 ---Adds a tab bar.
 ---@param parentId string The id of the parent element.
 ---@param elementId string The element of the tab bar.
-function ImGui.AddTab(parentId, elementId)
+function ImGui.AddTabBar(parentId, elementId)
 end
 
 ---Adds a text element.
