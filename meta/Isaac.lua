@@ -244,6 +244,11 @@ end
 function Isaac.GetCompletionMarks(playerType)
 end
 
+---Sets the completion marks of a character to match an input table. Requires a dictionary containing all the marks for the character, getting it from GetCompletionMarks is adviced for convenience.
+---@param marks CompletionMarks
+function Isaac.SetCompletionMarks(marks)
+end
+
 ---@param path string
 ---@return integer
 function Isaac.GetCostumeIdByPath(path)
@@ -426,7 +431,7 @@ end
 function Isaac.PlayCutscene(cutsceneId)
 end
 
----@param modRef table
+---@param modRef ModReference
 ---@param modName string
 ---@param apiVersion integer
 function Isaac.RegisterMod(modRef, modName, apiVersion)

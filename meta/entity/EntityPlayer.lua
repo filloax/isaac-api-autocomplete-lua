@@ -30,11 +30,11 @@ local EntityPlayer = {}
 
 ---@param charge integer
 ---@param slot ActiveSlot
----@param unknown boolean TODO: Find out what this argument does
+---@param flashHUD boolean TODO: Find out what this argument does
 ---@param overcharge boolean
 ---@param force boolean
 ---@return integer chargesAdded The true amount of charges added, which may have been capped by the targeted item's max charges.
-function EntityPlayer:AddActiveCharge(charge, slot, unknown, overcharge, force)
+function EntityPlayer:AddActiveCharge(charge, slot, flashHUD, overcharge, force)
 end
 
 ---@param BlackHearts integer
@@ -666,7 +666,13 @@ end
 function EntityPlayer:GetCollectibleRNG(ID)
 end
 
----@return {costumeIndex: integer, layerID: integer, priority: integer, isBodyLayer: boolean}[]
+---@class CostumeLayerMap
+---@field costumeIndex integer
+---@field layerID integer
+---@field priority integer
+---@field isBodyLayer boolean
+
+---@return CostumeLayerMap[]
 function EntityPlayer:GetCostumeLayerMap()
 end 
 
@@ -758,7 +764,7 @@ end
 function EntityPlayer:GetEnterPosition()
 end
 
----@return EntityConfigPlayer
+---@return EntityConfig_Player
 function EntityPlayer:GetEntityConfigPlayer()
 end
 
@@ -1996,4 +2002,10 @@ end
 ---@param collectible CollectibleType
 ---@return boolean 
 function EntityPlayer:VoidHasCollectible(collectible)
+end
+
+---@param item ItemConfig_Item
+---@param layer PlayerSpriteLayer | string
+---@return boolean
+function EntityPlayer:IsItemCostumeVisible(item, layer)
 end

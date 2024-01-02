@@ -7291,16 +7291,16 @@ ProceduralEffectActionType = {
 
 ---@enum EntityTag
 EntityTag = {
-	TAG_FLY = 1<<0,
-	TAG_SPIDER = 1<<1,
+	FLY = 1<<0,
+	SPIDER = 1<<1,
 	--unused?
-	TAG_GHOST = 1<<3,
-	TAG_NOREROLL = 1<<4,
-	TAG_CANSACRIFICE = 1<<5,
-	TAG_EXPLOSIVE_SOUL = 1<<6,
-	TAG_HOMING_SOUL = 1<<7,
-	TAG_BRIMSTONE_SOUL = 1<<8,
-	TAG_NODELIRIUM = 1<<9,
+	GHOST = 1<<3,
+	NOREROLL = 1<<4,
+	CANSACRIFICE = 1<<5,
+	EXPLOSIVE_SOUL = 1<<6,
+	HOMING_SOUL = 1<<7,
+	BRIMSTONE_SOUL = 1<<8,
+	NODELIRIUM = 1<<9,
 }
 
 ---@enum GibFlag
@@ -7327,4 +7327,12 @@ ImGuiNotificationType = {
 	SUCCESS = 1,
 	WARNING = 2,
 	ERROR = 3,
+}
+
+---@enum PurityState
+PurityState = {
+	RED = 0,
+	BLUE = 1,
+	YELLOW = 2,
+	ORANGE = 3
 }
