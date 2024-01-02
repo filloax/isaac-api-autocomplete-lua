@@ -126,6 +126,15 @@ end
 function ImGui.AddInputInteger(parentId, elementId, label, changeCallback, defaultValue, step, stepFast)
 end
 
+---Adds an input for keyboard buttons.
+---@param ParentId string The id of the parent element.
+---@param ElementId string The id of the keyboard input element.
+---@param ButtonLabel Optional. The keyboard input element's label. Default is an empty string.
+---@param ChangeCallback nil | fun(key: Keyboard, buttonName: string) Optional. Default is nil.
+---@param DefaultValue number? Optional. Default is 0.
+function ImGui.AddInputKeyboard(ParentId, ElementId, ButtonLabel, ChangeCallback, DefaultValue)
+end
+
 ---Adds a text input element.
 ---@param parentId string The id of the parent element.
 ---@param elementId string The element id of the text input.
