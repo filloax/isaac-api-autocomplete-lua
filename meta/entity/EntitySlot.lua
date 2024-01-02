@@ -1,4 +1,4 @@
----@class EntitySlot
+---@class EntitySlot : Entity
 local EntitySlot = {}
 
 ---Causes the slot to drop loot. This is the same loot that is spawned when the slot is blown up.
