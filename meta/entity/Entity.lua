@@ -158,9 +158,16 @@ end
 function Entity:ComputeStatusEffectDuration(initial, ref)
 end
 
----Copies the entity's status effects onto another entity
----@param target Entity? Optional. The target to receive the entity's status effects. If nil, all of the entity's children will receive the status effect instead.
-function Entity:CopyStatusEffects(target)
+---Copies the entity's status effects onto another entity.
+---@param target Entity The target to receive the entity's status effects. If nil, all of the entity's children will receive the status effect instead.
+---@param copyColor boolean? Default is true.
+function Entity:CopyStatusEffects(target, copyColor)
+end
+
+---Copies the entity's status effects onto another entity.
+---@param copyColor boolean? Default is true.
+---@diagnostic disable-next-line: duplicate-set-field
+function Entity:CopyStatusEffects(copyColor)
 end
 
 function Entity:Die()
@@ -195,6 +202,10 @@ end
 
 ---@return Color
 function Entity:GetColor()
+end
+
+---@return integer
+function Entity:GetDamageCountdown()
 end
 
 ---@return table
@@ -401,6 +412,10 @@ end
 ---@param Fadeout boolean
 ---@param Share boolean
 function Entity:SetColor(Color, Duration, Priority, Fadeout, Share)
+end
+
+---@param countdown integer
+function Entity:SetDamageCountdown(countdown) 
 end
 
 ---@param isDead boolean

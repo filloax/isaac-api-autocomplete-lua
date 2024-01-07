@@ -33,10 +33,9 @@ end
 
 ---Returns the first player to pick up the provided collectible. If no player has picked up the collectible yet, nil is returned instead.
 ---@param collectible CollectibleType
----@param rng RNG TODO: Document me!
----@param unknown boolean TODO: Document me!
+---@param lazarusSharedGlobalTag boolean TODO: Document me!
 ---@return EntityPlayer?
-function PlayerManager.FirstCollectibleOwner(collectible, rng, unknown)
+function PlayerManager.FirstCollectibleOwner(collectible, lazarusSharedGlobalTag)
 end
 
 ---Returns the player of the provided PlayerType which was initialized first.
