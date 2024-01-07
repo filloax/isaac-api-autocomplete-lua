@@ -488,3 +488,8 @@ end
 ---@param Duration integer
 function Game:MakeShockwave(Position, Amplitude, Speed, Duration)
 end
+
+---Returns `true` if current mode is Hard Mode or Greedier
+---@return boolean
+function Game:IsHardMode()
+end

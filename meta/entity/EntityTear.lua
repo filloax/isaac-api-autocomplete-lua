@@ -16,12 +16,12 @@
 ---@field StickDiff Vector
 ---@field StickTarget Entity
 ---@field StickTimer integer
----@field TearFlags integer @TearFlags
+---@field TearFlags TearFlags
 ---@field TearIndex integer @const
 ---@field WaitFrames integer
 local EntityTear = {}
 
----@param Flags integer @TearFlags
+---@param Flags TearFlags
 function EntityTear:AddTearFlags(Flags)
 end
 
@@ -29,7 +29,7 @@ end
 function EntityTear:ChangeVariant(NewVariant)
 end
 
----@param Flags integer @TearFlags
+---@param Flags TearFlags
 function EntityTear:ClearTearFlags(Flags)
 end
 
@@ -38,7 +38,7 @@ end
 function EntityTear:GetDeadEyeIntensity()
 end
 
----@param Flags integer @TearFlags
+---@param Flags TearFlags
 ---@return boolean
 function EntityTear:HasTearFlags(Flags)
 end

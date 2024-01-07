@@ -10,6 +10,7 @@ local Vector = {}
 
 ---@param x number
 ---@param y number
+---@return Vector
 function _G.Vector(x, y) end
 
 ---@param AngleDegrees number
