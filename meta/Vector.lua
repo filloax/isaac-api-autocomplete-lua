@@ -117,9 +117,3 @@ end
 function Vector:Rotated(AngleDegrees)
 end
 
-_G.Vector = {
-	---@type Vector
-	One = Vector(1,1),
-	---@type Vector
-	Zero = Vector(0,0)
-}
