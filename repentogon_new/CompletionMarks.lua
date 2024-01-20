@@ -1,0 +1,15 @@
+---@class CompletionMarks
+---@field PlayerType PlayerType
+---@field MomsHeart Difficulty
+---@field Isaac Difficulty
+---@field Satan Difficulty
+---@field BossRush Difficulty
+---@field BlueBaby Difficulty
+---@field Lamb Difficulty
+---@field MegaSatan Difficulty
+---@field UltraGreed Difficulty
+---@field Hush Difficulty
+---@field UltraGreedier Difficulty
+---@field Delirium Difficulty
+---@field Mother Difficulty
+---@field Beast Difficulty

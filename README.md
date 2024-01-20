@@ -50,6 +50,13 @@ This was tested with VSCode using the [vscode-lua](https://github.com/sumneko/vs
 
 4. As above, if you put the autocomplete files in your mod folder (or enums.lua), remember to remove them before publishing your mod.
 
+## Folders
+
+* *vanilla* should always be used
+* *repentogon_changes* contains additions made to vanilla classes by Repentogon
+* *repentogon_new* contains new classes from repentogon
+* *no_repentogon_only* should be used only without repentogon
+
 ## More examples
 
 ![autocomplete example 2](./readme/screen2.png)
