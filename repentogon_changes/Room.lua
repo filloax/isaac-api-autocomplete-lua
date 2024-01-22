@@ -43,7 +43,6 @@ function Room:GetFXParams() end
 ---Returns the greed wave timer.
 ---@return integer
 function Room:GetGreedWaveTimer() end
-end
 
 ---Returns the grid index from the provided row and column. Returns -1 if the function fails to find a valid grid index.
 ---@param gridRow integer
@@ -65,7 +64,6 @@ end
 ---TODO: Document me!
 ---@return integer
 function Room:GetRoomClearDelay() end 
-end
 
 ---Returns the price of the item.
 ---@param entityVariant integer
@@ -106,7 +104,6 @@ end
 ---@param gridIndex integer 
 ---@return EntityEffect
 function Room:PickupGridEntity(gridIndex) end 
-end
 
 --- Immediately removes the GridEntity at the given index. This means grids can be properly removed and immediately replaced, without the need to call `Room:Update()`.
 ---@param gridIndex integer 
