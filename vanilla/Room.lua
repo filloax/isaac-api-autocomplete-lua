@@ -6,9 +6,9 @@ local Room = {}
 ---@param Pos1 Vector
 ---@param Pos2 Vector
 ---@param Mode LinecheckMode
----@param GridPathThreshold? integer @default: 0
----@param IgnoreWalls? boolean @default: false
----@param IgnoreCrushable? boolean @default: false
+---@param GridPathThreshold? integer @default: `0`
+---@param IgnoreWalls? boolean @default: `false`
+---@param IgnoreCrushable? boolean @default: `false`
 ---@return boolean
 function Room:CheckLine(Pos1, Pos2, Mode, GridPathThreshold, IgnoreWalls, IgnoreCrushable)
 end
@@ -31,9 +31,9 @@ function Room:EmitBloodFromWalls(Duration, Count)
 end
 
 ---@param Pos Vector
----@param InitialStep? number @default: 0
----@param AvoidActiveEntities? boolean @default: false
----@param AllowPits? boolean @default: false
+---@param InitialStep? number @default: `0`
+---@param AvoidActiveEntities? boolean @default: `false`
+---@param AllowPits? boolean @default: `false`
 ---@return Vector
 function Room:FindFreePickupSpawnPosition(Pos, InitialStep, AvoidActiveEntities, AllowPits)
 end
@@ -243,7 +243,7 @@ function Room:GetSecondBossID()
 end
 
 ---@param Seed integer
----@param noDecrease? boolean # default = false
+---@param noDecrease? boolean @default: `false`
 ---@return CollectibleType
 function Room:GetSeededCollectible(Seed, noDecrease)
 end
@@ -458,7 +458,7 @@ end
 function Room:StopRain()
 end
 
----@param Silent? boolean @default: false
+---@param Silent? boolean @default: `false`
 function Room:TriggerClear(Silent)
 end
 
@@ -474,37 +474,37 @@ end
 function Room:TryPlaceLadder(PlayerPos, PlayerVelocity, Ladder)
 end
 
----@param FirstTime? boolean @default: true
----@param IgnoreTime? boolean @default: false
----@param Force? boolean @default: false
+---@param FirstTime? boolean @default: `true`
+---@param IgnoreTime? boolean @default: `false`
+---@param Force? boolean @default: `false`
 ---@return boolean
 function Room:TrySpawnBlueWombDoor(FirstTime, IgnoreTime, Force)
 end
 
----@param IgnoreTime? boolean @default: false
----@param Force? boolean @default: false
+---@param IgnoreTime? boolean @default: `false`
+---@param Force? boolean @default: `false`
 ---@return boolean
 function Room:TrySpawnBossRushDoor(IgnoreTime, Force)
 end
 
----@param Animate? boolean @default: false
----@param Force? boolean @default: false
+---@param Animate? boolean @default: `false`
+---@param Force? boolean @default: `false`
 ---@return boolean
 function Room:TrySpawnDevilRoomDoor(Animate, Force)
 end
 
----@param Force? boolean @default: false
+---@param Force? boolean @default: `false`
 ---@return boolean
 function Room:TrySpawnMegaSatanRoomDoor(Force)
 end
 
----@param Animate? boolean @default: false
----@param Force? boolean @default: false
+---@param Animate? boolean @default: `false`
+---@param Force? boolean @default: `false`
 ---@return boolean
 function Room:TrySpawnSecretExit(Animate, Force)
 end
 
----@param Force? boolean @default: false
+---@param Force? boolean @default: `false`
 ---@return boolean
 function Room:TrySpawnSecretShop(Force)
 end
@@ -513,7 +513,7 @@ end
 function Room:TrySpawnSpecialQuestDoor()
 end
 
----@param Force? boolean @default: false
+---@param Force? boolean @default: `false`
 ---@return boolean
 function Room:TrySpawnTheVoidDoor(Force)
 end
@@ -528,4 +528,3 @@ end
 ---@return Vector
 function Room:WorldToScreenPosition(WorldPos)
 end
-

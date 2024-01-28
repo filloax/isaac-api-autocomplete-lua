@@ -35,31 +35,32 @@ end
 ---@param Position Vector
 ---@param Damage number
 ---@param Radius number
----@param LineCheck? boolean @default: true
----@param Source? Entity @default: nil
----@param TearFlags? TearFlags @default: TearFlags.TEAR_NORMAL
----@param DamageFlags? integer @default: DamageFlags.DAMAGE_EXPLOSION
----@param DamageSource? boolean @default: false
+---@param LineCheck? boolean @default: `true`
+---@param Source? Entity @default: `nil`
+---@param TearFlags? TearFlags @default: `TearFlags.TEAR_NORMAL`
+---@param DamageFlags? integer @default: `DamageFlags.DAMAGE_EXPLOSION`
+---@param DamageSource? boolean @default: `false`
 function Game:BombDamage(Position, Damage, Radius, LineCheck, Source, TearFlags, DamageFlags, DamageSource)
 end
 
 ---@param Position Vector
 ---@param Damage number
----@param TearFlags? TearFlags @default: TearFlags.TEAR_NORMAL
----@param Color? Color @default: Color.Default
----@param Source? Entity @default: nil
----@param RadiusMult? number @default: 1
----@param LineCheck? boolean @default: true
----@param DamageSource? boolean @default: false
----@param DamageFlags? integer @default: DamageFlags.DAMAGE_EXPLOSION
-function Game:BombExplosionEffects(Position, Damage, TearFlags, Color, Source, RadiusMult, LineCheck, DamageSource, DamageFlags)
+---@param TearFlags? TearFlags @default: `TearFlags.TEAR_NORMAL`
+---@param Color? Color @default: `Color.Default`
+---@param Source? Entity @default: `nil`
+---@param RadiusMult? number @default: `1`
+---@param LineCheck? boolean @default: `true`
+---@param DamageSource? boolean @default: `false`
+---@param DamageFlags? integer @default: `DamageFlags.DAMAGE_EXPLOSION`
+function Game:BombExplosionEffects(Position, Damage, TearFlags, Color, Source, RadiusMult, LineCheck, DamageSource,
+								   DamageFlags)
 end
 
 ---@param Position Vector
 ---@param Radius number
 ---@param TearFlags TearFlags
----@param Source? Entity @default: nil
----@param RadiusMult? number @default: 1
+---@param Source? Entity @default: `nil`
+---@param RadiusMult? number @default: `1`
 function Game:BombTearflagEffects(Position, Radius, TearFlags, Source, RadiusMult)
 end
 
@@ -72,7 +73,7 @@ function Game:ButterBeanFart(Position, Radius, Source, ShowEffect, DoSuperKnockb
 end
 
 ---@param RoomIndex integer
----@param Dimension? integer @default: -1
+---@param Dimension? integer @default: `-1`
 function Game:ChangeRoom(RoomIndex, Dimension)
 end
 
@@ -121,11 +122,11 @@ function Game:Fadeout(Speed, Target)
 end
 
 ---@param Position Vector
----@param Radius? number @default: 85
----@param Source? Entity @default: nil
----@param FartScale? number @default: 1
----@param FartSubType? integer @default: 0
----@param FartColor? Color @default: Color.Default
+---@param Radius? number @default: `85`
+---@param Source? Entity @default: `nil`
+---@param FartScale? number @default: `1`
+---@param FartSubType? integer @default: `0`
+---@param FartColor? Color @default: `Color.Default`
 function Game:Fart(Position, Radius, Source, FartScale, FartSubType, FartColor)
 end
 
@@ -323,7 +324,7 @@ function Game:ShowFortune()
 end
 
 ---@param FrameCount integer
----@param Backdrop? BackdropType @default: BackdropType.NUM_BACKDROPS
+---@param Backdrop? BackdropType @default: `BackdropType.NUM_BACKDROPS`
 function Game:ShowHallucination(FrameCount, Backdrop)
 end
 
@@ -352,31 +353,32 @@ end
 ---@param ParticleType EffectVariant
 ---@param NumParticles integer
 ---@param Speed number
----@param Color? Color @default: Color.Default
----@param Height? number @default: 100000
----@param SubType? integer @default: 0
+---@param Color? Color @default: `Color.Default`
+---@param Height? number @default: `100000`
+---@param SubType? integer @default: `0`
 function Game:SpawnParticles(Pos, ParticleType, NumParticles, Speed, Color, Height, SubType)
 end
 
 ---@param RoomIndex integer
 ---@param Direction Direction
----@param Animation? RoomTransitionAnim @default: RoomTransitionAnim.WALK
----@param Player? EntityPlayer @default: nil
----@param Dimension? integer @default: -1
+---@param Animation? RoomTransitionAnim @default: `RoomTransitionAnim.WALK`
+---@param Player? EntityPlayer @default: `nil`
+---@param Dimension? integer @default: `-1`
 function Game:StartRoomTransition(RoomIndex, Direction, Animation, Player, Dimension)
 end
 
 ---@param SameStage boolean
 ---@param Animation integer @StageTransition::Animation
-function Game:StartStageTransition(SameStage, Animation)
+---@param Player EntityPlayer
+function Game:StartStageTransition(SameStage, Animation, Player)
 end
 
 function Game:Update()
 end
 
 ---@param Position Vector
----@param Force? number @default: 10
----@param Radius? number @default: 250
+---@param Force? number @default: `10`
+---@param Radius? number @default: `250`
 function Game:UpdateStrangeAttractor(Position, Force, Radius)
 end
 

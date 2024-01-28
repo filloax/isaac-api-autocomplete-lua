@@ -26,7 +26,6 @@ end
 function HistoryItem:GetTime()
 end
 
----Returns true if the history item is a trinket.
 ---@return boolean
 function HistoryItem:IsTrinket()
 end

@@ -3,41 +3,41 @@ local ProceduralEffect = {}
 
 ---Returns a table that describes the action argument.
 ---
----If `GetActionType` returns `ProceduralEffectActionType.USE_ACTIVE_ITEM`, the returned 
+---If `GetActionType` returns `ProceduralEffectActionType.USE_ACTIVE_ITEM`, the returned
 ---table has the following fields:
 ---
 --- - id: integer
 ---
----If `GetActionType` returns `ProceduralEffectActionType.ADD_TEMPRORY_EFFECT`, the returned 
+---If `GetActionType` returns `ProceduralEffectActionType.ADD_TEMPRORY_EFFECT`, the returned
 ---table has the following fields:
 ---
 --- - id: integer
 ---
----If `GetActionType` returns `ProceduralEffectActionType.SPAWN_ENTITY`, the returned 
+---If `GetActionType` returns `ProceduralEffectActionType.SPAWN_ENTITY`, the returned
 ---table has the following fields:
 ---
---- - type: integer 
+--- - type: integer
 --- - variant: integer
 ---
----If `GetActionType` returns `ProceduralEffectActionType.CONVERT_ENTITY`, the returned 
+---If `GetActionType` returns `ProceduralEffectActionType.CONVERT_ENTITY`, the returned
 ---table has the following fields:
 ---
---- - fromType: integer 
+--- - fromType: integer
 --- - fromvariant: integer
---- - toType: integer 
+--- - toType: integer
 --- - tovariant: integer
 ---
----If `GetActionType` returns `ProceduralEffectActionType.AREA_DAMAGE`, the returned 
+---If `GetActionType` returns `ProceduralEffectActionType.AREA_DAMAGE`, the returned
 ---table has the following fields:
 ---
---- - radius: number 
+--- - radius: number
 --- - damage: number
 ---
----If `GetActionType` returns `ProceduralEffectActionType.FART`, the returned 
+---If `GetActionType` returns `ProceduralEffectActionType.FART`, the returned
 ---table has the following fields:
 ---
---- - fromType: number 
---- - radius: number 
+--- - fromType: number
+--- - radius: number
 ---@return table
 function ProceduralEffect:GetProceduralEffect()
 end
@@ -52,10 +52,10 @@ end
 ---When `ProceduralEffect:GetConditionType` returns `ProceduralEffectConditionType.ENTITY_SPAWN`, the returned
 ---table has the following fields:
 ---
---- - type: integer 
+--- - type: integer
 --- - variant: integer
 ---
----@return table 
+---@return table
 function ProceduralEffect:GetConditionProperty()
 end
 
@@ -65,6 +65,6 @@ function ProceduralEffect:GetConditionType()
 end
 
 ---Returns the trigger chance. The returned value is between 0 and 1.
----@return number 
+---@return number
 function ProceduralEffect:GetTriggerChance()
 end

@@ -47,7 +47,7 @@ end
 ---@param SamplePos Vector
 ---@param RenderPos Vector
 ---@param AlphaThreshold number
----@param LayerID? integer @default: 0
+---@param LayerID? integer @default: `0`
 ---@return any @KColor
 function Sprite:GetTexel(SamplePos, RenderPos, AlphaThreshold, LayerID)
 end
@@ -110,15 +110,15 @@ function Sprite:RemoveOverlay()
 end
 
 ---@param Position Vector
----@param TopLeftClamp? Vector @default: Vector.Zero
----@param BottomRightClamp? Vector @default: Vector.Zero
+---@param TopLeftClamp? Vector @default: `Vector.Zero`
+---@param BottomRightClamp? Vector @default: `Vector.Zero`
 function Sprite:Render(Position, TopLeftClamp, BottomRightClamp)
 end
 
 ---@param LayerId integer
 ---@param Position Vector
----@param TopLeftClamp? Vector @default: Vector.Zero
----@param BottomRightClamp? Vector @default: Vector.Zero
+---@param TopLeftClamp? Vector @default: `Vector.Zero`
+---@param BottomRightClamp? Vector @default: `Vector.Zero`
 function Sprite:RenderLayer(LayerId, Position, TopLeftClamp, BottomRightClamp)
 end
 
@@ -135,7 +135,7 @@ end
 --- FloatDirection animations dynamically and other entities that follow
 --- similar behaviors.
 ---@param AnimationName string
----@param Reset? boolean @default: true
+---@param Reset? boolean @default: `true`
 ---@return boolean
 function Sprite:SetAnimation(AnimationName, Reset)
 end
@@ -178,5 +178,3 @@ end
 ---@return boolean
 function Sprite:WasEventTriggered(EventName)
 end
-
-

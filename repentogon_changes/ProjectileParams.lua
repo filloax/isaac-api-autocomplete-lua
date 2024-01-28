@@ -7,7 +7,7 @@
 ---@field CircleAngle number
 ---@field Color Color
 ---@field CurvingStrength number
----@field Damage number **Warning:** Enemies that are champions will cap the damage at 2.
+---@field Damage number **WARNING:** Enemies that are champions will cap the damage at `2.0`.
 ---@field DepthOffset number
 ---@field DotProductLimit number
 ---@field FallingAccelModifier number
@@ -23,4 +23,3 @@
 ---@field Variant integer
 ---@field VelocityMulti number
 ---@field WiggleFrameOffset integer
----@field Damage number **Warning:** Enemies that are champions will cap the damage at 2.

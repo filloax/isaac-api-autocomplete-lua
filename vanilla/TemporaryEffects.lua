@@ -2,20 +2,20 @@
 local TemporaryEffects = {}
 
 ---@param CollectibleType CollectibleType
----@param AddCostume? boolean @default: true
----@param Count? integer @default: 1
+---@param AddCostume? boolean @default: `true`
+---@param Count? integer @default: `1`
 function TemporaryEffects:AddCollectibleEffect(CollectibleType, AddCostume, Count)
 end
 
 ---@param NullId integer @ItemConfigNullItemID
----@param AddCostume? boolean @default: true
----@param Count? integer @default: 1
+---@param AddCostume? boolean @default: `true`
+---@param Count? integer @default: `1`
 function TemporaryEffects:AddNullEffect(NullId, AddCostume, Count)
 end
 
 ---@param TrinketType TrinketType
----@param AddCostume? boolean @default: true
----@param Count? integer @default: 1
+---@param AddCostume? boolean @default: `true`
+---@param Count? integer @default: `1`
 function TemporaryEffects:AddTrinketEffect(TrinketType, AddCostume, Count)
 end
 
@@ -72,17 +72,16 @@ function TemporaryEffects:HasTrinketEffect(TrinketType)
 end
 
 ---@param CollectibleType CollectibleType
----@param Count? integer @default: 1
+---@param Count? integer @default: `1`
 function TemporaryEffects:RemoveCollectibleEffect(CollectibleType, Count)
 end
 
 ---@param NullId integer @ItemConfigNullItemID
----@param Count? integer @default: 1
+---@param Count? integer @default: `1`
 function TemporaryEffects:RemoveNullEffect(NullId, Count)
 end
 
 ---@param TrinketType TrinketType
----@param Count? integer @default: 1
+---@param Count? integer @default: `1`
 function TemporaryEffects:RemoveTrinketEffect(TrinketType, Count)
 end
-

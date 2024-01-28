@@ -1,4 +1,4 @@
----@return ColorModifier
+---@return Color
 function EntityFamiliar:GetDirtColor()
 end
 
@@ -7,19 +7,23 @@ function EntityFamiliar:GetFollowerPriority()
 end
 
 ---@return PathFinder
-function EntityFamiliar:GetPathfinder()
+function EntityFamiliar:GetPathFinder()
 end
 
+---Returns `nil` for familiars that don't mimic the player's attacks (Incubus, etc).
+---@return Weapon?
+function EntityFamiliar:GetWeapon()
+end
+
+---Triggers effects on the familiar as if a room was cleared and incrementing `.RoomClearCount` (i.e. Sack of pennies dropping a coin).
 function EntityFamiliar:TriggerRoomClear()
 end
 
 ---@param aimDirection Vector 
 ---@param direction Direction
----@param unknownVector Vector? TODO: Document this parameter
----@return boolean `true` if it was able to aim.
-function EntityFamiliar:TryAimAtMarkedTarget(aimDirection, direction, unknownVector)
+---@return Vector?
+function EntityFamiliar:TryAimAtMarkedTarget(aimDirection, direction)
 end
 
----@return PathFinder
-function EntityFamiliar:GetPathFinder()
+function EntityFamiliar:UpdateDirtColor()
 end

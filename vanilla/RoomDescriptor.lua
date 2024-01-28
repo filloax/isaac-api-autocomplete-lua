@@ -4,7 +4,7 @@
 ---@field ChallengeDone boolean
 ---@field Clear boolean
 ---@field ClearCount integer
----@field Data RoomConfig_Room
+---@field Data RoomConfigRoom
 ---@field DecorationSeed integer
 ---@field DeliriumDistance integer
 ---@field DisplayFlags integer
@@ -13,7 +13,7 @@
 ---@field HasWater boolean
 ---@field ListIndex integer
 ---@field NoReward boolean
----@field OverrideData RoomConfig_Room
+---@field OverrideData RoomConfigRoom
 ---@field PitsCount integer
 ---@field PoopCount integer
 ---@field PressurePlatesTriggered boolean
@@ -24,8 +24,7 @@
 ---@field SpawnSeed integer
 ---@field SurpriseMiniboss boolean
 ---@field VisitedCount integer
-local _RoomDescriptor = {}
+local RoomDescriptor = {}
 
 -- to make the enum not error
 _G.RoomDescriptor = {}
-

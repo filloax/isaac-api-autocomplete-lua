@@ -1,12 +1,12 @@
----@class RenderSet 
+---@class RenderSet
 local RenderSet = {}
 
 ---TODO: Document me!
 ---@param vertexBuffer VertexBuffer
----@param shader Shader 
----@param nElements integer 
+---@param shader Shader
+---@param nElements integer
 ---@param first integer
----@param second integer? Optional. Default is -1.
+---@param second? integer default: `-1`
 function RenderSet:SliceSingle(vertexBuffer, shader, nElements, first, second)
 end
 

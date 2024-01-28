@@ -1,19 +1,13 @@
 ---@class MenuManager
 _G.MenuManager = {}
 
----Returns the current active menu. If the main menu is not active, an error is thrown instead.
+---Returns the `MainMenuType` of the currently active (visible) section of the main menu.
 ---@return MainMenuType
 function MenuManager.GetActiveMenu()
 end
 
----Returns the back widget sprite.
 ---@return Sprite 
 function MenuManager.GetBackWidgetSprite()
-end
-
----Returns the current ColorModifier.
----@return ColorModifier
-function MenuManager.GetCurrentColorModifier()
 end
 
 ---Returns the color modifier lerp amount. This is formatted as the absolute rate of change.
@@ -21,17 +15,18 @@ end
 function MenuManager.GetColorModifierLerpAmount()
 end
 
----Returns the select widget sprite.
+---@return ColorModifier
+function MenuManager.GetCurrentColorModifier()
+end
+
 ---@return Sprite 
 function MenuManager.GetSelectWidgetSprite()
 end
 
----Returns the shadow sprite.
 ---@return Sprite 
 function MenuManager.GetShadowSprite()
 end
 
----Returns the target color modifier.
 ---@return ColorModifier
 function MenuManager.GetTargetColorModifier()
 end
@@ -40,15 +35,14 @@ end
 function MenuManager.GetViewPosition()
 end
 
----Sets the current menu. If the main menu is not active, an error is thrown instead.
----@param menu MainMenuType
-function MenuManager.SetActiveMenu(menu)
+---Changes the active menu on the main menu to match the input `menuType`.
+---@param menuType MainMenuType
+function MenuManager.SetActiveMenu(menuType)
 end
 
----Sets the current color modifier.
 ---@param colorModifier ColorModifier
----@param lerp boolean? Optional. Default is true.
----@param rate number? Optional. Default is 0.015.
+---@param lerp? boolean @default: `true`
+---@param rate? number @default: `0.015`.
 function MenuManager.SetColorModifier(colorModifier, lerp, rate)
 end
 

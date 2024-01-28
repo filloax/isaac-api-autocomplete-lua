@@ -26,11 +26,11 @@ function SFXManager:IsPlaying(ID)
 end
 
 ---@param ID SoundEffect
----@param Volume? number @default: 1
----@param FrameDelay? integer @default: 2
----@param Loop? boolean @default: false
----@param Pitch? number @default: 1
----@param Pan? number @default: 0
+---@param Volume? number @default: `1`
+---@param FrameDelay? integer @default: `2`
+---@param Loop? boolean @default: `false`
+---@param Pitch? number @default: `1`
+---@param Pan? number @default: `0`
 function SFXManager:Play(ID, Volume, FrameDelay, Loop, Pitch, Pan)
 end
 
@@ -50,4 +50,3 @@ end
 
 function SFXManager:StopLoopingSounds()
 end
-

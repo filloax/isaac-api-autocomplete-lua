@@ -1,4 +1,4 @@
----@class ItemConfig_PillEffect
+---@class ItemConfigPillEffect
 ---@field AchievementID integer
 ---@field GreedModeAllowed boolean
 ---@field ID integer
@@ -9,8 +9,8 @@
 ---@field MimicCharge integer
 ---@field EffectClass integer
 ---@field EffectSubClass integer
-local ItemConfig_PillEffect = {}
+local ItemConfigPillEffect = {}
 
 ---@return boolean
-function ItemConfig_PillEffect:IsAvailable()
+function ItemConfigPillEffect:IsAvailable()
 end

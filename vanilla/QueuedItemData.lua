@@ -1,6 +1,5 @@
 ---@class QueuedItemData
 ---@field Charge integer
----@field Item ItemConfig_Item
+---@field Item ItemConfigItem
 ---@field Touched boolean
 local QueuedItemData = {}
-

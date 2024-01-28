@@ -121,4 +121,3 @@ end
 ---@return Vector
 function Vector:Rotated(AngleDegrees)
 end
-

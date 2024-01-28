@@ -1,4 +1,4 @@
----@class RoomConfig_Room
+---@class RoomConfigRoom
 ---@field Difficulty Difficulty @const
 ---@field Doors integer @const
 ---@field Height integer @const
@@ -14,4 +14,4 @@
 ---@field Variant integer @const
 ---@field Weight number @const
 ---@field Width integer @const
-local RoomConfig_Room = {}
+local RoomConfigRoom = {}

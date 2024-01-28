@@ -1,7 +1,7 @@
 ---@type boolean
 Options.BetterVoidGeneration = nil
 ---@type boolean 
-Options.HushPanicStateFix =nil
+Options.HushPanicStateFix = nil
 ---@type boolean 
 Options.KeyMasterDealChance = nil
 ---@type boolean 

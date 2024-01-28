@@ -1,27 +1,23 @@
 ---@class NightmareScene
 _G.NightmareScene = {}
 
----Returns the background sprite.
 ---@return Sprite 
-function NightmareScene.GetSprite()
+function NightmareScene.GetBackgroundSprite()
 end
 
----Returns the bubble sprite.
 ---@return Sprite 
 function NightmareScene.GetBubbleSprite()
 end
 
----TODO: Document me!
 ---@return integer[]
 function NightmareScene.GetProgressBarMap()
 end
 
----Returns the progress bar sprite.
 ---@return integer[]
 function NightmareScene.GetProgressBarSprite()
 end
 
----Returns true if the Dogma nightmare scene is playing.
+---Returns true if the Dogma nightmare scene is playing (when interacting with Mom's Bed in Home).
 ---@return boolean 
 function NightmareScene.IsDogmaNightmare()
 end

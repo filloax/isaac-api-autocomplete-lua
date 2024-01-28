@@ -1,4 +1,4 @@
----@class ItemConfig_Item
+---@class ItemConfigItem
 ---@field AchievementID integer
 ---@field AddBlackHearts integer
 ---@field AddBombs integer
@@ -11,7 +11,7 @@
 ---@field CacheFlags integer
 ---@field ChargeType integer
 ---@field ClearEffectsOnRemove boolean
----@field Costume ItemConfig_Costume @const
+---@field Costume ItemConfigCostume @const
 ---@field Description string
 ---@field DevilPrice integer
 ---@field Discharged boolean
@@ -29,25 +29,25 @@
 ---@field Special boolean
 ---@field Tags integer
 ---@field Type ItemType
-local ItemConfig_Item = {}
+local ItemConfigItem = {}
 
 ---@param Tags integer
 ---@return boolean
-function ItemConfig_Item:HasTags(Tags)
+function ItemConfigItem:HasTags(Tags)
 end
 
 ---@return boolean
-function ItemConfig_Item:IsCollectible()
+function ItemConfigItem:IsCollectible()
 end
 
 ---@return boolean
-function ItemConfig_Item:IsNull()
+function ItemConfigItem:IsNull()
 end
 
 ---@return boolean
-function ItemConfig_Item:IsTrinket()
+function ItemConfigItem:IsTrinket()
 end
 
 ---@return boolean
-function ItemConfig_Item:IsAvailable()
+function ItemConfigItem:IsAvailable()
 end

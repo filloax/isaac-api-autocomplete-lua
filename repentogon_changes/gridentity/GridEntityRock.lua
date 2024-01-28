@@ -1,12 +1,12 @@
 ---Returns the rock's altrock type.
----@param backdrop BackdropType? Optional. Default is `BackdropType.BACKDROP_NULL`.
+---@param backdrop? BackdropType @default: `BackdropType.BACKDROP_NULL`.
 ---@return integer
 function GridEntityRock:GetAltRockType(backdrop)
 end
 
 ---TODO: Document me!
 ---@param gridType GridEntityType
----@param backdrop BackdropType? Optional. Default is `BackdropType.BACKDROP_NULL`.
+---@param backdrop? BackdropType @default: `BackdropType.BACKDROP_NULL`.
 function GridEntityRock:PlayBreakSound(gridType, backdrop)
 end
 
@@ -22,10 +22,10 @@ end
 
 ---TODO: Document me!
 ---@param gridType GridEntityType
----@param gridVariant integer 
----@param seed integer 
+---@param gridVariant integer
+---@param seed integer
 ---@param unknown boolean TODO: Document me!
----@param backdrop BackdropType? Optional. Default is `BackdropType.BACKDROP_NULL`.
+---@param backdrop? BackdropType @default: `BackdropType.BACKDROP_NULL`.
 function GridEntityRock:SpawnDrops(gridType, gridVariant, seed, unknown, backdrop)
 end
 

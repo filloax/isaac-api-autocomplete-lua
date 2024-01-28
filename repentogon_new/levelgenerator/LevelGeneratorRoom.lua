@@ -6,36 +6,30 @@ local LevelGeneratorRoom = {}
 function LevelGeneratorRoom:Column()
 end
 
----TODO: Document me!
+---Return a mask of the available doors of the room slot. In order to check if a door at a given slot is available, use the DoorSlot enumeration.
 ---@return integer
 function LevelGeneratorRoom:DoorMask()
 end
 
----TODO: Document me!
----@return integer
+---Index of the room during generation.
+---@return integer `0` if the room was the first to be generated, `1` if it was the second, etc.
 function LevelGeneratorRoom:GenerationIndex()
 end
 
----TODO: Document me!
----@return integer
-function LevelGeneratorRoom:Line()
-end
+---@return boolean
+function LevelGeneratorRoom:IsDeadEnd() end
 
----TODO: Document me!
+---Returns a table of the generation indices of the neighboring rooms.
 ---@return integer[]
 function LevelGeneratorRoom:Neighbors()
 end
 
----TODO: Document me!
----@return integer
+---Return the row of the room slot on the level grid.
+---@return integer `0` for the first row, `1` for the second, etc.
 function LevelGeneratorRoom:Row()
 end
 
----TODO: Document me!
----@return integer
+---Return the shape of the room, as per the `RoomShape` enumeration.
+---@return RoomShape
 function LevelGeneratorRoom:Shape()
 end
-
----Returns true if the room is a deadend.
----@return boolean 
-function LevelGeneratorRoom:IsDeadEnd() end

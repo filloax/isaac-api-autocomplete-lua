@@ -71,10 +71,10 @@ function EntityFamiliar:MoveDiagonally(Speed)
 end
 
 ---@param MaxDistance number
----@param FrameInterval? integer @default: 13
----@param Flags? integer @default: 0
----@param ConeDir? Vector @default: Vector.Zero
----@param ConeAngle? number @default: 15
+---@param FrameInterval? integer @default: `13`
+---@param Flags? integer @default: `0`
+---@param ConeDir? Vector @default: `Vector.Zero`
+---@param ConeAngle? number @default: `15`
 function EntityFamiliar:PickEnemyTarget(MaxDistance, FrameInterval, Flags, ConeDir, ConeAngle)
 end
 
@@ -107,4 +107,3 @@ end
 
 function EntityFamiliar:Shoot()
 end
-
