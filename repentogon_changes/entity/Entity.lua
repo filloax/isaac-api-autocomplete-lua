@@ -87,9 +87,16 @@ end
 function Entity:GetCollisionCapsule(vector)
 end
 
----If the entity recently took damage with the DAMAGE_COUNTDOWN `DamageFlag`, this returns how many more frames must pass before they can take damage with the DAMAGE_COUNTDOWN `DamageFlag` again.
+---If the entity recently took damage with the DAMAGE_COUNTDOWN `DamageFlag`, 
+---this returns how many more frames must pass before they can take damage with 
+---the DAMAGE_COUNTDOWN `DamageFlag` again.
 ---
----Note that this is NOT the same as the player's invincibility frames (`EntityPlayer:GetDamageCooldown()`). The DAMAGE_COUNTDOWN `DamageFlag` and this associated countdown are typically used to control how rapidly an enemy will take damage from the few sources that uses that flag, such as the the collision damage effects from the "My Little Unicorn", "The Nail", and "The Gamekid".
+---Note that this is NOT the same as the player's invincibility frames 
+---(`EntityPlayer:GetDamageCooldown()`). The DAMAGE_COUNTDOWN `DamageFlag` and
+---this associated countdown are typically used to control how rapidly an enemy
+---will take damage from the few sources that uses that flag, such as the the
+---collision damage effects from the "My Little Unicorn", "The Nail", and "The 
+---Gamekid".
 ---@return integer
 function Entity:GetDamageCountdown()
 end
@@ -171,7 +178,11 @@ end
 function Entity:GetPosVel()
 end
 
----The prediction is the target's current position plus their velocity multiplied by the distance between this and the target. `Delay` acts as a multiplier for how far ahead the prediction should be. For example, `1.0` would predict where the target's velocity would place them on the next update.
+---The prediction is the target's current position plus their velocity
+---multiplied by the distance between this and the target. `Delay` acts
+---as a multiplier for how far ahead the prediction should be. For 
+---example, `1.0` would predict where the target's velocity would place 
+---them on the next update.
 ---@param target Entity
 ---@param strength integer
 ---@return Vector
@@ -213,14 +224,16 @@ end
 function Entity:IgnoreEffectFromFriendly(ref)
 end
 
----Spawns two blood poof effects. The second effect is the child of the effect this function returns.
+---Spawns two blood poof effects. The second effect is the child of the 
+---effect this function returns.
 ---@param position Vector? @default: `self.Position`
 ---@param color Color? @default: `Color.Default`
 ---@param scale? number @default: `1.0`
 function Entity:MakeBloodPoof(position, color, scale)
 end
 
----Spawns two blood poof effects. The second effect is the child of the effect this function returns.
+---Spawns two blood poof effects. The second effect is the child of the 
+---effect this function returns.
 ---
 ---Deprecated in favor of `Entity:MakeBloodPoof()`
 ---@deprecated
@@ -372,7 +385,9 @@ end
 function Entity:TeleportToRandomPosition()
 end
 
----Used to cast an `Entity` object to an `EntityDelirium` object. The conversion will only succeed if the source entity is an instance of Delirium (in its normal form or in a transformed form).
+---Used to cast an `Entity` object to an `EntityDelirium` object. 
+---The conversion will only succeed if the source entity is an instance 
+---of Delirium (in its normal form or in a transformed form).
 ---@return EntityDelirium? `nil` is conversion is not successful
 function Entity:ToDelirium()
 end

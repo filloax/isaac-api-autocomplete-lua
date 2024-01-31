@@ -10,7 +10,8 @@ end
 function EntityFamiliar:GetPathFinder()
 end
 
----Returns `nil` for familiars that don't mimic the player's attacks (Incubus, etc).
+---Returns `nil` for familiars that don't mimic the player's attacks 
+---(Incubus, etc).
 ---@return Weapon?
 function EntityFamiliar:GetWeapon()
 end

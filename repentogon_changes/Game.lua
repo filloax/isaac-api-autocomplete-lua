@@ -4,7 +4,9 @@
 function Game:AchievementUnlocksDisallowed()
 end
 
---Adds a debug flag to the game. Multiple can be added simultaneously with bitwise concatenation (e.g. `DebugFlag.ENTITY_POSITIONS | DebugFlag.HITSPHERES`).
+---Adds a debug flag to the game. Multiple can be added simultaneously with 
+---bitwise concatenation (e.g. 
+---`DebugFlag.ENTITY_POSITIONS | DebugFlag.HITSPHERES`).
 ---@param flags DebugFlag
 function Game:AddDebugFlags(flags)
 end
@@ -37,12 +39,14 @@ end
 function Game:GetItemOverlay()
 end
 
----Returns the lerped color modifier. This is formatted as the absolute rate of change (ie, all values are positive).
+---Returns the lerped color modifier. This is formatted as the absolute 
+---rate of change (ie, all values are positive).
 ---@return ColorModifier
 function Game:GetLerpColorModifier()
 end
 
----Deprecated as `PauseMenu` is now a global table. You can get the state via `PauseMenu.GetState()`
+---Deprecated as `PauseMenu` is now a global table. You can get the state 
+---via `PauseMenu.GetState()`
 ---@deprecated
 ---@return PauseMenuStates
 function Game:GetPauseMenuState()
@@ -65,7 +69,8 @@ end
 function Game:IsErased(entity)
 end
 
----Returns `true `if the next or current wave is a boss wave. Returns `false` otherwise or if not in Greed Mode.
+---Returns `true `if the next or current wave is a boss wave. Returns `false` 
+---otherwise or if not in Greed Mode.
 ---@return boolean
 function Game:IsGreedBoss()
 end

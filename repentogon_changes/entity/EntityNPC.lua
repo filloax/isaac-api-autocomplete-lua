@@ -1,4 +1,5 @@
----Same as `FireBossProjectiles`, but returns a table containing the list of spawned projectiles.
+---Same as `FireBossProjectiles`, but returns a table containing the list of
+---spawned projectiles.
 ---@param NumProjectiles integer
 ---@param TargetPos Vector
 ---@param TrajectoryModifier number
@@ -15,7 +16,8 @@ end
 function EntityNPC:FireGridEntity(sprite, desc, velocity, backdrop)
 end
 
----Same as `FireProjectiles`, but returns a table containing the list of spawned projectiles.
+---Same as `FireProjectiles`, but returns a table containing the list of 
+---spawned projectiles.
 ---@param Position Vector
 ---@param Velocity Vector
 ---@param Mode ProjectileMode
@@ -24,12 +26,15 @@ end
 function EntityNPC:FireProjectilesEx(Position, Velocity, Mode, Params)
 end
 
----Returns the ControllerId for the NPC, which indicates which player is controlling it. Will return -1 when its not being controlled by any player.
+---Returns the ControllerId for the NPC, which indicates which player 
+---is controlling it. Will return -1 when its not being controlled by 
+---any player.
 ---@return integer
 function EntityNPC:GetControllerId()
 end
 
----Returns the dynamic dirt color of the entity. This lets entities like Nightcrawler blend in to the environment.
+---Returns the dynamic dirt color of the entity. This lets entities like 
+---Nightcrawler blend in to the environment.
 ---@return Color
 function EntityNPC:GetDirtColor()
 end
@@ -50,7 +55,8 @@ end
 function EntityNPC:PlaySound(ID, Volume, FrameDelay, Loop, Pitch)
 end
 
----Sets the ControllerId for the NPC, which indicates which player will control it. Set it to `-1` for no player controls(back to normal behaviour).
+---Sets the ControllerId for the NPC, which indicates which player will 
+---control it. Set it to `-1` for no player controls(back to normal behaviour).
 ---@param ControllerID integer
 function EntityNPC:SetControllerId(ControllerID)
 end
@@ -111,7 +117,8 @@ end
 function EntityNPC:TryForceTarget(Target, Duration)
 end
 
----`Force` only applies to NPC poop (it's modified and then used as V1.y, with V1.x being -20.0) and may be incorrect. This needs further investigation.
+---`Force` only applies to NPC poop (it's modified and then used as V1.y, 
+---with V1.x being -20.0) and may be incorrect. This needs further investigation.
 ---@param Source EntityRef
 ---@param Direction Vector
 ---@param Force integer
@@ -119,7 +126,8 @@ end
 function EntityNPC:TryThrow(Source, Direction, Force)
 end
 
----Instructs the entity to update its dirt color. This is generally done automatically on vanilla entities.
+---Instructs the entity to update its dirt color. This is generally done 
+---automatically on vanilla entities.
 ---@param immediate boolean If true, the dirt color will be set to exactly what is beneath the entity. Otherwise, it will be updated smoothly over the course of multiple frames.
 function EntityNPC:UpdateDirtColor(immediate)
 end

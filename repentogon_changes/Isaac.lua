@@ -1,4 +1,5 @@
----Checks if a given character has completed all marks and returns the highest difficulty it was accomplished in.
+---Checks if a given character has completed all marks and returns the 
+---highest difficulty it was accomplished in.
 ---@param playerType PlayerType
 ---@return integer
 ---|0 # None
@@ -7,7 +8,8 @@
 function Isaac.AllMarksFilled(playerType)
 end
 
----Checks if a given character has completed all tainted-related marks and returns the highest difficulty it was accomplished in.
+---Checks if a given character has completed all tainted-related marks 
+---and returns the highest difficulty it was accomplished in.
 ---@param playerType PlayerType
 ---@param taintedMarksGroup TaintedMarksGroup
 ---@return integer
@@ -21,7 +23,8 @@ end
 function Isaac.CanStartTrueCoop()
 end
 
---- Moves the windows mouse cursor to the center of the game's window. It won't move the cursor if the game's window is out of focus.
+--- Moves the windows mouse cursor to the center of the game's window. It 
+---won't move the cursor if the game's window is out of focus.
 function Isaac.CenterCursor()
 end
 
@@ -42,7 +45,9 @@ end
 
 ---Spawns a timer effect.
 ---
----The timer is called every game update. This means the timer only runs while the game is unpaused and uses update frames for its delay parameter (30 frames per second).
+---The timer is called every game update. This means the timer only runs 
+---while the game is unpaused and uses update frames for its delay parameter 
+---(30 frames per second).
 ---
 ---If your use case requires a timer that takes paused time into acount, stick with a custom timer running on a RENDER callback.
 ---@param intervalFunction fun()
@@ -53,7 +58,8 @@ end
 function Isaac.CreateTimer(intervalFunction, interval, times, persistent)
 end
 
----Creates and returns a Weapon object. It is not automatically useable by `owner` and `Isaac.SetWeaponType` must be used in tandem.
+---Creates and returns a Weapon object. It is not automatically useable by 
+---`owner` and `Isaac.SetWeaponType` must be used in tandem.
 ---@param weaponType WeaponType
 ---@param owner Entity Advised that this only be used for `EntityPlayer` and `EntityFamiliar` objects.
 ---@return Weapon
@@ -102,12 +108,14 @@ end
 function Isaac.GetAchievementIdByName(name)
 end
 
----Returns the contents of the player's clipboard. If nothing is in the clipboard, `nil` is returned instead.
+---Returns the contents of the player's clipboard. If nothing is in the 
+---clipboard, `nil` is returned instead.
 ---@return string? 
 function Isaac.GetClipboard()
 end
 
----Returns what position a collectible would actually spawn at from the provided position.
+---Returns what position a collectible would actually spawn at from the 
+---provided position.
 ---@param position Vector
 ---@return Vector
 function Isaac.GetCollectibleSpawnPosition(position)
@@ -142,12 +150,15 @@ end
 function Isaac.GetCompletionMarks(playerType)
 end
 
----Sets the completion marks of a character to match an input table. Requires a dictionary containing all the marks for the character, getting it from GetCompletionMarks is advised for convenience.
+---Sets the completion marks of a character to match an input table. 
+---Requires a dictionary containing all the marks for the character, 
+---getting it from GetCompletionMarks is advised for convenience.
 ---@param marks CompletionMarks
 function Isaac.SetCompletionMarks(marks)
 end
 
----Returns the cursor sprite that is rendered when `Options.MouseControl` is true.
+---Returns the cursor sprite that is rendered when `Options.MouseControl`
+---is true.
 ---@return Sprite
 function Isaac.GetCursorSprite()
 end

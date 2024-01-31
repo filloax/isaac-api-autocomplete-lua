@@ -64,7 +64,8 @@ end
 function EntityPlayer:CanUsePill(pillEffect)
 end
 
----Same as `CheckFamiliar`, but returns a table containing the list of spawned projectiles.
+---Same as `CheckFamiliar`, but returns a table containing the list of
+---spawned projectiles.
 ---@param FamiliarVariant integer
 ---@param TargetCount integer
 ---@param rng RNG
@@ -151,7 +152,8 @@ end
 function EntityPlayer:GetBagOfCraftingSlot(slotId)
 end
 
----Returns the current charge for when the player stops shooting and charges the Kidney Stone item.
+---Returns the current charge for when the player stops shooting 
+---and charges the Kidney Stone item.
 ---@return integer
 function EntityPlayer:GetBladderCharge()
 end
@@ -160,7 +162,8 @@ end
 function EntityPlayer:GetBodyMoveDirection()
 end
 
----Returns how many times the player has taken damage with the Cambion Conception item.
+---Returns how many times the player has taken damage with the 
+---Cambion Conception item.
 ---@return integer
 function EntityPlayer:GetCambionConceptionState()
 end
@@ -169,7 +172,8 @@ end
 function EntityPlayer:GetCambionPregnancyLevel()
 end
 
----Returns a table with the amount of each collectible the player has without counting innate items.
+---Returns a table with the amount of each collectible the player 
+---has without counting innate items.
 ---@return table<CollectibleType, integer>
 function EntityPlayer:GetCollectiblesList()
 end
