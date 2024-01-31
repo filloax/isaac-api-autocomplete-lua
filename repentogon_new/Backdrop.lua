@@ -2,7 +2,7 @@
 local Backdrop = {}
 
 ---@return Image
-function Backdrop:GetFloorImage() end 
+function Backdrop:GetFloorImage() end
 
 ---@return Image
-function Backdrop:GetWallImage() end 
+function Backdrop:GetWallImage() end

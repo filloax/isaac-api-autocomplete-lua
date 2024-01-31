@@ -20,7 +20,6 @@ local CppList_RoomDescriptor = {}
 function CppList_RoomDescriptor:Get(idx)
 end
 
-
 ---@class CppList_RoomConfigSpawn : CppList
 local CppList_RoomConfigSpawn = {}
 
@@ -28,7 +27,6 @@ local CppList_RoomConfigSpawn = {}
 ---@return RoomConfig_Spawn
 function CppList_RoomConfigSpawn:Get(idx)
 end
-
 
 ---@class CppList_RoomConfigEntries : CppList
 local CppList_RoomConfigEntries = {}
@@ -38,7 +36,6 @@ local CppList_RoomConfigEntries = {}
 function CppList_RoomConfigEntries:Get(idx)
 end
 
-
 ---@class EntityList : CppList
 local EntityList = {}
 
@@ -47,24 +44,21 @@ local EntityList = {}
 function EntityList:Get(idx)
 end
 
-
 ---@class CardConfigList : CppList
 local CardConfigList = {}
 
 ---@param idx integer
----@return ItemConfig_Card
+---@return ItemConfigCard
 function CardConfigList:Get(idx)
 end
-
 
 ---@class CostumeConfigList : CppList
 local CostumeConfigList = {}
 
 ---@param idx integer
----@return ItemConfig_Costume
+---@return ItemConfigCostume
 function CostumeConfigList:Get(idx)
 end
-
 
 ---@class EffectList : CppList
 local EffectList = {}
@@ -74,24 +68,21 @@ local EffectList = {}
 function EffectList:Get(idx)
 end
 
-
 ---@class ItemConfigList : CppList
 local ItemConfigList = {}
 
 ---@param idx integer
----@return ItemConfig_Item
+---@return ItemConfigItem
 function ItemConfigList:Get(idx)
 end
-
 
 ---@class PillConfigList : CppList
 local PillConfigList = {}
 
 ---@param idx integer
----@return ItemConfig_PillEffect
+---@return ItemConfigPillEffect
 function PillConfigList:Get(idx)
 end
-
 
 ---@class VectorList : CppList
 local VectorList = {}
@@ -101,7 +92,5 @@ local VectorList = {}
 function VectorList:Get(idx)
 end
 
-
 ---@class CppList_intValues : CppList
 local CppList_intValues = {}
-

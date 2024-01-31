@@ -24,9 +24,9 @@ function ItemPool:GetCard(Seed, Playing, Rune, OnlyRunes)
 end
 
 ---@param PoolType ItemPoolType
----@param Decrease? boolean @default: false
----@param Seed? integer @default: Random()
----@param DefaultItem? CollectibleType @default: CollectibleType.COLLECTIBLE_NULL
+---@param Decrease? boolean @default: `false`
+---@param Seed? integer @default: `Random()`
+---@param DefaultItem? CollectibleType @default: `CollectibleType.COLLECTIBLE_NULL`
 ---@return CollectibleType
 function ItemPool:GetCollectible(PoolType, Decrease, Seed, DefaultItem)
 end
@@ -41,7 +41,7 @@ function ItemPool:GetPill(Seed)
 end
 
 ---@param PillColor PillColor
----@param Player? EntityPlayer @default: nil
+---@param Player? EntityPlayer @default: `nil`
 ---@return PillEffect
 function ItemPool:GetPillEffect(PillColor, Player)
 end
@@ -52,7 +52,7 @@ end
 function ItemPool:GetPoolForRoom(RoomType, Seed)
 end
 
----@param DontAdvanceRNG? boolean @default: false
+---@param DontAdvanceRNG? boolean @default: `false`
 ---@return TrinketType
 function ItemPool:GetTrinket(DontAdvanceRNG)
 end
@@ -81,4 +81,3 @@ end
 
 function ItemPool:ResetTrinkets()
 end
-

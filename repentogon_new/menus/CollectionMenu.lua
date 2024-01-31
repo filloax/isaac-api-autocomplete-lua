@@ -1,24 +1,22 @@
 ---@class CollectionMenu
 _G.CollectionMenu = {}
 
----Returns the collection menu sprite.
+---Returns the collection menu sprite (Paper sprite and all other decoration).
 ---@return Sprite 
 function CollectionMenu:GetCollectionMenuSprite()
 end
 
----Returns the selectable elements that shows the items deathscreen sprites.
+---Returns the sprite of the selectable elements that shows the "DeathScreen" item sprites.
 ---@return Sprite 
 function CollectionMenu:GetDeathScreenSprite()
 end
 
----Returns the current page number.
 ---@return integer
 function CollectionMenu:GetSelectedPage()
 end
 
----Returns the current element.
 ---@return integer
-function CollectionMenu:GetSelectedelement()
+function CollectionMenu:GetSelectedElement()
 end
 
 ---Sets the current page.
@@ -26,7 +24,6 @@ end
 function CollectionMenu:SetSelectedPage(page)
 end
 
----Sets the current element
 ---@param elementNumber integer
 function CollectionMenu:SetSelectedElement(elementNumber)
 end

@@ -1,19 +1,20 @@
+---@diagnostic disable: inject-field
 ---Returns true if achievements can't be unlocked this run.
----@return boolean 
+---@return boolean
 function Game:AchievementUnlocksDisallowed()
 end
 
----Adds a debug flag to the game. Multiple can be added simultaneously with bitwise concatenation.
----@param flags integer
+---Adds a debug flag to the game. Multiple can be added simultaneously with 
+---bitwise concatenation (e.g. 
+---`DebugFlag.ENTITY_POSITIONS | DebugFlag.HITSPHERES`).
+---@param flags DebugFlag
 function Game:AddDebugFlags(flags)
 end
 
----Devolves the provided entity.
 ---@param entity Entity
 function Game:DevolveEntity(entity)
-end 
+end
 
----Returns the current ChallengeParams.
 ---@return ChallengeParams
 function Game:GetChallengeParams()
 end
@@ -23,35 +24,38 @@ end
 function Game:GetCurrentColorModifier()
 end
 
----Returns a bitmask of the debugflags.
----@return integer
+---Returns a DebugFlags bitmask.
+---@return DebugFlag
 function Game:GetDebugFlags()
 end
 
----Returns the current dimension.
 ---@return Dimension
 function Game:GetDimension()
-end 
+end
 
----Returns the lerped color modifier. This is formatted as the absolute rate of change.
+---Deprecated as `ItemOverlay` is now a global table.
+---@deprecated
+---@return userdata @ItemOverlay
+function Game:GetItemOverlay()
+end
+
+---Returns the lerped color modifier. This is formatted as the absolute 
+---rate of change (ie, all values are positive).
 ---@return ColorModifier
 function Game:GetLerpColorModifier()
 end
 
----Returns the current pause menu state.
+---Deprecated as `PauseMenu` is now a global table. You can get the state 
+---via `PauseMenu.GetState()`
+---@deprecated
 ---@return PauseMenuStates
 function Game:GetPauseMenuState()
 end
 
 ---Returns the amount of planetariums that has been entered in the current run.
----@return integer 
+---@return integer
 function Game:GetPlanetariumsVisited()
 end
-
----Returns the RoomTransition class.
----@return RoomTransition
-function Game:GetRoomTransition()
-end 
 
 ---Returns the target ColorModifier.
 ---@return ColorModifier
@@ -59,58 +63,56 @@ function Game:GetTargetColorModifier()
 end
 
 ---Returns true if the entity was erased for the run.
----@param entity Entity 
+---@param entity Entity
 ---@return boolean
+---@overload fun(self: Game, type: EntityType, variant?: integer, subType?: integer): boolean
 function Game:IsErased(entity)
 end
 
----Returns true if the entity was erased for the run.
----@param type EntityType
----@param variant integer? Optional. Default is -1.
----@param subType integer? Optional. Default is -1.
----@return boolean
-function Game:IsErased(type, variant, subType)
-end
-
----TODO: Document me!
+---Returns `true `if the next or current wave is a boss wave. Returns `false` 
+---otherwise or if not in Greed Mode.
 ---@return boolean
 function Game:IsGreedBoss()
 end
 
----TODO: Document me!
+---Returns `true` if the next or current wave is the optional "nightmare" wave. Returns `false` otherwise or if not in Greed Mode.
 ---@return boolean
 function Game:IsGreedFinalBoss()
-end
-
----Returns true if the pause menu is open.
----@return boolean
-function Game:IsPauseMenuOpen()
-end 
-
----Returns true if the game run is a rerun.
----@return boolean 
-function Game:IsRerun()
-end
-
----Sets the color modifier.
----@param colorModifier ColorModifier
----@param lerp boolean? Optional. Default is true. 
----@param rate number? Optional. Default is 0.015.
-function Game:SetColorModifier(colorModifier, lerp, rate)
-end 
-
----Spawns a bomb crater.
----@param position Vector 
----@return Entity 
-function Game:SpawnBombCrater(position)
-end
-
----@param SameStage boolean
----@param Animation integer @StageTransition::Animation
-function Game:StartStageTransition(SameStage, Animation, Player)
 end
 
 ---Returns `true` if current mode is Hard Mode or Greedier
 ---@return boolean
 function Game:IsHardMode()
+end
+
+---@return boolean
+function Game:IsPauseMenuOpen()
+end
+
+---Returns `true` if the current run is a rerun.
+---@return boolean
+function Game:IsRerun()
+end
+
+---@param colorModifier ColorModifier
+---@param lerp? boolean @default: `true`
+---@param rate? number @default: `0.015`.
+function Game:SetColorModifier(colorModifier, lerp, rate)
+end
+
+---TODO: Document me!
+---
+---**NOTE**: In upcoming release of REPENTOGON v1.0.6
+function Game:ShowGenericLeaderboard()
+end
+
+---@param position Vector
+---@return Entity
+function Game:SpawnBombCrater(position)
+end
+
+---@param SameStage boolean
+---@param Animation integer @StageTransition::Animation
+---@param Player? EntityPlayer
+function Game:StartStageTransition(SameStage, Animation, Player)
 end

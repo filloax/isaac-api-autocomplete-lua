@@ -1,7 +1,6 @@
 ---@class CustomChallengeMenu
 _G.CustomChallengeMenu = {}
 
----Returns the modded challenge menu sprite.
 ---@return Sprite 
 function CustomChallengeMenu:GetSprite()
 end

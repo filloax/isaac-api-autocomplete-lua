@@ -1,35 +1,35 @@
----@class PoolRegistration
----@field decreaseBy number 
----@field initialWeight number 
----@field itemID CollectibleType
----@field removeOn number 
----@field weight number
-
 ---Returns true if the collectible can be spawned.
 ---@param collectible CollectibleType
----@param unknown boolean TODO: Document me!
----@return true
-function ItemPool:CanSpawnCollectible(collectible, unknown)
+---@param ignoreLocked boolean If set to `true`, this function will return true for items that could appear but are locked behind achievements.
+---@return boolean canSpawn Will still return `false` if the item was removed from the item pool or if it can't appear because other effects (Tainted Lost offensive items mechanic or NO! trinket effect).
+function ItemPool:CanSpawnCollectible(collectible, ignoreLocked)
 end
 
 ---More sophisticated version of `ItemPool:GetCard` that allows individual chances to be defined.
 ---@param seed integer
----@param specialChance integer 
+---@param specialChance integer
 ---@param runeChance integer
 ---@param suitChance integer
 ---@param allowNonCards boolean
 function ItemPool:GetCardEx(seed, specialChance, runeChance, suitChance, allowNonCards)
-end 
+end
 
----Returns a collectible from a lost. 
+---Returns a collectible from a list.
 ---@param collectibles CollectibleType[] The collectibles to choose from.
----@param seed integer? Optional. The seed to use. Default is `Random`.
----@param defaultItem CollectibleType? Optional. The default item to resort to. Default is `CollectibleType.COLLECTIBLE_BREAKFAST`.
----@param addToBlacklist boolean? Optional. If true, the collectible is added to the blacklist and can't normally spawn again. Default is true.
----@param excludeLockedItems boolean? Optional. If true, collectibles that haven't been unlocked yet can't be chosen. Default is false.
+---@param seed? integer @default: `Random`. The seed to use.
+---@param defaultItem CollectibleType? @default: `CollectibleType.COLLECTIBLE_BREAKFAST`. The default item to resort to.
+---@param addToBlacklist? boolean @default: `true`. If `true`, the collectible is added to the blacklist and can't normally spawn again.
+---@param excludeLockedItems? boolean @default: `false`. If `true`, collectibles that haven't been unlocked yet can't be chosen.
 ---@return CollectibleType
 function ItemPool:GetCollectibleFromList(collectibles, seed, defaultItem, addToBlacklist, excludeLockedItems)
-end 
+end
+
+---@class PoolRegistration
+---@field decreaseBy number
+---@field initialWeight number
+---@field itemID CollectibleType
+---@field removeOn number
+---@field weight number
 
 ---Returns a table of registered collectibles in the pool.
 ---@param poolType ItemPoolType
@@ -60,19 +60,19 @@ end
 function ItemPool:GetRoomBlacklistedCollectibles()
 end
 
----Returns true if the collectible is available in item pools.
+---Returns `true` if the collectible is available in item pools.
 ---@param collectible CollectibleType
 ---@return boolean
 function ItemPool:HasCollectible(collectible)
 end
 
----Returns true if the trinket is available in the trinket pool.
+---Returns `true` if the trinket is available in the trinket pool.
 ---@param trinket TrinketType
 ---@return boolean
 function ItemPool:HasTrinket(trinket)
 end
 
----Unidentifies a pill and returns it back to the ??? state.
+---Unidentifies a pill and returns it back to the unidentified (displaying as ???) state.
 ---@param pill PillColor
 function ItemPool:UnidentifyPill(pill)
 end

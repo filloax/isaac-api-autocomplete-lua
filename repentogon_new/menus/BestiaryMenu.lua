@@ -2,17 +2,17 @@
 _G.BestiaryMenu = {}
 
 ---Returns the bestiary menu sprite.
----@return Sprite 
+---@return Sprite
 function BestiaryMenu:GetBestiaryMenuSprite()
 end
 
----Returns the sprite of the selectable elements that shows the deathscreen enemy sprite.
----@return Sprite 
+---Returns the sprite of the selectable elements that shows the "DeathScreen" enemy sprite.
+---@return Sprite
 function BestiaryMenu:GetDeathScreenSprite()
-end 
+end
 
 ---Returns the animated enemy preview sprite.
----@return Sprite 
+---@return Sprite
 function BestiaryMenu:GetEnemySprite()
 end
 
@@ -21,28 +21,24 @@ end
 function BestiaryMenu:GetSelectedPage()
 end
 
----Returns the last page number for enemies. Pages after are reserved for bosses.
 ---@return integer
 function BestiaryMenu:GetLastEnemyPageID()
-end 
+end
 
----Returns the number of boss pages.
 ---@return integer
 function BestiaryMenu:GetNumBossPages()
 end
 
----Returns the number of monster pages.
 ---@return integer
 function BestiaryMenu:GetNumMonsterPages()
 end
 
----Returns the number of pages.
 ---@return integer
 function BestiaryMenu:GetNumPages()
-end 
+end
 
----TODO: Document me!
----@return integer 
+---Returns the selected element on the current page.
+---@return integer
 function BestiaryMenu:GetSelectedElement()
 end
 
@@ -51,7 +47,7 @@ end
 function BestiaryMenu:SetSelectedPage(page)
 end
 
----TODO: Document me!
----@param element integer 
+---Sets the selected element on the current page.
+---@param element integer
 function BestiaryMenu:SetSelectedElement(element)
 end

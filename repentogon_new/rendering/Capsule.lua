@@ -1,7 +1,7 @@
 ---@class Capsule
 local Capsule = {}
 
----TODO: Document me!
+---Causes the capsule to run collision code with `capsule2`
 ---@param capsule2 Capsule 
 ---@param vec Vector 
 ---@return boolean 

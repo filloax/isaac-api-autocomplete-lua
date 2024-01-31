@@ -268,43 +268,53 @@ end
 function Entity:TakeDamage(Damage, Flags, Source, DamageCountdown)
 end
 
----@return EntityBomb
+---Used to cast an `Entity` object to an `EntityBomb` object.
+---@return EntityBomb? --`nil` if conversion is not successful.
 function Entity:ToBomb()
 end
 
----@return EntityEffect
+---Used to cast an `Entity` object to an `EntityEffect` object.
+---@return EntityEffect? --`nil` if conversion is not successful.
 function Entity:ToEffect()
 end
 
----@return EntityFamiliar
+---Used to cast an `Entity` object to an `EntityFamiliar` object.
+---@return EntityFamiliar? --`nil` if conversion is not successful.
 function Entity:ToFamiliar()
 end
 
----@return EntityKnife
+---Used to cast an `Entity` object to an `EntityKnife` object.
+---@return EntityKnife? --`nil` if conversion is not successful.
 function Entity:ToKnife()
 end
 
----@return EntityLaser
+---Used to cast an `Entity` object to an `EntityLaser` object.
+---@return EntityLaser? --`nil` if conversion is not successful.
 function Entity:ToLaser()
 end
 
----@return EntityNPC
+---Used to cast an `Entity` object to an `EntityNPC` object.
+---@return EntityNPC? --`nil` if conversion is not successful.
 function Entity:ToNPC()
 end
 
----@return EntityPickup
+---Used to cast an `Entity` object to an `EntityPickup` object.
+---@return EntityPickup? --`nil` if conversion is not successful.
 function Entity:ToPickup()
 end
 
----@return EntityPlayer
+---Used to cast an `Entity` object to an `EntityPlayer` object.
+---@return EntityPlayer? --`nil` if conversion is not successful.
 function Entity:ToPlayer()
 end
 
----@return EntityProjectile
+---Used to cast an `Entity` object to an `EntityProjectile` object.
+---@return EntityProjectile? --`nil` if conversion is not successful.
 function Entity:ToProjectile()
 end
 
----@return EntityTear
+---Used to cast an `Entity` object to an `EntityTear` object.
+---@return EntityTear? --`nil` if conversion is not successful.
 function Entity:ToTear()
 end
 

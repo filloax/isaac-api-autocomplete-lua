@@ -1,3 +1,3 @@
----@return Vector[]
+---@return integer[]
 function EntityKnife:GetHitList()
 end

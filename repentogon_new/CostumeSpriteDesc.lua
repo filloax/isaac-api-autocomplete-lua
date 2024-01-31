@@ -4,37 +4,38 @@
 local CostumeSpriteDesc = {}
 
 ---@return boolean
-function CostumeSpriteDesc:CanOverwriteColor() end  
+function CostumeSpriteDesc:CanOverwriteColor() end
 
----@return integer
-function CostumeSpriteDesc:GetBodyColor() end  
+---@return SkinColor
+function CostumeSpriteDesc:GetBodyColor() end
 
----@return integer
-function CostumeSpriteDesc:GetHeadColor() end  
+---@return SkinColor
+function CostumeSpriteDesc:GetHeadColor() end
 
----@return ItemConfig_Item 
-function CostumeSpriteDesc:GetItemConfig() end  
-
----@return boolean
-function CostumeSpriteDesc:GetPlayerType() end  
+---@return ItemConfigItem
+function CostumeSpriteDesc:GetItemConfig() end
 
 ---@return boolean
-function CostumeSpriteDesc:GetPriority() end  
+function CostumeSpriteDesc:GetPlayerType() end
 
+---@return boolean
+function CostumeSpriteDesc:GetPriority() end
+
+---Returns sprite of associated to the costume.
 ---@return Sprite
-function CostumeSpriteDesc:GetSprite() end  
+function CostumeSpriteDesc:GetSprite() end
 
 ---@return boolean
-function CostumeSpriteDesc:HasOverlay() end  
+function CostumeSpriteDesc:HasOverlay() end
 
 ---@return boolean
-function CostumeSpriteDesc:HasSkinAlt() end  
+function CostumeSpriteDesc:HasSkinAlt() end
 
 ---@return boolean
-function CostumeSpriteDesc:IsFlying() end  
+function CostumeSpriteDesc:IsFlying() end
 
 ---@return boolean
-function CostumeSpriteDesc:IsItemAnimPlaying() end  
+function CostumeSpriteDesc:IsItemAnimPlaying() end
 
 ---@return boolean
-function CostumeSpriteDesc:IsItemStateOnly() end  
+function CostumeSpriteDesc:IsItemStateOnly() end

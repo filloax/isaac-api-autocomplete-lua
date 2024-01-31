@@ -9,8 +9,8 @@ end
 ---@param PositionX number
 ---@param PositionY number
 ---@param RenderColor KColor
----@param BoxWidth? integer @default: 0
----@param Center? boolean @default: false
+---@param BoxWidth? integer @default: `0`
+---@param Center? boolean @default: `false`
 function Font:DrawString(String, PositionX, PositionY, RenderColor, BoxWidth, Center)
 end
 
@@ -20,8 +20,8 @@ end
 ---@param ScaleX number
 ---@param ScaleY number
 ---@param RenderColor KColor
----@param BoxWidth? integer @default: 0
----@param Center? boolean @default: false
+---@param BoxWidth? integer @default: `0`
+---@param Center? boolean @default: `false`
 function Font:DrawStringScaled(String, PositionX, PositionY, ScaleX, ScaleY, RenderColor, BoxWidth, Center)
 end
 
@@ -31,8 +31,8 @@ end
 ---@param ScaleX number
 ---@param ScaleY number
 ---@param RenderColor KColor
----@param BoxWidth? integer @default: 0
----@param Center? boolean @default: false
+---@param BoxWidth? integer @default: `0`
+---@param Center? boolean @default: `false`
 function Font:DrawStringScaledUTF8(String, PositionX, PositionY, ScaleX, ScaleY, RenderColor, BoxWidth, Center)
 end
 
@@ -40,8 +40,8 @@ end
 ---@param PositionX number
 ---@param PositionY number
 ---@param RenderColor KColor
----@param BoxWidth? integer @default: 0
----@param Center? boolean @default: false
+---@param BoxWidth? integer @default: `0`
+---@param Center? boolean @default: `false`
 function Font:DrawStringUTF8(String, PositionX, PositionY, RenderColor, BoxWidth, Center)
 end
 
@@ -83,4 +83,3 @@ end
 
 function Font:Unload()
 end
-

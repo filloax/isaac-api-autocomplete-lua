@@ -1,55 +1,28 @@
 ---@class Options
+---@field AnnouncerVoiceMode integer
+---@field BulletVisibility boolean
+---@field CameraStyle integer
+---@field ChargeBars boolean
+---@field ConsoleFont integer
+---@field DisplayPopups boolean
+---@field DebugConsoleEnabled boolean
+---@field ExtraHUDStyle integer
+---@field FadedConsoleDisplay boolean
+---@field Filter boolean
+---@field FoundHUD boolean
+---@field Fullscreen boolean
+---@field Gamma number
+---@field HUDOffset number
+---@field Language string
+---@field MapOpacity number
+---@field MaxRenderScale integer
+---@field MaxScale integer
+---@field MouseControl boolean
+---@field MusicVolume number
+---@field PauseOnFocusLost boolean
+---@field RumbleEnabled boolean
+---@field SaveCommandHistory boolean
+---@field SFXVolume number
+---@field UseBorderlessFullscreen boolean
+---@field VSync boolean
 _G.Options = {}
-
----@type integer
-Options.AnnouncerVoiceMode = nil
----@type boolean
-Options.BulletVisibility = nil
----@type integer
-Options.CameraStyle = nil
----@type boolean
-Options.ChargeBars = nil
----@type integer
-Options.ConsoleFont = nil
----@type boolean
-Options.DisplayPopups = nil
----@type boolean
-Options.DebugConsoleEnabled = nil
----@type integer
-Options.ExtraHUDStyle = nil
----@type boolean
-Options.FadedConsoleDisplay = nil
----@type boolean
-Options.Filter = nil
----@type boolean
-Options.FoundHUD = nil
----@type boolean
-Options.Fullscreen = nil
----@type number
-Options.Gamma = nil
----@type number
-Options.HUDOffset = nil
----@type string
-Options.Language = nil
----@type number
-Options.MapOpacity = nil
----@type integer
-Options.MaxRenderScale = nil
----@type integer
-Options.MaxScale = nil
----@type boolean
-Options.MouseControl = nil
----@type number
-Options.MusicVolume = nil
----@type boolean
-Options.PauseOnFocusLost = nil
----@type boolean
-Options.RumbleEnabled = nil
----@type boolean
-Options.SaveCommandHistory = nil
----@type number
-Options.SFXVolume = nil
----@type boolean
-Options.UseBorderlessFullscreen = nil
----@type boolean
-Options.VSync = nil

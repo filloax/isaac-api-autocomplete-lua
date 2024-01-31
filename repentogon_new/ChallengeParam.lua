@@ -2,83 +2,109 @@
 _G.ChallengeParam = {}
 
 ---@return boolean
-function ChallengeParam.CanShoot() end
+function ChallengeParam.CanShoot()
+end
 
 ---@return Achievement[]
-function ChallengeParam.GetAchievementList() end
+function ChallengeParam.GetAchievementList()
+end
 
 ---@return number
-function ChallengeParam.GetAddDamage() end
+function ChallengeParam.GetAddDamage()
+end
 
 ---@return integer
-function ChallengeParam.GetBlackHearts() end
+function ChallengeParam.GetBlackHearts()
+end
 
 ---@return integer
-function ChallengeParam.GetCoins() end
+function ChallengeParam.GetCoins()
+end
 
 ---@return CollectibleType[]
-function ChallengeParam.GetCollectibleList() end
+function ChallengeParam.GetCollectibleList()
+end
 
 ---@return CollectibleType[]
-function ChallengeParam.GetCollectibleTwinList() end
+function ChallengeParam.GetCollectibleTwinList()
+end
 
 ---@return integer
-function ChallengeParam.GetCurse() end
+function ChallengeParam.GetCurse()
+end
 
 ---@return integer
-function ChallengeParam.GetCurseFilter() end
+function ChallengeParam.GetCurseFilter()
+end
 
 ---@return Difficulty
-function ChallengeParam.GetDifficulty() end
+function ChallengeParam.GetDifficulty()
+end
 
 ---@return LevelStage
-function ChallengeParam.GetEndStage() end
+function ChallengeParam.GetEndStage()
+end
 
 ---@return integer
-function ChallengeParam.GetHearts() end
+function ChallengeParam.GetHearts()
+end
 
 ---@return integer
-function ChallengeParam.GetMaxHearts() end
+function ChallengeParam.GetMaxHearts()
+end
 
 ---@return number
-function ChallengeParam.GetMinFireRate() end
+function ChallengeParam.GetMinFireRate()
+end
 
 ---@return string
-function ChallengeParam.GetName() end
+function ChallengeParam.GetName()
+end
 
 ---@return PlayerType
-function ChallengeParam.GetPlayerType() end
+function ChallengeParam.GetPlayerType()
+end
 
 ---@return RoomType[]
-function ChallengeParam.GetRoomFilter() end
+function ChallengeParam.GetRoomFilter()
+end
 
 ---@return integer
-function ChallengeParam.GetSoulHearts() end
+function ChallengeParam.GetSoulHearts()
+end
 
 ---@return Card
-function ChallengeParam.GetStartingCard() end
+function ChallengeParam.GetStartingCard()
+end
 
 ---@return PillEffect
-function ChallengeParam.GetStartingPill() end
+function ChallengeParam.GetStartingPill()
+end
 
 ---@return TrinketType[]
-function ChallengeParam.GetTrinketList() end
+function ChallengeParam.GetTrinketList()
+end
 
 ---@return boolean
-function ChallengeParam.IsAltPath() end
+function ChallengeParam.IsAltPath()
+end
 
 ---@return boolean
-function ChallengeParam.IsBigRangeEnabled() end
+function ChallengeParam.IsBigRangeEnabled()
+end
 
 ---@return boolean
-function ChallengeParam.IsMaxDamageEnabled() end
+function ChallengeParam.IsMaxDamageEnabled()
+end
 
 ---@return boolean
-function ChallengeParam.IsMegaSatanRun() end
+function ChallengeParam.IsMegaSatanRun()
+end
 
 ---@return boolean
-function ChallengeParam.IsMinShotspeedEnabled() end
+function ChallengeParam.IsMinShotspeedEnabled()
+end
 
 ---@return boolean
-function ChallengeParam.IsSecretPath() end
-
+function ChallengeParam.IsSecretPath()
+end

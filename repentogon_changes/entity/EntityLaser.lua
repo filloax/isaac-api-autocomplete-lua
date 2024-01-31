@@ -1,9 +1,8 @@
----@field HomingType integer 
 ---@return boolean
 function EntityLaser:GetDisableFollowParent()
 end
 
----@return integer
+---@return integer[]
 function EntityLaser:GetHitList()
 end
 
@@ -27,7 +26,7 @@ function EntityLaser:ResetSpriteScale()
 end
 
 ---@param angle number
----@param speed number Optional. Default is 8.
+---@param speed? number @default: `8`
 function EntityLaser:RotateToAngle(angle, speed)
 end
 
@@ -43,3 +42,6 @@ end
 function EntityLaser:SetShrink(isShrink)
 end
 
+---@param value boolean
+function EntityLaser:SetTimeout(value)
+end

@@ -1,7 +1,7 @@
 ---@class ChallengeMenu
 _G.ChallengeMenu = {}
 
----Returns the challenge menu sprite.
+---Returns the challenge menu paper sprite.
 ---@return Sprite 
 function ChallengeMenu:GetSprite()
 end

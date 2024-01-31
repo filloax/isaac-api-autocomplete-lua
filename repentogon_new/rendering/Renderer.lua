@@ -1,4 +1,4 @@
----@class Renderer 
+---@class Renderer
 local Renderer = {}
 
 ---TODO: Document me!
@@ -12,13 +12,18 @@ end
 function Renderer:Pipeline()
 end
 
+---TODO: Document me!
 ---@return GLSLValue
 function Renderer:ProjectionMatrix()
 end
 
 ---TODO: Document me!
----@param vertexShader string 
----@param fragmentShader string 
+function Renderer:RenderSet()
+end
+
+---TODO: Document me!
+---@param vertexShader string
+---@param fragmentShader string
 ---@param vertexDescriptor VertexDescriptor
 ---@return Shader
 function Renderer:Shader(vertexShader, fragmentShader, vertexDescriptor)
@@ -30,25 +35,25 @@ function Renderer:StartTransformation()
 end
 
 ---TODO: Document me!
----@param x number? Optional. Default is 0.
----@param y number? Optional. Default is 0.
+---@param x? number @default: `0`
+---@param y? number @default: `0`
 ---@return GLSLValue
 function Renderer:Vec2(x, y)
 end
 
 ---TODO: Document me!
----@param x number? Optional. Default is 0.
----@param y number? Optional. Default is 0.
----@param z number? Optional. Default is 0.
+---@param x? number @default: `0`
+---@param y? number @default: `0`
+---@param z? number @default: `0`
 ---@return GLSLValue
 function Renderer:Vec3(x, y, z)
 end
 
 ---TODO: Document me!
----@param x number? Optional. Default is 0.
----@param y number? Optional. Default is 0.
----@param z number? Optional. Default is 0.
----@param w number? Optional. Default is 0. 
+---@param x? number @default: `0`
+---@param y? number @default: `0`
+---@param z? number @default: `0`
+---@param w? number @default: `0`
 ---@return GLSLValue
 function Renderer:Vec4(x, y, z, w)
 end
@@ -57,6 +62,3 @@ end
 ---@return VertexDescriptor
 function Renderer:VertexDescriptor()
 end
-
-
-

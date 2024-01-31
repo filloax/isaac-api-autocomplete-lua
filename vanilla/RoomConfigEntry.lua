@@ -3,5 +3,5 @@
 ---@field Type EntityType
 ---@field Variant integer
 ---@field Weight number
-local RoomConfig_Entry = {}
+local RoomConfigEntry = {}
 

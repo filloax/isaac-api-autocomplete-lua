@@ -1,4 +1,4 @@
----@class ItemConfig_Costume
+---@class ItemConfigCostume
 ---@field Anm2Path string
 ---@field HasOverlay boolean
 ---@field HasSkinAlt boolean
@@ -7,5 +7,4 @@
 ---@field OverwriteColor boolean
 ---@field Priority integer
 ---@field SkinColor SkinColor
-local ItemConfig_Costume = {}
-
+local ItemConfigCostume = {}

@@ -2,13 +2,15 @@
 local EntitiesSaveStateVector = {}
 
 ---TODO: Document me!
----@param index integer 
+---@param index integer
 ---@return EntitiesSaveState
-function EntitiesSaveStateVector:Get(index) end 
+function EntitiesSaveStateVector:Get(index)
+end
 
 ---TODO: Document me!
 ---@param type EntityType
----@param variant integer? Optional. Default is 0.
----@param subType integer? Optional. Default is 0.
+---@param variant? integer @default: `0`
+---@param subType? integer @default: `0`
 ---@return EntitiesSaveState
-function EntitiesSaveStateVector:GetByType(type, variant, subType) end
+function EntitiesSaveStateVector:GetByType(type, variant, subType)
+end

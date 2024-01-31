@@ -1,4 +1,4 @@
----@class ItemConfig_Card
+---@class ItemConfigCard
 ---@field AchievementID integer
 ---@field Description string
 ---@field GreedModeAllowed boolean
@@ -10,17 +10,16 @@
 ---@field AnnouncerVoice integer # accepts any value from the SoundEffect.SOUND_* enum
 ---@field AnnouncerDelay integer
 ---@field MimicCharge integer
-local ItemConfig_Card = {}
+local ItemConfigCard = {}
 
 ---@return boolean
-function ItemConfig_Card:IsCard()
+function ItemConfigCard:IsCard()
 end
 
 ---@return boolean
-function ItemConfig_Card:IsRune()
+function ItemConfigCard:IsRune()
 end
 
 ---@return boolean
-function ItemConfig_Card:IsAvailable()
+function ItemConfigCard:IsAvailable()
 end
-

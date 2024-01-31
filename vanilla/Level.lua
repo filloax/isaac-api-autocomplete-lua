@@ -40,7 +40,7 @@ function Level:CanStageHaveCurseOfLabyrinth(Stage)
 end
 
 ---@param RoomIndex integer
----@param Dimension? integer @default: -1
+---@param Dimension? integer @default: `-1`
 function Level:ChangeRoom(RoomIndex, Dimension)
 end
 
@@ -131,7 +131,7 @@ function Level:GetRandomRoomIndex(IAmErrorRoom, Seed)
 end
 
 ---@param RoomIdx integer
----@param Dimension? integer @default: -1
+---@param Dimension? integer @default: `-1`
 ---@return RoomDescriptor
 function Level:GetRoomByIdx(RoomIdx, Dimension)
 end
@@ -199,7 +199,7 @@ end
 ---@param RoomType RoomType
 ---@param Visited boolean
 ---@param rng RNG
----@param IgnoreGroup? boolean @default: false
+---@param IgnoreGroup? boolean @default: `false`
 ---@return integer
 function Level:QueryRoomTypeIndex(RoomType, Visited, rng, IgnoreGroup)
 end
@@ -251,4 +251,3 @@ end
 
 function Level:UpdateVisibility()
 end
-

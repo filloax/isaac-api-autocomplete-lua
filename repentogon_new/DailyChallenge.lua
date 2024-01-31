@@ -4,4 +4,5 @@
 _G.DailyChallenge = {}
 
 ---@return ChallengeParams
-function DailyChallenge.GetChallengeParams() end
+function DailyChallenge.GetChallengeParams()
+end

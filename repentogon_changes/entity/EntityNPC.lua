@@ -1,12 +1,5 @@
----@param NumProjectiles integer
----@param TargetPos Vector
----@param TrajectoryModifier number
----@param Params ProjectileParams
----@return EntityProjectile
----@deprecated This function has been deprecated in favor of `EntityNPC:FireBossProjectilesEx`
-function EntityNPC:FireBossProjectiles(NumProjectiles, TargetPos, TrajectoryModifier, Params)
-end
-
+---Same as `FireBossProjectiles`, but returns a table containing the list of
+---spawned projectiles.
 ---@param NumProjectiles integer
 ---@param TargetPos Vector
 ---@param TrajectoryModifier number
@@ -18,39 +11,35 @@ end
 ---@param sprite Sprite
 ---@param desc GridEntityDesc
 ---@param velocity Vector
----@param backdrop BackdropType? Optional. Default is `BackdropType.BASEMENT`.
+---@param backdrop BackdropType? @default: `BackdropType.BASEMENT`.
 ---@return EntityProjectile
 function EntityNPC:FireGridEntity(sprite, desc, velocity, backdrop)
 end
 
----@param NumProjectiles integer
----@param TargetPos Vector
----@param TrajectoryModifier number
----@param Params ProjectileParams
----@return EntityProjectile
----@deprecated This function has been deprecated in favor of `EntityNPC:FireBossProjectilesEx`
-function EntityNPC:FireBossProjectiles(NumProjectiles, TargetPos, TrajectoryModifier, Params)
-end
-
----@param NumProjectiles integer
----@param TargetPos Vector
----@param TrajectoryModifier number
+---Same as `FireProjectiles`, but returns a table containing the list of 
+---spawned projectiles.
+---@param Position Vector
+---@param Velocity Vector
+---@param Mode ProjectileMode
 ---@param Params ProjectileParams
 ---@return EntityProjectile[]
-function EntityNPC:FireBossProjectilesEx(NumProjectiles, TargetPos, TrajectoryModifier, Params)
+function EntityNPC:FireProjectilesEx(Position, Velocity, Mode, Params)
 end
 
---- Returns the ControllerId for the NPC, which indicates which player is controlling it. Will return -1 when its not being controlled by any player.
+---Returns the ControllerId for the NPC, which indicates which player 
+---is controlling it. Will return -1 when its not being controlled by 
+---any player.
 ---@return integer
 function EntityNPC:GetControllerId()
 end
 
---- Returns the dynamic dirt color of the entity. This lets entities like Nightcrawler blend in to the environment.
+---Returns the dynamic dirt color of the entity. This lets entities like 
+---Nightcrawler blend in to the environment.
 ---@return Color
 function EntityNPC:GetDirtColor()
 end
 
----@return Vector[]
+---@return integer[]
 function EntityNPC:GetHitList()
 end
 
@@ -59,91 +48,86 @@ function EntityNPC:GetShieldStrength()
 end
 
 ---@param ID SoundEffect
----@param Volume number? Optional. Default is 1.
----@param FrameDelay integer? Optional. Default is 2.
----@param Loop boolean? Optional. Default is false.
----@param Pitch number? Optional. Default is 1.
+---@param Volume? number @default: `1`
+---@param FrameDelay? integer @default: `2`
+---@param Loop? boolean @default: `false`
+---@param Pitch? number @default: `1`
 function EntityNPC:PlaySound(ID, Volume, FrameDelay, Loop, Pitch)
 end
 
----@param strength number
-function EntityNPC:SetShieldStrength(strength)
+---Sets the ControllerId for the NPC, which indicates which player will 
+---control it. Set it to `-1` for no player controls(back to normal behaviour).
+---@param ControllerID integer
+function EntityNPC:SetControllerId(ControllerID)
 end
 
----@param position Vector 
----@param color Color
----@return EntityEffect
-function EntityNPC:SpawnBloodCloud(position, color)
+---@param Strength number
+function EntityNPC:SetShieldStrength(Strength)
 end
 
----@param subType number? Optional. Default is 0.
----@param position number? Optional. Default is the entity's current position.
----@param offset Vector? Optional. Default is `Vector.Zero`.
----@param color Color? Optional. Default is `Color.Default`.
----@param velocity Vector? Optional. Default is `Vector.Zero`.
+---@param Target Vector
+---@param Velocity? number @default: `-24`
+---@param YOffset? number @default: `-8`
+---@return EntityNPC
+function EntityNPC:ShootMaggotProjectile(Target, Velocity, YOffset)
+end
+
+---@param Position Vector
+---@param Color Color
 ---@return EntityEffect
-function EntityNPC:SpawnBloodEffect(subType, position, offset, color, velocity)
+function EntityNPC:SpawnBloodCloud(Position, Color)
 end
 
 function EntityNPC:SpawnBloodSplash()
 end
 
----@param target Entity 
----@param duration integer
+---@param Source Entity
+---@param Target Vector
+---@param YPosOffset? number @default: `-10`
+---@param Big? boolean @default: `false`
+---@return EntityNPC
+function EntityNPC:ThrowLeech(Source, Target, YPosOffset, Big)
+end
+
+---@param Origin Vector
+---@param Velocity Vector @default: `-8.0`
+---@param YOffset? number @default: `0.0`
+---@return EntityNPC
+function EntityNPC:ThrowMaggotAtPos(Origin, Velocity, YOffset)
+end
+
+---@param Source Entity
+---@param Target Vector
+---@param Variant? integer @default: `0`
+---@param YPosOffset? number @default: `-10.0`
+---@return EntityNPC
+function EntityNPC:ThrowRockSpider(Source, Target, Variant, YPosOffset)
+end
+
+---@param Source Entity
+---@param Target Vector
+---@return EntityNPC
+function EntityNPC:ThrowStrider(Source, Target)
+end
+
+---Used by Lost Fly to force this NPC to focus on a specific target.
+---@param Target Entity
+---@param Duration integer
 ---@return boolean
-function EntityNPC:TryForceTarget(target, duration)
+function EntityNPC:TryForceTarget(Target, Duration)
 end
 
----@param ref EntityRef 
----@param direction Vector 
----@param force integer
----@return boolean 
-function EntityNPC:TryThrow(ref, direction, force)
+---`Force` only applies to NPC poop (it's modified and then used as V1.y, 
+---with V1.x being -20.0) and may be incorrect. This needs further investigation.
+---@param Source EntityRef
+---@param Direction Vector
+---@param Force integer
+---@return boolean
+function EntityNPC:TryThrow(Source, Direction, Force)
 end
 
----Instructs the entity to update its dirt color. This is generally done automatically on vanilla entities.
+---Instructs the entity to update its dirt color. This is generally done 
+---automatically on vanilla entities.
 ---@param immediate boolean If true, the dirt color will be set to exactly what is beneath the entity. Otherwise, it will be updated smoothly over the course of multiple frames.
 function EntityNPC:UpdateDirtColor(immediate)
 end
-
----@param Position Vector 
----@param TargetPosition Vector 
----@param YOffset number? Optional. Default is -24.
----@param FallingSpeed number? Optional. Default is -8.
-function EntityNPC.ShootMaggotProjectile(Position, TargetPosition, YOffset, FallingSpeed)
-end
-
----@param Position Vector
----@param Spawner Entity
----@param TargetPos Vector
----@param YPositionOffset number? Optional. Default is -10.
----@param Big boolean? Optional. Default is false.
----@return EntityNPC
-function EntityNPC.ThrowLeech(Position, Spawner, TargetPos, YPositionOffset, Big) end
-
----@param Position Vector 
----@param TargetPosition Vector 
----@param YOffset number? Optional. Default is -10.
----@param FallingSpeed number? Optional. Default is -8.
-function EntityNPC.ThrowMaggot(Position, TargetPosition, YOffset, FallingSpeed)
-end
-
----@param Position Vector 
----@param TargetPosition Vector 
----@param YOffset number? Optinoal. Default is -8.
-function EntityNPC.ThrowMaggotAtPos(Position, TargetPosition, YOffset)
-end
-
----@param Position Vector
----@param Spawner Entity
----@param TargetPos Vector
----@param SpiderVariant number? Optional. Default is 0.
----@param YPosOffset number? Optional. Default is -10.
----@return EntityNPC
-function EntityNPC.ThrowRockSpider(Position, Spawner, TargetPos, SpiderVariant, YPosOffset) end
-
----@param Position Vector
----@param Spawner Entity
----@param TargetPos Vector
----@return EntityNPC
-function EntityNPC.ThrowStrider(Position, Spawner, TargetPos) end

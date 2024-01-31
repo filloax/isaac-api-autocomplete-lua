@@ -1,29 +1,34 @@
----@class ItemOverlay 
+---@class ItemOverlay
 _G.ItemOverlay = {}
 
 ---Returns the overlay's delay.
----@return integer 
+---@return integer
 function ItemOverlay.GetDelay()
 end
 
 ---Returns the Mega Mush player sprite.
 ---@return Sprite
 function ItemOverlay.GetMegaMushPlayerSprite()
-end 
+end
+
+
+---@return Giantbook
+function ItemOverlay.GetOverlayID()
+end
 
 ---Returns the player.
----@return EntityPlayer 
+---@return EntityPlayer
 function ItemOverlay.GetPlayer()
 end
 
 ---Returns the sprite.
----@return Sprite 
+---@return Sprite
 function ItemOverlay.GetSprite()
-end 
+end
 
 ---Shows the overlay.
 ---@param giantbookId Giantbook
----@param delay integer? Optional. Default is 3.
----@param player EntityPlayer? Optional. Default is nil.
+---@param delay? integer @default: `3`
+---@param player? EntityPlayer @default: `nil`
 function ItemOverlay.Show(giantbookId, delay, player)
 end

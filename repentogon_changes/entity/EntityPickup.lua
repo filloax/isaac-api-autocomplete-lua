@@ -1,17 +1,25 @@
 ---Adds the specified collectible to cycle with the pedestal's collectibles. 
 ---
----This function does nothing if the pickup is not a pedestal.
+---Does nothing for non-collectible EntityPickups.
 ---@param collectible CollectibleType
----@return boolean unknown TODO: Document me!
+---@return boolean wasAdded Returns `true` if adding the collectible was successful.
 function EntityPickup:AddCollectibleCycle(collectible)
 end
 
----Returns the pickup's (if it's a collectible) alternate pedestal.
----@return PedestalType
+---@return boolean
+function EntityPickup:CanReroll()
+end
+
+---Returns the pickup's alternate pedestal.
+---@return PedestalType --Returns -1 for non-collectible EntityPickups
 function EntityPickup:GetAlternatePedestal()
 end
 
----Returns the drop delay of the pickup
+---Returns a table of all collectibles types being used inside it's collectible cycle (i.e. Cracked Crown).
+---@return CollectibleType[] --Table will be empty if used on non-collectible EntityPickups
+function EntityPickup:GetCollectibleCycle()
+end
+
 ---@return integer
 function EntityPickup:GetDropDelay()
 end
@@ -21,12 +29,11 @@ end
 function EntityPickup:GetPriceSprite()
 end
 
----Returns the pickup's vardata.
 ---@return integer
 function EntityPickup:GetVarData()
 end
 
----Returns true if the pickup is a collectible pedestal and is hidden (such as when Curse of the Blind is active).
+---Returns `true` if the pickup is a collectible pedestal and is hidden (such as when Curse of the Blind is active).
 ---@return boolean
 function EntityPickup:IsBlind()
 end
@@ -36,43 +43,51 @@ end
 function EntityPickup:MakeShopItem(shopItemId)
 end
 
----Changes the appearance of the collectible's pedestal. Does nothing if the pickup is not a collectible.
+---Sets the graphics of the item pedestal.
+---
+---Does nothing for non-collectible EntityPickups.
 ---@param pedestalType PedestalType
 function EntityPickup:SetAlternatePedestal(pedestalType)
 end
 
----Sets the drop delay for the pickup.
 ---@param delay integer
 function EntityPickup:SetDropDelay(delay)
 end
 
----Hides the collectible's sprite on the pedestal similar to curse of the blind. Does nothing if the pickup is not a collectible.
+---Hides pedestal items similar to Curse of the Blind.
+---
+---Does nothing for non-collectible EntityPickups.
 ---@param isBlind boolean
 function EntityPickup:SetForceBlind(isBlind)
 end
 
+---Returns the new pickup index.
+---
 ---TODO: Document me!
----@return integer pickupIndex The new pickup index.
+---@return integer pickupIndex
 function EntityPickup:SetNewOptionsPickupIndex()
 end
 
----Sets the pickup's vardata.
 ---@param varData integer
 function EntityPickup:SetVarData(varData)
 end
 
----TODO: Document me!
----@return boolean
+---Will try to flip the collectible, such as when using the Flip collectible on an collectible pedestal with a second, holographic collectible present behind the first one.
+---@return boolean wasFlipped Returns `true` if the collectible was successfully flipped. Returns `false` otherwise, or if used on non-collectible EntityPickups.
 function EntityPickup:TryFlip()
 end
 
----Causes the collectible pedestal to start cycling through the specified amount of collectibles, including its own collectible type. Does nothing if the pickup isn't a collectible pedestal or it's already cycling through collectibles.
+---Causes the collectible pedestal to start cycling through the specified amount of collectibles, including its own collectible type.
+---
+--- or if the collectible was already cycling.
 ---@param numCycle integer The amount of collectibles to add to the cycle.
----@return boolean didCycleInit True if the cycle was successfully initialized, false otherwise.
+---@return boolean didCycleInit Returns `true` if the cycle was successfully initialized. Returns `false` if the collectible was already cycling, or if use on non-collectible EntityPickups.
 function EntityPickup:TryInitOptionCycle(numCycle)
 end
 
----Tries to remove the collectible from the pedestal. Does nothing if the pedestal is empty or the pickup is not a collectible.
----@return boolean wasRemoved True if the collectible was removed, otherwise false.
+---Tries to remove the collectible from the pedestal.
+---
+---Does nothing for non-collectible EntityPickups.
+---@return boolean wasRemoved Returns `true` if the collectible was removed. Returns `false` if it was already empty, or if use on non-collectible EntityPickups.
 function EntityPickup:TryRemoveCollectible()
 end

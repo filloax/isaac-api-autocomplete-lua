@@ -1,23 +1,20 @@
----@class AnimationData 
+---@class AnimationData
 local AnimationData = {}
 
----Returns a table of all of the layers.
+---Returns a table of all the animation's `AnimationLayer` objects, ordered from bottom to top (NOT ordered by layer ID).
 ---@return AnimationLayer[]
-function AnimationData:GetAllLayers() end 
+function AnimationData:GetAllLayers() end
 
----Returns a layer from the provided layer id. Returns nil if the id is invalid.
----@param layerId integer 
+---@param layerId integer
 ---@return AnimationLayer
-function AnimationData:GetLayer(layerId) end 
+function AnimationData:GetLayer(layerId) end
 
 ---Returns the amount of frames the animation has.
 ---@return integer
-function AnimationData:GetLength() end 
+function AnimationData:GetLength() end
 
----Returns the name of the animation.
----@return string 
-function AnimationData:GetName() end 
+---@return string
+function AnimationData:GetName() end
 
----Returns true if the animation loops.
 ---@return boolean
-function AnimationData:IsLoopingAnimation() end 
+function AnimationData:IsLoopingAnimation() end

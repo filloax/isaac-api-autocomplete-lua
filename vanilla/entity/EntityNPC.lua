@@ -79,8 +79,8 @@ function EntityNPC:KillUnique()
 end
 
 ---@param Seed integer
----@param ChampionColorIdx? ChampionColor @default: -1
----@param Init? boolean @default: false
+---@param ChampionColorIdx? ChampionColor @default: `-1`
+---@param Init? boolean @default: `false`
 function EntityNPC:MakeChampion(Seed, ChampionColorIdx, Init)
 end
 
@@ -134,4 +134,3 @@ end
 ---@return EntityNPC
 function EntityNPC.ThrowSpider(Position, Spawner, TargetPos, Big, YOffset)
 end
-

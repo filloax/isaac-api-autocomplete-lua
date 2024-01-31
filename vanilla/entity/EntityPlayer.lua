@@ -72,10 +72,10 @@ function EntityPlayer:AddCoins(Amount)
 end
 
 ---@param Type CollectibleType
----@param Charge? integer @default: 0
----@param FirstTimePickingUp? boolean @default: true
----@param Slot? ActiveSlot @default: ActiveSlot.SLOT_PRIMARY
----@param VarData? integer @default: 0
+---@param Charge? integer @default: `0`
+---@param FirstTimePickingUp? boolean @default: `true`
+---@param Slot? ActiveSlot @default: `ActiveSlot.SLOT_PRIMARY`
+---@param VarData? integer @default: `0`
 function EntityPlayer:AddCollectible(Type, Charge, FirstTimePickingUp, Slot, VarData)
 end
 
@@ -83,7 +83,7 @@ end
 function EntityPlayer:AddControlsCooldown(Cooldown)
 end
 
----@param Item ItemConfig_Item
+---@param Item ItemConfigItem
 ---@param ItemStateOnly? boolean
 function EntityPlayer:AddCostume(Item, ItemStateOnly)
 end
@@ -126,7 +126,7 @@ end
 
 ---@param Collectible CollectibleType
 ---@param Position Vector
----@param AdjustOrbitLayer? boolean @default: false
+---@param AdjustOrbitLayer? boolean @default: `false`
 ---@return EntityFamiliar
 function EntityPlayer:AddItemWisp(Collectible, Position, AdjustOrbitLayer)
 end
@@ -149,7 +149,7 @@ function EntityPlayer:AddMaxHearts(MaxHearts, IgnoreKeeper)
 end
 
 ---@param Position Vector
----@param PlayAnim? boolean @default: true
+---@param PlayAnim? boolean @default: `true`
 ---@return EntityFamiliar
 function EntityPlayer:AddMinisaac(Position, PlayAnim)
 end
@@ -191,14 +191,14 @@ function EntityPlayer:AddSwarmFlyOrbital(Position)
 end
 
 ---@param Type TrinketType
----@param FirstTimePickingUp? boolean @default: true
+---@param FirstTimePickingUp? boolean @default: `true`
 function EntityPlayer:AddTrinket(Type, FirstTimePickingUp)
 end
 
 ---@param Collectible CollectibleType
 ---@param Position Vector
----@param AdjustOrbitLayer? boolean @default: false
----@param DontUpdate? boolean @default: false
+---@param AdjustOrbitLayer? boolean @default: `false`
+---@param DontUpdate? boolean @default: `false`
 ---@return EntityFamiliar
 function EntityPlayer:AddWisp(Collectible, Position, AdjustOrbitLayer, DontUpdate)
 end
@@ -207,13 +207,13 @@ function EntityPlayer:AnimateAppear()
 end
 
 ---@param ID Card
----@param AnimName? string @default: "Pickup"
+---@param AnimName? string @default: `"Pickup"`
 function EntityPlayer:AnimateCard(ID, AnimName)
 end
 
 ---@param Collectible CollectibleType
----@param AnimName? string @default: "Pickup"
----@param SpriteAnimName? string @default: "PlayerPickupSparkle"
+---@param AnimName? string @default: `"Pickup"`
+---@param SpriteAnimName? string @default: `"PlayerPickupSparkle"`
 function EntityPlayer:AnimateCollectible(Collectible, AnimName, SpriteAnimName)
 end
 
@@ -224,13 +224,13 @@ function EntityPlayer:AnimateLightTravel()
 end
 
 ---@param sprite Sprite
----@param HideShadow? boolean @default: false
----@param AnimName? string @default: "Pickup"
+---@param HideShadow? boolean @default: `false`
+---@param AnimName? string @default: `"Pickup"`
 function EntityPlayer:AnimatePickup(sprite, HideShadow, AnimName)
 end
 
 ---@param Pill PillColor
----@param AnimName? string @default: "Pickup"
+---@param AnimName? string @default: `"Pickup"`
 function EntityPlayer:AnimatePill(Pill, AnimName)
 end
 
@@ -251,8 +251,8 @@ function EntityPlayer:AnimateTrapdoor()
 end
 
 ---@param Trinket TrinketType
----@param AnimName? string @default: "Pickup"
----@param SpriteAnimName? string @default: "PlayerPickupSparkle"
+---@param AnimName? string @default: `"Pickup"`
+---@param SpriteAnimName? string @default: `"PlayerPickupSparkle"`
 function EntityPlayer:AnimateTrinket(Trinket, AnimName, SpriteAnimName)
 end
 
@@ -264,7 +264,7 @@ end
 function EntityPlayer:AreOpposingShootDirectionsPressed()
 end
 
----@param Type? CollectibleType @default: CollectibleType.COLLECTIBLE_NULL
+---@param Type? CollectibleType @default: `CollectibleType.COLLECTIBLE_NULL`
 ---@return boolean
 function EntityPlayer:CanAddCollectible(Type)
 end
@@ -312,8 +312,8 @@ end
 ---@param FamiliarVariant integer
 ---@param TargetCount integer
 ---@param rng RNG
----@param SourceItemConfigItem? ItemConfig_Item @default: nil
----@param FamiliarSubType? integer @default: -1
+---@param SourceItemConfigItem? ItemConfigItem @default: `nil`
+---@param FamiliarSubType? integer @default: `-1`
 function EntityPlayer:CheckFamiliar(FamiliarVariant, TargetCount, rng, SourceItemConfigItem, FamiliarSubType)
 end
 
@@ -326,7 +326,7 @@ end
 function EntityPlayer:ClearTemporaryEffects()
 end
 
----@param ActiveSlot? ActiveSlot @default: ActiveSlot.SLOT_PRIMARY
+---@param ActiveSlot? ActiveSlot @default: `ActiveSlot.SLOT_PRIMARY`
 function EntityPlayer:DischargeActiveItem(ActiveSlot)
 end
 
@@ -353,14 +353,14 @@ end
 
 ---@param Position Vector
 ---@param Velocity Vector
----@param Source? Entity @default: nil
+---@param Source? Entity @default: `nil`
 ---@return EntityBomb
 function EntityPlayer:FireBomb(Position, Velocity, Source)
 end
 
 ---@param Direction Vector
----@param Source? Entity @default: nil
----@param DamageMultiplier? number @default: 1
+---@param Source? Entity @default: `nil`
+---@param DamageMultiplier? number @default: `1`
 ---@return EntityLaser
 function EntityPlayer:FireBrimstone(Direction, Source, DamageMultiplier)
 end
@@ -372,21 +372,21 @@ function EntityPlayer:FireDelayedBrimstone(Angle, Parent)
 end
 
 ---@param Parent Entity
----@param RotationOffset? number @default: 0
----@param CantOverwrite? boolean @default: false
----@param SubType? integer @default: 0
----@param Variant? integer @default: 0
+---@param RotationOffset? number @default: `0`
+---@param CantOverwrite? boolean @default: `false`
+---@param SubType? integer @default: `0`
+---@param Variant? integer @default: `0`
 ---@return EntityKnife
 function EntityPlayer:FireKnife(Parent, RotationOffset, CantOverwrite, SubType, Variant)
 end
 
 ---@param Position Vector
 ---@param Velocity Vector
----@param CanBeEye? boolean @default: true
----@param NoTractorBeam? boolean @default: false
----@param CanTriggerStreakEnd? boolean @default: true
----@param Source? Entity @default: nil
----@param DamageMultiplier? number @default: 1
+---@param CanBeEye? boolean @default: `true`
+---@param NoTractorBeam? boolean @default: `false`
+---@param CanTriggerStreakEnd? boolean @default: `true`
+---@param Source? Entity @default: `nil`
+---@param DamageMultiplier? number @default: `1`
 ---@return EntityTear
 function EntityPlayer:FireTear(Position, Velocity, CanBeEye, NoTractorBeam, CanTriggerStreakEnd, Source, DamageMultiplier)
 end
@@ -395,9 +395,9 @@ end
 ---@param OffsetID LaserOffset
 ---@param Direction Vector
 ---@param LeftEye? boolean
----@param OneHit? boolean @default: false
----@param Source? Entity @default: nil
----@param DamageMultiplier? number @default: 1
+---@param OneHit? boolean @default: `false`
+---@param Source? Entity @default: `nil`
+---@param DamageMultiplier? number @default: `1`
 ---@return EntityLaser
 function EntityPlayer:FireTechLaser(Position, OffsetID, Direction, LeftEye, OneHit, Source, DamageMultiplier)
 end
@@ -405,8 +405,8 @@ end
 ---@param Position Vector
 ---@param Direction Vector
 ---@param Radius number
----@param Source? Entity @default: nil
----@param DamageMultiplier? number @default: 1
+---@param Source? Entity @default: `nil`
+---@param DamageMultiplier? number @default: `1`
 ---@return EntityLaser
 function EntityPlayer:FireTechXLaser(Position, Direction, Radius, Source, DamageMultiplier)
 end
@@ -415,23 +415,23 @@ end
 function EntityPlayer:FlushQueueItem()
 end
 
----@param ActiveSlot? ActiveSlot @default: ActiveSlot.SLOT_PRIMARY
----@param Force? integer @default: false
+---@param ActiveSlot? ActiveSlot @default: `ActiveSlot.SLOT_PRIMARY`
+---@param Force? integer @default: `false`
 ---@return boolean
 function EntityPlayer:FullCharge(ActiveSlot, Force)
 end
 
----@param ActiveSlot? ActiveSlot @default: ActiveSlot.SLOT_PRIMARY
+---@param ActiveSlot? ActiveSlot @default: `ActiveSlot.SLOT_PRIMARY`
 ---@return integer
 function EntityPlayer:GetActiveCharge(ActiveSlot)
 end
 
----@param ActiveSlot? ActiveSlot @default: ActiveSlot.SLOT_PRIMARY
+---@param ActiveSlot? ActiveSlot @default: `ActiveSlot.SLOT_PRIMARY`
 ---@return CollectibleType
 function EntityPlayer:GetActiveItem(ActiveSlot)
 end
 
----@param ActiveSlot? ActiveSlot @default: ActiveSlot.SLOT_PRIMARY
+---@param ActiveSlot? ActiveSlot @default: `ActiveSlot.SLOT_PRIMARY`
 ---@return integer
 function EntityPlayer:GetActiveSubCharge(ActiveSlot)
 end
@@ -448,7 +448,7 @@ end
 function EntityPlayer:GetBabySkin()
 end
 
----@param ActiveSlot? ActiveSlot @default: ActiveSlot.SLOT_PRIMARY
+---@param ActiveSlot? ActiveSlot @default: `ActiveSlot.SLOT_PRIMARY`
 ---@return integer
 function EntityPlayer:GetBatteryCharge(ActiveSlot)
 end
@@ -498,7 +498,7 @@ function EntityPlayer:GetCollectibleCount()
 end
 
 ---@param Type CollectibleType
----@param OnlyCountTrueItems? boolean @default: false
+---@param OnlyCountTrueItems? boolean @default: `false`
 ---@return integer
 function EntityPlayer:GetCollectibleNum(Type, OnlyCountTrueItems)
 end
@@ -649,7 +649,7 @@ end
 function EntityPlayer:GetMovementVector()
 end
 
----@param WeaponType? WeaponType @default: WeaponType.WEAPON_TEARS
+---@param WeaponType? WeaponType @default: `WeaponType.WEAPON_TEARS`
 ---@return userdata @MultiShotParams
 function EntityPlayer:GetMultiShotParams(WeaponType)
 end
@@ -760,9 +760,9 @@ function EntityPlayer:GetSubPlayer()
 end
 
 ---@param WeaponType WeaponType
----@param DamageScale? number @default: 1
----@param TearDisplacement? integer @default: 1
----@param Source? Entity @default: nil
+---@param DamageScale? number @default: `1`
+---@param TearDisplacement? integer @default: `1`
+---@param Source? Entity @default: `nil`
 ---@return TearParams
 function EntityPlayer:GetTearHitParams(WeaponType, DamageScale, TearDisplacement, Source)
 end
@@ -776,6 +776,7 @@ end
 function EntityPlayer:GetTearPoisonDamage()
 end
 
+---For Experimental Treatement, returns `-1`, `0` or `1` depending on the range rolled.
 ---@return integer
 function EntityPlayer:GetTearRangeModifier()
 end
@@ -812,7 +813,7 @@ function EntityPlayer:GetZodiacEffect()
 end
 
 ---@param Type CollectibleType
----@param IgnoreModifiers? boolean @default: false
+---@param IgnoreModifiers? boolean @default: `false`
 ---@return boolean
 function EntityPlayer:HasCollectible(Type, IgnoreModifiers)
 end
@@ -837,7 +838,7 @@ end
 function EntityPlayer:HasGoldenKey()
 end
 
----@param Flags? DamageFlag @default: 0
+---@param Flags? DamageFlag @default: `0`
 ---@return boolean
 function EntityPlayer:HasInvincibility(Flags)
 end
@@ -852,7 +853,7 @@ function EntityPlayer:HasTimedItem()
 end
 
 ---@param Type TrinketType
----@param IgnoreModifiers? boolean @default: false
+---@param IgnoreModifiers? boolean @default: `false`
 ---@return boolean
 function EntityPlayer:HasTrinket(Type, IgnoreModifiers)
 end
@@ -912,7 +913,7 @@ end
 function EntityPlayer:IsSubPlayer()
 end
 
----@param ActiveSlot? ActiveSlot @default: ActiveSlot.SLOT_PRIMARY
+---@param ActiveSlot? ActiveSlot @default: `ActiveSlot.SLOT_PRIMARY`
 ---@return boolean
 function EntityPlayer:NeedsCharge(ActiveSlot)
 end
@@ -925,11 +926,11 @@ end
 function EntityPlayer:QueueExtraAnimation(Animation)
 end
 
----@param Item ItemConfig_Item
----@param Charge? integer @default: 0
----@param Touched? boolean @default: false
----@param Golden? boolean @default: false
----@param VarData? integer @default: 0
+---@param Item ItemConfigItem
+---@param Charge? integer @default: `0`
+---@param Touched? boolean @default: `false`
+---@param Golden? boolean @default: `false`
+---@param VarData? integer @default: `0`
 function EntityPlayer:QueueItem(Item, Charge, Touched, Golden, VarData)
 end
 
@@ -944,13 +945,13 @@ function EntityPlayer:RemoveBlueSpider()
 end
 
 ---@param Type CollectibleType
----@param IgnoreModifiers? boolean @default: false
----@param ActiveSlot? ActiveSlot @default: ActiveSlot.SLOT_PRIMARY
----@param RemoveFromPlayerForm? boolean @default: true
+---@param IgnoreModifiers? boolean @default: `false`
+---@param ActiveSlot? ActiveSlot @default: `ActiveSlot.SLOT_PRIMARY`
+---@param RemoveFromPlayerForm? boolean @default: `true`
 function EntityPlayer:RemoveCollectible(Type, IgnoreModifiers, ActiveSlot, RemoveFromPlayerForm)
 end
 
----@param Item ItemConfig_Item
+---@param Item ItemConfigItem
 function EntityPlayer:RemoveCostume(Item)
 end
 
@@ -982,7 +983,7 @@ end
 function EntityPlayer:RenderTop(position)
 end
 
----@param Item ItemConfig_Item
+---@param Item ItemConfigItem
 ---@param SpritePath string
 ---@param SpriteId integer
 function EntityPlayer:ReplaceCostumeSprite(Item, SpritePath, SpriteId)
@@ -1001,7 +1002,7 @@ function EntityPlayer:Revive()
 end
 
 ---@param Charge integer
----@param ActiveSlot? ActiveSlot @default: ActiveSlot.SLOT_PRIMARY
+---@param ActiveSlot? ActiveSlot @default: `ActiveSlot.SLOT_PRIMARY`
 function EntityPlayer:SetActiveCharge(Charge, ActiveSlot)
 end
 
@@ -1067,7 +1068,7 @@ end
 
 ---@param Subtype integer
 ---@param Position Vector
----@param Target? Vector @default: Vector.Zero
+---@param Target? Vector @default: `Vector.Zero`
 ---@return EntityFamiliar
 function EntityPlayer:ThrowFriendlyDip(Subtype, Position, Target)
 end
@@ -1077,8 +1078,8 @@ end
 function EntityPlayer:ThrowHeldEntity(Velocity)
 end
 
----@param Type? CollectibleType @default: CollectibleType.COLLECTIBLE_NULL
----@param Charge? integer @default: 0
+---@param Type? CollectibleType @default: `CollectibleType.COLLECTIBLE_NULL`
+---@param Charge? integer @default: `0`
 function EntityPlayer:TriggerBookOfVirtues(Type, Charge)
 end
 
@@ -1118,20 +1119,20 @@ function EntityPlayer:UpdateCanShoot()
 end
 
 ---@param Item CollectibleType
----@param UseFlags? UseFlag @default: 0
----@param Slot? ActiveSlot @default: -1
+---@param UseFlags? UseFlag @default: `0`
+---@param Slot? ActiveSlot @default: `-1`
 ---@overload fun(self: EntityPlayer, Item: CollectibleType, ShowAnim?: boolean, KeepActiveItem?: boolean, AllowNonMainPlayer?: boolean, ToAddCostume?: boolean, Slot?: ActiveSlot)
 function EntityPlayer:UseActiveItem(Item, UseFlags, Slot)
 end
 
 ---@param ID Card
----@param UseFlags? UseFlag @default: 0
+---@param UseFlags? UseFlag @default: `0`
 function EntityPlayer:UseCard(ID, UseFlags)
 end
 
 ---@param ID PillEffect
 ---@param PillColor PillColor
----@param UseFlags? UseFlag @default: 0
+---@param UseFlags? UseFlag @default: `0`
 function EntityPlayer:UsePill(ID, PillColor, UseFlags)
 end
 
@@ -1142,4 +1143,3 @@ end
 ---@param type PoopSpellType
 function EntityPlayer:UsePoopSpell(type)
 end
-

@@ -1,7 +1,7 @@
 ---@class DailyChallengeMenu
 _G.DailyChallengeMenu = {}
 
----Returns the daily challenge menu sprite.
+---Returns the daily challenge menu sprite (background, most of the visible papers).
 ---@return Sprite 
 function DailyChallengeMenu:GetSprite()
 end
@@ -16,7 +16,6 @@ end
 function DailyChallengeMenu:GetLeaderboardScoreMenuSprite()
 end
 
----Returns the selected element.
 ---@return integer
 function DailyChallengeMenu:GetSelectedElement()
 end
@@ -36,12 +35,10 @@ end
 function DailyChallengeMenu:GetTimeLeftSeconds()
 end
 
----Returns true if the leaderboard is visible.
 ---@return boolean 
 function DailyChallengeMenu:IsLeaderboardVisible()
 end
 
----Sets the currently selected melement.
 ---@param element integer 
 function DailyChallengeMenu:SetSelectedElement(element)
 end

@@ -1,9 +1,10 @@
 ---@class Pipeline
-local VertexBuffer = {}
+local Pipeline = {}
 
 ---TODO: Document me!
----@param nbVertices integer 
----@param shader Shader 
+---@param nbVertices integer
+---@param shader Shader
 ---@param nbElements integer
-function VertexBuffer:NewPass(nbVertices, shader, nbElements)
+---@return VertexBuffer
+function Pipeline:NewPass(nbVertices, shader, nbElements)
 end

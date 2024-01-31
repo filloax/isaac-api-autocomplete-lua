@@ -1,4 +1,4 @@
----@class Beam 
+---@class Beam
 local Beam = {}
 
 ---Constructs a new beam object.
@@ -19,54 +19,70 @@ local Beam = {}
 ---    chain:Render()
 ---end)
 ---```
----@param sprite Sprite The beam's sprite.
----@param layer string | integer 
+---@param sprite Sprite
+---@param layerId integer
 ---@param useOverlay boolean
 ---@param unknownBool boolean TODO: Document me!
----@param pointsPreallocateSize integer Optional. The amount of space the beam will reserve to hold the points. Allocating more beams than the default value will be more expensive on performance. Default is 8.
----@return Beam 
-function _G.Beam(sprite, layer, useOverlay, unknownBool, pointsPreallocateSize)
+---@return Beam
+---@overload fun(sprite: Sprite, layerName: string, useOverlay: boolean, unknownBool: boolean)
+function _G.Beam(sprite, layerId, useOverlay, unknownBool)
 end
 
 ---Adds a point to the beam.
----@param position Vector 
----@param height number How long the rendered sprite is.
----@param width number Optional. The scale of the rendered sprite. Default is 1.
----@param color Color Optional. Default is `Color.Default`.
-function Beam:Add(position, height, width, color)
+---@param position Vector
+---@param spritesheetCoordinate number The Y position of the spritesheet that should be drawn by the time this Point is reached. For example, two points of `0` and `64` SpritesheetCoordinate will render the spritesheet starting from `y 0` to `y 64`, while an additional third point of `0` will draw it in reverse from `y 64` to `y 0`. `width` acts as 
+---@param width? number @default: `1.0`. A multiplier for how wide the beam should be. A non-zero value will scale the spritesheet width accordingly. This is interpolated between points.
+---@overload fun(self: Beam, point: Point)
+function Beam:Add(position, spritesheetCoordinate, width)
 end
 
----Returns the beam's layer.
 ---@return integer
 function Beam:GetLayer()
 end
 
----Returns the beam's sprite.
+---Returns a table of the `Point` objects currently stored.
+---@return Point[]
+function Beam:GetPoints()
+end
+
 ---@return Sprite
 function Beam:GetSprite()
 end
 
 ---TODO: Document me!
 ---@return boolean
+function Beam:GetUnkBool()
+end
+
+---Returns if the beam is currently using the overlay sprite or not.
+---@return boolean
 function Beam:GetUseOverlay()
-end 
+end
 
 ---Renders the beam.
----@param clearPoints boolean Optional. Default is true.
+---@param clearPoints? boolean @default: `true`
 function Beam:Render(clearPoints)
 end
 
 ---Sets the beam's layer.
----@param layer integer | string 
-function Beam:SetLayer(layer)
+---@param layerId integer
+---@overload fun(self: Beam, layerName: string)
+function Beam:SetLayer(layerId)
 end
 
 ---Sets the beam's sprite.
----@param sprite Sprite 
+---@param sprite Sprite
+---@overload fun(self: Beam, sprite: Sprite, layerName: string, useOverlay: boolean)
+---@overload fun(self: Beam, sprite: Sprite, layerId: integer, useOverlay: boolean)
 function Beam:SetSprite(sprite)
 end
 
 ---TODO: Document me!
----@param useOverlay boolean 
+---@param unknownBool boolean
+function Beam:SetUnkBool(unknownBool)
+end
+
+---TODO: Document me!
+---@param useOverlay boolean
 function Beam:SetUseOverlay(useOverlay)
 end

@@ -40,8 +40,8 @@ end
 ---@class CallbackEntry
 ---@field Mod table
 ---@field Function function
----@field Priority integer #default=0
----@field Param integer #default=-1; entity ID or anything else
+---@field Priority integer @default: `0`
+---@field Param integer @default: `-1`; entity ID or anything else
 
 ---@param callbackId CallbackID
 ---@param createIfMissing? boolean
@@ -67,9 +67,9 @@ function Isaac.CountEnemies()
 end
 
 ---@param Spawner? Entity  Optionally specify only entities spawned by this entity
----@param Type? EntityType @default: EntityType.ENTITY_NULL
----@param Variant? integer @default: -1
----@param SubType? integer @default: -1
+---@param Type? EntityType @default: `EntityType.ENTITY_NULL`
+---@param Variant? integer @default: `-1`
+---@param SubType? integer @default: `-1`
 ---@return integer
 function Isaac.CountEntities(Spawner, Type, Variant, SubType)
 end
@@ -90,17 +90,17 @@ function Isaac.Explode(pos, source, damage)
 end
 
 ---@param Type integer
----@param Variant? integer @default: -1
----@param SubType? integer @default: -1
----@param Cache? boolean @default: false
----@param IgnoreFriendly? boolean @default: false
+---@param Variant? integer @default: `-1`
+---@param SubType? integer @default: `-1`
+---@param Cache? boolean @default: `false`
+---@param IgnoreFriendly? boolean @default: `false`
 ---@return Entity[]
 function Isaac.FindByType(Type, Variant, SubType, Cache, IgnoreFriendly)
 end
 
 ---@param Position Vector
 ---@param Radius number
----@param Partitions? integer @default: 0xFFFFFFFF
+---@param Partitions? integer @default: `0xFFFFFFFF`
 ---@return Entity[]
 function Isaac.FindInRadius(Position, Radius, Partitions)
 end
@@ -168,13 +168,13 @@ end
 function Isaac.GetPillEffectByName(pillEffect)
 end
 
----@param playerID? integer @default: 0
+---@param playerID? integer @default: `0`
 ---@return EntityPlayer
 function Isaac.GetPlayer(playerID)
 end
 
 ---@param playerName string
----@param Tainted? boolean @default: false
+---@param Tainted? boolean @default: `false`
 ---@return PlayerType
 function Isaac.GetPlayerTypeByName(playerName, Tainted)
 end
@@ -221,7 +221,7 @@ end
 ---@param gridEntityType GridEntityType
 ---@param variant integer
 ---@param position Vector
----@param forced? boolean [bug] currently doesn't have any effect
+---@param forced? boolean **BUG**: Currently doesn't have any effect
 ---@return GridEntity
 function Isaac.GridSpawn(gridEntityType, variant, position, forced)
 end
@@ -307,4 +307,3 @@ end
 ---@return Vector
 function Isaac.WorldToScreenDistance(pos)
 end
-

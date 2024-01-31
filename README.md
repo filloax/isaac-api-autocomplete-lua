@@ -42,7 +42,7 @@ This was tested with VSCode using the [vscode-lua](https://github.com/sumneko/vs
     You can also use `---@type` for specific variables, more info on the [annotation documentation](https://github.com/sumneko/lua-language-server/wiki/EmmyLua-Annotations). Example:
 
     ```Lua
-    ---@type ItemConfig_Item
+    ---@type ItemConfigItem
     local item = [etc.]
     ```
 

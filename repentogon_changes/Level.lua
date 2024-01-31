@@ -1,13 +1,18 @@
 ---Returns true of the Red Key door outline can spawn on the door slot.
----@param roomIndex integer 
+---@param roomIndex integer
 ---@param doorSlot DoorSlot
 ---@return boolean
 function Level:CanSpawnDoorOutline(roomIndex, doorSlot)
 end
 
----Returns the current Dimension. 
+---Returns the current Dimension.
 ---@return Dimension
 function Level:GetDimension()
+end
+
+--If set, the level will automatically attempt to place the Knife Piece puzzle door for this `LevelStage`.
+---@return SpecialQuest
+function Level:GetForceSpecialQuest()
 end
 
 ---Returns true if the floor has the abandoned mineshaft room used for the second knife piece puzzle.
@@ -16,7 +21,7 @@ function Level:HasAbandonedMineshaft()
 end
 
 ---Returns true if the floor has a mirror dimension used for the first knife piece puzzle.
----@return boolean 
+---@return boolean
 function Level:HasMirrorDimension()
 end
 
@@ -25,19 +30,25 @@ end
 function Level:HasPhotoDoor()
 end
 
----TODO: Document me!
+---Returns `true` is the provided `levelStage` and `stageType` combination is available to be generated in any given run. Returns `false` if locked behind an achievement.
 ---@param levelStage LevelStage
 ---@param stageType StageType
 ---@return boolean
 function Level:IsStageAvailable(levelStage, stageType)
 end
 
----Places a room into the level. 
 ---@param room LevelGeneratorEntry
----@param roomConfig RoomConfig_Room
----@param seed integer 
+---@param roomConfig RoomConfigRoom
+---@param seed integer
 ---@return boolean successful True if the room was placed successfully.
 function Level:PlaceRoom(room, roomConfig, seed)
+end
+
+---Sets whether the level should attempt to place the Knife Piece puzzle door for this LevelStage.
+---
+---This is set to `SpecialQuest.DEFAULT` immediately before calling MC_PRE_LEVEL_INIT.
+---@param Quest SpecialQuest
+function Level:SetForceSpecialQuest(Quest)
 end
 
 ---Sets the name of the level.

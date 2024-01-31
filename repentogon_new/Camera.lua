@@ -7,6 +7,6 @@ function Camera:SetFocusPosition(pos) end
 
 ---Immediately moves the camera to the specified position.
 ---
----<b>BUG:</b> This function currently does not work with Active Cam enabled as the camera snaps back to its original position in each update.
+---**BUG:** This function currently does not work with Active Cam enabled as the camera snaps back to its original position in each update.
 ---@param pos Vector
 function Camera:SnapToPosition(pos) end
