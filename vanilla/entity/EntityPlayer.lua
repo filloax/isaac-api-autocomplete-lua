@@ -59,10 +59,6 @@ end
 function EntityPlayer:AddBrokenHearts(BrokenHearts)
 end
 
----@param CacheFlag CacheFlag
-function EntityPlayer:AddCacheFlags(CacheFlag)
-end
-
 ---@param ID Card
 function EntityPlayer:AddCard(ID)
 end
@@ -318,9 +314,6 @@ function EntityPlayer:CheckFamiliar(FamiliarVariant, TargetCount, rng, SourceIte
 end
 
 function EntityPlayer:ClearCostumes()
-end
-
-function EntityPlayer:ClearDeadEyeCharge()
 end
 
 function EntityPlayer:ClearTemporaryEffects()
@@ -649,11 +642,6 @@ end
 function EntityPlayer:GetMovementVector()
 end
 
----@param WeaponType? WeaponType @default: `WeaponType.WEAPON_TEARS`
----@return userdata @MultiShotParams
-function EntityPlayer:GetMultiShotParams(WeaponType)
-end
-
 ---@param LoopIndex integer
 ---@param Weapon WeaponType
 ---@param ShotDirection Vector
@@ -711,11 +699,6 @@ end
 
 ---@return PlayerType
 function EntityPlayer:GetPlayerType()
-end
-
----@param SlotId integer
----@return userdata @PlayerPocketItem
-function EntityPlayer:GetPocketItem(SlotId)
 end
 
 ---@return integer

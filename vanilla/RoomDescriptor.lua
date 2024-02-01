@@ -1,5 +1,4 @@
 ---@class RoomDescriptor
----@field AllowedDoors userdata @DoorSet
 ---@field AwardSeed integer
 ---@field ChallengeDone boolean
 ---@field Clear boolean

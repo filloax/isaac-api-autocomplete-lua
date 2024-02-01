@@ -1,3 +1,7 @@
+## NOTICE
+
+**NOW DEPRECATED; DIRECTLY PART OF [VSCode extension](https://github.com/filloax/isaac-lua-api-vscode) repository**
+
 # Isaac Modding API Autocomplete
 
 Now published as a [VSCode extension](https://github.com/filloax/isaac-lua-api-vscode) for easier installation!

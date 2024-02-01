@@ -642,18 +642,12 @@ end
 
 ---Produces a random quantity of various pickups, similar to Tainted Cain's ability.
 ---
----The provided EntityPickup will be removed by this function. Use the override version of this function to avoid this.
----@param pickup EntityPickup
----@param rng? RNG @default: PickyupDropRNG
----@param itemPool? ItemPoolType @default: `ItemPoolType.POOL_NULL`.
-function EntityPlayer:SalvageCollectible(pickup, rng, itemPool)
-end
-
----Produces a random quantity of various pickups, similar to Tainted Cain's ability.
+---If an EntityPickup is passed, it will be removed by this function. Use the other version of this function to avoid this.
 ---@param collectible CollectibleType
 ---@param position? Vector @default: `self.Position`
 ---@param rng? RNG @default: PlayerDropRNG
 ---@param itemPool? ItemPoolType @default: `ItemPoolType.POOL_NULL`.
+---@overload fun(pickup: EntityPickup, rng?: RNG, itemPool?: ItemPoolType)
 function EntityPlayer:SalvageCollectible(collectible, position, rng, itemPool)
 end
 
@@ -668,14 +662,10 @@ end
 function EntityPlayer:SetBagOfCraftingContent(contentTable)
 end
 
----Sets the output of the player's Bag of Crafting to the specified collectible.
----@param collectible CollectibleType
-function EntityPlayer:SetBagOfCraftingOutput(collectible)
-end
-
----Sets the specified slot in the player's Bag of Crafting to the specified pickup.
+---Sets the specified slot in the player's Bag of Crafting to the specified pickup or collectible.
 ---@param slot integer
 ---@param pickup BagOfCraftingPickup
+---@overload fun(collectible: CollectibleType)
 function EntityPlayer:SetBagOfCraftingOutput(slot, pickup)
 end
 

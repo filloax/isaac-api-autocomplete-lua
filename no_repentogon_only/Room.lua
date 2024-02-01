@@ -6,3 +6,7 @@
 ---@return boolean
 function Room:SpawnGridEntity(GridIndex, Type, Variant, Seed, VarData)
 end
+
+---@return boolean
+function Room:TrySpawnSpecialQuestDoor()
+end

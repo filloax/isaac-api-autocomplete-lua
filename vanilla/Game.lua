@@ -173,10 +173,6 @@ end
 function Game:GetHUD()
 end
 
----@return userdata @ItemOverlay
-function Game:GetItemOverlay()
-end
-
 ---@return ItemPool
 function Game:GetItemPool()
 end

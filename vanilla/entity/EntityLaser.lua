@@ -100,10 +100,6 @@ end
 function EntityLaser:SetOneHit(Value)
 end
 
----@param Value integer
-function EntityLaser:SetTimeout(Value)
-end
-
 ---@param Variant integer
 ---@param SourcePos Vector
 ---@param AngleDegrees number

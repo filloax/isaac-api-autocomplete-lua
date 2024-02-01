@@ -8,10 +8,6 @@
 ---@field Rotation number
 local Sprite = {}
 
----@return Sprite
-function _G.Sprite()
-end
-
 ---@return string
 function Sprite:GetAnimation()
 end
@@ -122,11 +118,6 @@ end
 function Sprite:RenderLayer(LayerId, Position, TopLeftClamp, BottomRightClamp)
 end
 
----@param LayerId integer
----@param PngFilename string
-function Sprite:ReplaceSpritesheet(LayerId, PngFilename)
-end
-
 function Sprite:Reset()
 end
 
@@ -159,16 +150,8 @@ end
 function Sprite:SetOverlayAnimation(AnimationName)
 end
 
----@param AnimationName string
----@param FrameNum integer
-function Sprite:SetOverlayFrame(AnimationName, FrameNum)
-end
-
 ---@param RenderFirst boolean
 function Sprite:SetOverlayRenderPriority(RenderFirst)
-end
-
-function Sprite:Stop()
 end
 
 function Sprite:Update()

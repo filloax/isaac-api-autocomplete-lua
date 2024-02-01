@@ -97,13 +97,6 @@ end
 function EntityNPC:Morph(type, Variant, SubType, ChampionColorIdx)
 end
 
----@param ID SoundEffect
----@param Volume number
----@param FrameDelay integer
----@param Loop boolean
----@param Pitch number
-function EntityNPC:PlaySound(ID, Volume, FrameDelay, Loop, Pitch)
-end
 
 ---@param GroupIdx integer
 ---@return EntityList

@@ -446,15 +446,6 @@ end
 function Room:SpawnClearAward()
 end
 
----@param GridIndex integer
----@param Type GridEntityType
----@param Variant integer
----@param Seed integer
----@param VarData integer
----@return boolean
-function Room:SpawnGridEntity(GridIndex, Type, Variant, Seed, VarData)
-end
-
 function Room:StopRain()
 end
 
@@ -507,10 +498,6 @@ end
 ---@param Force? boolean @default: `false`
 ---@return boolean
 function Room:TrySpawnSecretShop(Force)
-end
-
----@return boolean
-function Room:TrySpawnSpecialQuestDoor()
 end
 
 ---@param Force? boolean @default: `false`
